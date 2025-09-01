@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sensors 2>/dev/null | grep -E 'Tdie|Tctl|Package id 0' | grep -oP '\+?[0-9]+\.\d+(?=°C)' | head -n1
+temp=$(sensors 2>/dev/null | grep -E 'Tdie|Tctl|Package id 0' | grep -oP '\+?[0-9]+\.\d+(?=°C)' | head -n1)
 
 echo "${temp}°C"
 
