@@ -5,6 +5,7 @@ bluetui
 dex
 galculator
 grim
+jq
 kitty
 kvantum
 ly
@@ -16,12 +17,15 @@ qt5ct
 qt6ct
 rofi-wayland
 scrot
+sway
 swappy
 swayimg
 swaync
+swaybg
 thunar
 thunar-shares-plugin
 thunar-vcs-plugin
-wf-recorder
+ttf-jetbrains-mono-nerd
+waybar
 xdg-user-dirs
 xed
