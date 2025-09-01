@@ -244,9 +244,7 @@ bindsym F1 exec  --no-startup-id $HOME/.config/sway/scripts/keyhint-2
 #############
 # wallpaper #
 #############
-exec_always swaybg \
-  -o DP-3 -i $HOME/Bilder/fusion_right.png -m fill \
-  -o DP-1 -i $HOME/Bilder/fusion_left.png -m fill
+exec_always swaybg -i /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png -m fill
 
 
 
