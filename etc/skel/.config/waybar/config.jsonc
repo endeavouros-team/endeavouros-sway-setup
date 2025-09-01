@@ -8,21 +8,21 @@
   ],
 
   "modules-center": [
-    "custom/weather"
+    // "custom/weather"
     "custom/separator"
   ],
 
   "modules-right": [
     "pulseaudio",
     "custom/separator",
-    "custom/cputemp",
-    "custom/separator",
-    "custom/gputemp",
+    // "custom/cputemp",
+    // "custom/separator",
+    // "custom/gputemp",
     "custom/separator",
     "custom/mem",
     "custom/separator",
     "custom/disk",
-    "custom/disktmp",
+    // "custom/disktmp",
     "custom/separator",
     "custom/net",
     "custom/separator",
