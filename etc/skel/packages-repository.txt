@@ -7,7 +7,6 @@ galculator
 grim
 kitty
 kvantum
-kvantum-theme-arc
 network-manager-applet
 nwg-displays
 nwg-look
