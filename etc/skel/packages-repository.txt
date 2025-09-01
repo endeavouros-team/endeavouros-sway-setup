@@ -3,7 +3,9 @@ awesome-terminal-fonts
 blueman
 bluetui
 dex
+arc-gtk-theme-eos
 galculator
+gtklock
 grim
 jq
 kitty
