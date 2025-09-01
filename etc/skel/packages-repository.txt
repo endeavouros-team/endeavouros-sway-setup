@@ -6,6 +6,8 @@ dex
 galculator
 grim
 kitty
+kvantum
+kvantum-theme-arc
 network-manager-applet
 nwg-displays
 nwg-look
@@ -17,6 +19,7 @@ scrot
 swappy
 swayimg
 swaync
+thunar
 thunar-shares-plugin
 thunar-vcs-plugin
 wf-recorder
