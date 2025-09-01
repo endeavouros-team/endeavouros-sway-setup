@@ -15,7 +15,7 @@
   "modules-right": [
     "pulseaudio",
     "custom/separator",
-    // "custom/cputemp",
+    "custom/cputemp",
     // "custom/separator",
     // "custom/gputemp",
     "custom/separator",
