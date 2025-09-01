@@ -1,0 +1,10 @@
+#!/bin/bash
+
+killall waybar
+
+if [[ $USER = "joekamprad" ]]
+then
+    waybar -c ~/.config/waybar/config_br.jsonc -s ~/.config/waybar/style_br.css &
+    waybar -c ~/.config/waybar/config_tl.jsonc -s ~/.config/waybar/style_tl.css &
+    waybar -c ~/.config/waybar/config_bl.jsonc -s ~/.config/waybar/style_bl.css &
+fi

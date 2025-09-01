@@ -1,0 +1,8 @@
+#!/bin/bash
+# Holt die aktuellen Workspaces und findet die höchste Nummer
+max=$(swaymsg -t get_workspaces | jq '.[].num' | sort -n | tail -1)
+new_workspace=$((max + 1))
+
+# Wechsel zu neuem Workspace
+swaymsg workspace number $new_workspace
+

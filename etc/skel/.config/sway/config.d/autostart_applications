@@ -1,0 +1,61 @@
+
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+# dbus session?
+#exec dbus-run-session sway
+
+# Idle configuration
+exec swayidle idlehint 1
+
+# Sway Notification Center (swaync)
+exec swaync
+
+# set default display (to set screen for notifications to showup)
+# use:
+# swaymsg -t get_outputs | jq -r ' sort_by(.rect.x) | .[].name'
+# to get current connected display names (replace DP-3 with the one you want default)
+
+# exec swaync-client --change-noti-monitor DP-3
+
+# screen locker
+exec_always swayidle -w \
+  timeout 280 '$HOME/.config/sway/scripts/gtklock_config' \
+  timeout 300 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"' \
+  before-sleep '$HOME/.config/sway/scripts/gtklock_config'
+
+#exec swayidle -w timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' &
+#exec_always swayidle -w before-sleep "gtklock -d"
+
+# bars/panels (waybar)
+exec waybar -c $HOME/.config/waybar/config.jsonc -s $HOME/.config/waybar/style.css
+
+
+# Autotiling
+exec autotiling
+
+# cliphist
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
+
+# autostart apps
+exec firefox https://codeberg.org/joekamprad/endeavouros-sway-setup.git
+#exec  sleep 5 && telegram-desktop
+
+exec sleep 3 && blueman-applet
+
+# tools/helper
+
+## keyhelper:
+exec  /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+##tools
+exec  sh ~/.config/sway/scripts/packagelist.sh
+
+# dex execute .desktop files
+exec  dex --autostart --environment sway
+
+# osd für volume 
+exec  ~/.config/sway/scripts/volume_brightness.sh

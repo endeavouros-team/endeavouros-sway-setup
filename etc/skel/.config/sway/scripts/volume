@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Lautstärke erhöhen/senken/toggle
+case "$1" in
+  up)
+    pamixer --increase 5
+    ;;
+  down)
+    pamixer --decrease 5
+    ;;
+  toggle)
+    pamixer --toggle-mute
+    ;;
+  *)
+    echo "Usage: $0 {up|down|toggle}"
+    exit 1
+    ;;
+esac
+
+vol=$(pamixer --get-volume)
+muted=$(pamixer --get-mute)
+
+if [ "$muted" = "true" ]; then
+  msg="🔇 Muted"
+else
+  # Balken mit 10 Schritten
+  bar_len=10
+  filled=$(( vol / (100 / bar_len) ))
+  empty=$(( bar_len - filled ))
+
+  bar=$(printf '█%.0s' $(seq 1 $filled))
+  bar+=$(printf '░%.0s' $(seq 1 $empty))
+
+  msg="Volume: $vol% [$bar]"
+fi
+
+notify-send -a sway-volume "$msg"
+

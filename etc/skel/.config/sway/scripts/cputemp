@@ -1,0 +1,6 @@
+#!/bin/bash
+
+temp=$(sensors zenpower-pci-00c3 | grep 'Tdie' | grep -oP '\+\d+(\.\d+)?' | head -n1 | tr -d '+')
+
+echo "${temp}°C"
+

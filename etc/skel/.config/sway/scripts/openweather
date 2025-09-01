@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# Check for required commands
+command -v jq >/dev/null 2>&1 || { echo >&2 "❌ 'jq' is required but not installed. Aborting."; exit 1; }
+command -v wget >/dev/null 2>&1 || { echo >&2 "❌ 'wget' is required but not installed. Aborting."; exit 1; }
+
+# API config
+APIKEY="8d1705c11b708a1a0995de301fd6ac7c"  # 🔁 <-- Deinen echten OpenWeatherMap API-Key hier einfügen
+CITY_ID="2950159"  # Berlin
+URL="http://api.openweathermap.org/data/2.5/weather?id=${CITY_ID}&units=metric&appid=${APIKEY}"
+
+# API request
+WEATHER_RESPONSE=$(wget -qO- "${URL}")
+if [[ -z "$WEATHER_RESPONSE" ]]; then
+  echo "⚠️ Keine Wetterdaten erhalten"
+  exit 1
+fi
+
+# Parse weather data
+WEATHER_CONDITION=$(echo "$WEATHER_RESPONSE" | jq -r '.weather[0].main')
+WEATHER_TEMP=$(echo "$WEATHER_RESPONSE" | jq -r '.main.temp' | xargs printf "%.1f")
+WIND_DIR_RAW=$(echo "$WEATHER_RESPONSE" | jq -r '.wind.deg')
+WIND_SPEED_RAW=$(echo "$WEATHER_RESPONSE" | jq -r '.wind.speed')
+
+# Berechne Windgeschwindigkeit in km/h
+WIND_SPEED=$(awk "BEGIN {printf \"%.1f\", 60*60*$WIND_SPEED_RAW/1000}")
+
+# Berechne Windrichtung
+WIND_DIR_INDEX=$(awk "BEGIN {print int(($WIND_DIR_RAW % 360) / 22.5)}")
+DIR_ARRAY=(N NNE NE ENE E ESE SE SSE S SSW SW WSW W WNW NW NNW)
+WIND_DIR=${DIR_ARRAY[WIND_DIR_INDEX]}
+
+# Wetter-Icons basierend auf Bedingung
+case "$WEATHER_CONDITION" in
+  'Clouds') WEATHER_ICON="" ;;  # Material-Design oder Nerd Font Symbol
+  'Rain')   WEATHER_ICON="" ;;
+  'Snow')   WEATHER_ICON="" ;;
+  *)        WEATHER_ICON="" ;;  # Default: Sonne
+esac
+
+# Finaler Output
+echo "${WEATHER_ICON}  ${WEATHER_TEMP}°C, ${WIND_SPEED} km/h ${WIND_DIR}"
+
