@@ -1,6 +1,2 @@
-gtklock-git
 kvantum-theme-arc
-rsstail
-shared-mime-info-gnome
-swayfx
 wl-screenrec
