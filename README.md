@@ -5,7 +5,7 @@ sway setup for EndeavourOS based on the [i3 setup](https://github.com/endeavouro
 It will include:
 1. waybar
 2. rofi-wayland for menu
-3. swaync norification
+3. swaync notification
 4. [sway tools](https://github.com/killajoe/sway_tools/tree/main)
 5. ly (as login manager)
 6. start with using kitty terminal but may will fallback to foot
