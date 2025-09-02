@@ -11,7 +11,7 @@ The configuration main file for endesway can be found at `"${HOME}"/.config/sway
  
 ```
 # autostart apps
-exec firefox https://codeberg.org/joekamprad/endeavouros-sway-setup.git
+exec firefox https://codeberg.org/joekamprad/endeavouros-sway-setup/src/branch/main/force-knowledge.md
 #exec  sleep 5 && telegram-desktop
 ```
 
@@ -19,7 +19,7 @@ exec firefox https://codeberg.org/joekamprad/endeavouros-sway-setup.git
 
 ```
 # autostart apps
-#exec firefox https://codeberg.org/joekamprad/endeavouros-sway-setup.git
+#exec firefox https://codeberg.org/joekamprad/endeavouros-sway-setup/src/branch/main/force-knowledge.md
 #exec  sleep 5 && telegram-desktop
 ```
 
