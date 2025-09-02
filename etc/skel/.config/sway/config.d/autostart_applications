@@ -1,4 +1,3 @@
-
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
@@ -41,7 +40,7 @@ exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
 # autostart apps
-exec firefox https://codeberg.org/joekamprad/endeavouros-sway-setup.git
+exec firefox https://codeberg.org/joekamprad/endeavouros-sway-setup/src/branch/main/force-knowledge.md
 #exec  sleep 5 && telegram-desktop
 
 exec sleep 3 && blueman-applet
