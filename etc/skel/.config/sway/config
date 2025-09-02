@@ -6,7 +6,7 @@ include $HOME/.config/sway/outputs
 
 set $mod Mod4
 
-# https://i3wm.org/docs/userguide.html#_focus_wrapping
+# focus_wrapping
 focus_wrapping yes
 
 # round corners --> needs swayfx: `yay -S swayfx`
