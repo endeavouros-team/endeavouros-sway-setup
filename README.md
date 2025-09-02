@@ -12,3 +12,5 @@ It will include:
 7. nwg-look and nwg-displays for setup/change gtk theme and display settings
 8. kvantum to complete theme for qt apps
 9. thunar as filemanager
+
+![screenshot](sway-eos.png)
