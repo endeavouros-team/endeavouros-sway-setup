@@ -9,8 +9,8 @@ set $mod Mod4
 # https://i3wm.org/docs/userguide.html#_focus_wrapping
 focus_wrapping yes
 
-# round corners
-corner_radius 4
+# round corners --> needs swayfx: `yay -S swayfx`
+#corner_radius 4
 
 #####################
 # workspace layout: #
