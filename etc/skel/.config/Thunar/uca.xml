@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1747666409199817-1</unique-id>
+	<command>kitty --working-directory=%f</command>
+	<description>Opens a Kitty terminal in the current directory</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>file-archiver</icon>
+	<name>unpack archive here</name>
+	<submenu></submenu>
+	<unique-id>1750198190386237-1</unique-id>
+	<command>`sh -c &apos;file=&quot;$1&quot;; cd &quot;$(dirname &quot;$file&quot;)&quot;; case &quot;$file&quot; in *.zip) unzip &quot;$file&quot; ;; *.tar.gz</command>
+	<description>Unpack archive in current folder</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<startup-notify/>
+</action>
+</actions>
