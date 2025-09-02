@@ -11,11 +11,11 @@ alias app_id="sleep 3 && swaymsg -t get_tree | jq '.. | select(.focused? == true
 
 PS1='[\u@\h \W]\$ '
 
-echo -e "\n▶️ Welcome to your Endeavour today!🚀"
-echo -e "\n▶️ hello👋 $USER "
-echo -e "▶️ 📅 \c "
+echo -e "\n▶ Welcome to your Endeavour today!🚀"
+echo -e "\n▶ hello👋 $USER "
+echo -e "▶ 📅 \c "
 date
-echo -e "▶️  \c "
+echo -e "▶  \c "
 uname -r
 echo -e " "
 echo -e "🥠"
