@@ -3,6 +3,7 @@ window#waybar {
     font-size: 14px;
     background-color: rgba(8, 5, 43, 0.5);
     color: #ffffff;
+    border-radius: 7px; /* round corners */
     padding: 5px 10px;
     min-height: 26px;
 }
