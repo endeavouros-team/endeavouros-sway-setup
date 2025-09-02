@@ -1,7 +1,10 @@
 # Dive into configuring your Sway WM setup
 
-The main configuration file for endeavouros-sway can be found at `"${HOME}"/.config/sway/config`. and to make structure clean you will find other parts of the config in its dropin path:
-`${HOME}/.config/sway/config.d/` there you have parts of the config named to fit what the yinclude, these will sourced into the main config file automatically. 
+The main configuration file for endeavouros-sway can be found at `"${HOME}"/.config/sway/config`. and to make structure clean, you will find other parts of the config in its dropin path:
+
+`${HOME}/.config/sway/config.d/` t
+
+here you have parts of the config named to fit what the yinclude, these will sourced into the main config file automatically. 
 
 ## Firefox is autostarting at each login?
 
@@ -69,8 +72,30 @@ You can see // is the commenting sign for disable modules:
     // "custom/gputemp",
     "custom/separator",
 ```
-2. `style.css` is the look and feel part written in css. 
+2. `style.css` is the look and feel part written in css.
 
+## screencast
+
+```
+# Start recording (select area)
+bindsym $mod+Shift+y exec $HOME/.config/sway/scripts/screencast-select
+
+# Stop recording
+bindsym $mod+Shift+x exec $HOME/.config/sway/scripts/screencast-select stop
+```
+
+This will only work on real Hardware with a dedicated GPU.
+
+And you will need to install (build-->install) `wl-screenrec` from AUR:
+
+`yay -S wl-screenrec`
+
+This is needed to be able to use the tool. 
+
+It is taken from sway-tools:
+
+https://github.com/killajoe/sway_tools/tree/main
+ 
 
 ## Reset Configuration
 
