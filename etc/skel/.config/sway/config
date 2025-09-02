@@ -51,7 +51,7 @@ set $ws9 
 set $ws10   
 
 #bind program to workspace
-# type `app-is` and focus window with your mouse, wait a bit, to get id for that window.
+# type `app_id` and focus window with your mouse, wait a bit, to get id for that window.
 assign [app_id="thunar"] $ws4
 assign [app_id="xed"] $ws5
 #assign [app_id="org.telegram.desktop"] $ws10
