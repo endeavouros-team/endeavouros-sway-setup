@@ -1,13 +1,16 @@
 # user config directory
 include $HOME/.config/sway/config.d/*
+include $HOME/.config/sway/outputs
 
 # setting mod variable to windows key
 
 set $mod Mod4
 
-
-# https://i3wm.org/docs/userguide.html#_focus_wrapping
+# focus_wrapping
 focus_wrapping yes
+
+# round corners --> needs swayfx: `yay -S swayfx`
+#corner_radius 4
 
 #####################
 # workspace layout: #
@@ -20,7 +23,7 @@ workspace_layout default
 # Each window will be fullscreen and tabbed top to bottom.
 #workspace_layout stacking
 
-# i3 tabbed layout:
+# tabbed layout:
 # Each new window will open fullscreen as a tab (left to right)
 #workspace_layout tabbed
 
@@ -35,10 +38,34 @@ set $smart_borders off
 default_border pixel 1
 default_floating_border pixel 2
 
+# workspace naming
+set $ws1  
+set $ws2  
+set $ws3  
+set $ws4  
+set $ws5  
+set $ws6  
+set $ws7  
+set $ws8  
+set $ws9  
+set $ws10   
 
-
-# bind program to workspace
-#assign [app_id="thunar"] $ws1
+#bind program to workspace
+# type: `app_id`
+# in a terminal and focus a window with your mouse to get the id of it
+assign [app_id="thunar"] $ws4
+assign [app_id="xed"] $ws5
+#assign [app_id="org.telegram.desktop"] $ws10
+assign [app_id="(?i)firefox"] $ws3
+#assign [app_id="thunderbird"] $ws4
+#assign [app_id="libreoffice-writer"] $ws5
+#assign [app_id="(?i)libreoffice"] $ws5
+#assign [app_id="(?i)libreoffice.*"] $ws5
+#assign [app_id="libreoffice"] $ws5
+#assign [app_id="gimp"] $ws7
+#assign [app_id="inkscape"] $ws7
+# window "title" works too:
+#assign [title="Oracle VirtualBox Manager"] $ws6
 
 # qt-app fix for title bar:
 for_window [app_id="^.*"] border pixel 1
