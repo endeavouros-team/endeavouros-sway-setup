@@ -1,8 +1,6 @@
 ##set floating (nontiling) for special apps
-# type:
-# app-id
+# type: `app_id`
 # in a terminal and focus a window with your mouse to get the id of it
-# --->  sleep 3 && swaymsg -t get_tree | jq '.. | select(.focused? == true) | {app_id, name}'"
 
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="qt5ct"] floating enable
