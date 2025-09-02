@@ -41,6 +41,7 @@ button:hover {
     border-color: rgba(255, 255, 255, 0.9);
     box-shadow: none;
     padding: 0 8px;
+    margin: 4px 4px;
     transition: background-color 0.3s, color 0.3s;
 }
 
