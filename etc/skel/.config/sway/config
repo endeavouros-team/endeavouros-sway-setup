@@ -20,7 +20,7 @@ workspace_layout default
 # Each window will be fullscreen and tabbed top to bottom.
 #workspace_layout stacking
 
-# i3 tabbed layout:
+# tabbed layout:
 # Each new window will open fullscreen as a tab (left to right)
 #workspace_layout tabbed
 
@@ -35,6 +35,17 @@ set $smart_borders off
 default_border pixel 1
 default_floating_border pixel 2
 
+# workspace naming
+set $ws1  
+set $ws2  
+set $ws3  
+set $ws4  
+set $ws5  
+set $ws6  
+set $ws7  
+set $ws8  
+set $ws9  
+set $ws10   
 
 
 # bind program to workspace
