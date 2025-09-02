@@ -2,6 +2,9 @@
 include $HOME/.config/sway/config.d/*
 include $HOME/.config/sway/outputs
 
+# make sure it loads gtk configs
+exec_always $HOME/.config/sway/scripts/import-gsettings
+
 # setting mod variable to windows key
 
 set $mod Mod4
