@@ -5,6 +5,7 @@ git clone https://codeberg.org/joekamprad/endeavouros-sway-setup.git
 cd endeavouros-sway-setup/etc/skel/
 cp -R .config .local .icons /home/$username/
 cp  .bashrc .gtkrc-2.0 packages-AUR.txt /home/$username/
+cp ../../force-knowledge.md "/home/$username/.config/sway/readme.md"
 chown -R $username:$username /home/$username
 chmod -R +x /home/$username/.config/sway/scripts
 pacman -S --needed --noconfirm - < packages-repository.txt 
