@@ -5,6 +5,7 @@ blueman
 bluetui
 dex
 engrampa
+fortune-mod
 galculator
 grim
 gtklock
