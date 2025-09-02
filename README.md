@@ -10,7 +10,6 @@ It will include:
 5. ly (as login manager)
 6. start with using kitty terminal but may will fallback to foot
 7. nwg-look and nwg-displays for setup/change gtk theme and display settings
-8. kvantum to complete theme for qt apps
-9. thunar as filemanager
+8. thunar as filemanager
 
 ![screenshot](sway-eos.png)
