@@ -26,6 +26,7 @@ qt5ct
 qt6ct
 rofi-wayland
 scrot
+slurp
 swappy
 sway
 swaybg
