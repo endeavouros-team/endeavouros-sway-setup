@@ -1,3 +1,0 @@
-#!/bin/bash
-
-gtklock -s ~/.config/gtklock/style.css -b /home/joekamprad/Bilder/wallpapers/3480x1080/nadeln-text.png -t "%A, %d %B %Y — %H:%M:%S" -S

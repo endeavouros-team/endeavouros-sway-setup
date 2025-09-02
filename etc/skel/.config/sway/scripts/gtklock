@@ -1,0 +1,3 @@
+#!/bin/bash
+
+gtklock -c ~/.config/gtklock/config.ini -s ~/.config/gtklock/style.css -b /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png -t "%H:%M:%S"
