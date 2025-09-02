@@ -14,6 +14,7 @@ sway setup for EndeavourOS based on the [i3 setup](https://github.com/endeavouro
 7. [nwg-look](https://github.com/nwg-piotr/nwg-look) and [nwg-displays](https://github.com/nwg-piotr/nwg-displays) for setup/change gtk theme and display settings. Awesome tools made by piotr: [nwg](https://nwg-piotr.github.io/nwg-shell/)
 8. [thunar](https://docs.xfce.org/xfce/thunar/start) as filemanager, including setup to open kitty terminal in path, and filextractor
 9. [bash](https://www.gnu.org/software/bash/bash.html) using a nice welcome message and fortune cookies enabled, plus history with up and down arrow buttons
+10. [gtklock](https://github.com/jovanlanik/gtklock) as lock screen
 
 ![screenshot](sway-eos.png)
 
