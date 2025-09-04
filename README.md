@@ -20,6 +20,23 @@ sway setup for EndeavourOS based on the [i3 setup](https://github.com/endeavouro
 ![screenshot](sway-eos.png)
 
 # Things mostly working now but some parts still need some fixes/setup:
-* battery indicator is still missing
-* workspace icons and how the act plus binding apps to them need some changes. 
+* workspace icons and how the act plus binding apps to them need some changes.
+
+**open weather:**
+run `~/.config/sway/scripts/openweather -s` to create setup yo will need:
+1. Fee API key at: https://openweathermap.org/api
+2. city IDs at: https://openweathermap.org/find
+
+Open waybar config and enable weather module by removing the commenting // there:
+
+` nano ~/.config/waybar/config.jsonc`
+
+```
+"modules-center": [
+    // "custom/weather"
+    "custom/separator"
+  ],
+``` 
+
+
 
