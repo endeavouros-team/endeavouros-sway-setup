@@ -30,9 +30,12 @@ for_window [title="eos_yad_RunCmdTermBashOpt.*"] floating enable
 ##fullscreen apps
 #for_window [app_id="Xxxx" instance="xxxx"] fullscreen enable
 
-# thunar popups
-for_window [app_id="thunar" title="».*« umbenennen"] floating enable
-for_window [app_id="thunar" title="Dateivorgangsfortschritt"] floating enable
+
+## Make all Thunar windows floating
+for_window [app_id="thunar"] floating enable
+# But exclude ones with "- Thunar" in the title
+for_window [app_id="thunar" title=".*- Thunar.*"] floating disable
+
 
 # telegram no round corners?
 for_window [app_id="org.telegram.desktop"] border pixel 1
