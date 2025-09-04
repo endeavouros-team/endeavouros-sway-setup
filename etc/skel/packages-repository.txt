@@ -32,6 +32,7 @@ sway
 swaybg
 swayimg
 swaync
+swayosd
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
