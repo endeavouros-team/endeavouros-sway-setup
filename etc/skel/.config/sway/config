@@ -100,10 +100,10 @@ floating_modifier $mod
 # screenshot
 
 # take a screenshot of a selection:
-bindsym $mod+Print exec  --no-startup-id $HOME/.config/sway/scripts/screenshot-select
+bindsym $mod+Print exec $HOME/.config/sway/scripts/screenshot-select
 
 # Shot of all screens in one pic after releasing print button:
-bindsym --release Print exec --no-startup-id $HOME/.config/sway/scripts/screenshot
+bindsym --release Print exec $HOME/.config/sway/scripts/screenshot
 
 
 # screencast
@@ -127,18 +127,18 @@ bindsym $mod+l exec $HOME/.config/sway/scripts/gtklock_config
 bindsym F3 exec $HOME/.config/sway/scripts/waybar_toggle
 
 #extra keys:
-bindsym XF86Calculator exec  --no-startup-id galculator
+bindsym XF86Calculator exec galculator
 
 #exit-menu
-bindsym $mod+Shift+e exec  --no-startup-id $HOME/.config/sway/scripts/powermenu
+bindsym $mod+Shift+e exec $HOME/.config/sway/scripts/powermenu
 
 # restart sway inplace (preserves your layout/session, can be used to upgrade sway)
 bindsym $mod+Shift+r reload
 
 # configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
 
-#exec --no-startup-id setxkbmap -layout de,us -option grp:win_space_toggle
-#exec --no-startup-id setxkbmap -layout de,us -option 'grp:alt_c_toggle'
+#execsetxkbmap -layout de,us -option grp:win_space_toggle
+#execsetxkbmap -layout de,us -option 'grp:alt_c_toggle'
 
 # start a terminal
 set $term kitty
@@ -146,13 +146,13 @@ exec_always {
     export TERMINAL=kitty
 }
 
-bindsym $mod+Return exec  --no-startup-id kitty
+bindsym $mod+Return exec kitty
 
 # open Filemanager
-#bindsym $mod+t exec  --no-startup-id thunar
+#bindsym $mod+t exec thunar
 
 # open browser
-bindsym $mod+w exec  --no-startup-id firefox
+bindsym $mod+w exec firefox
 
 ## action starters:
 
@@ -262,13 +262,13 @@ bindsym $mod+b layout default
 # rofi-wayland application menu #
 #################################
 
-bindsym F9 exec  --no-startup-id rofi -modi drun -show drun \
+bindsym F9 exec rofi -modi drun -show drun \
                 -config $HOME/.config/rofi/rofidmenu.rasi 
 
-bindsym F10 exec  --no-startup-id rofi -show window \
+bindsym F10 exec rofi -show window \
                 -config $HOME/.config/rofi/rofidmenu.rasi
 
-bindsym F1 exec  --no-startup-id $HOME/.config/sway/scripts/keyhint-2
+bindsym F1 exec $HOME/.config/sway/scripts/keyhint-2
 
 
 #############
