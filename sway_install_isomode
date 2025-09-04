@@ -11,4 +11,5 @@ chmod -R +x /home/$username/.config/sway/scripts
 pacman -S --needed --noconfirm - < packages-repository.txt 
 cd /
 rm -R endeavouros-sway-setup
-systemctl enable ly
+systemctl enable ly.service
+systemctl enable swayosd-libinput-backend.service
