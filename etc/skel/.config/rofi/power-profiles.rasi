@@ -126,21 +126,13 @@ inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 
-textbox-prompt-colon {
-    expand:     false;
-    str:        "Set Power Profile:";
-    margin:     0px 0.3em 0em 0em ;
-    text-color: @normal-foreground;
-}
-
 /* Multiline header using the message widget */
 mainbox {
     children: [ message, inputbar, listview ];
 }
 message {
-    text: "Power Profile Switcher\nCurrent: [balanced]\nSelect a profile:";
     expand: false;
-    font: "JetBrains Mono 10";
+    font: "Noto Sans Regular 10";
     text-color: @normal-foreground;
     margin: 0 0 10px 0;
 }
