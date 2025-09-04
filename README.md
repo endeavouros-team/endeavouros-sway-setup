@@ -23,6 +23,7 @@ sway setup for EndeavourOS based on the [i3 setup](https://github.com/endeavouro
 * workspace icons and how the act plus binding apps to them need some changes.
 
 **open weather:**
+
 run `~/.config/sway/scripts/openweather -s` to create setup yo will need:
 1. Fee API key at: https://openweathermap.org/api
 2. city IDs at: https://openweathermap.org/find
