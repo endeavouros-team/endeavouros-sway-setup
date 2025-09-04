@@ -22,9 +22,8 @@ ly
 network-manager-applet
 nwg-displays
 nwg-look
+playerctl
 polkit-gnome
-qt5ct
-qt6ct
 rofi-wayland
 scrot
 slurp
