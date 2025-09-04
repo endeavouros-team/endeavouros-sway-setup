@@ -2,7 +2,7 @@
 
 The main configuration file for endeavouros-sway can be found at `"${HOME}"/.config/sway/config`. and to make structure clean, you will find other parts of the config in its dropin path:
 
-`${HOME}/.config/sway/config.d/` t
+`${HOME}/.config/sway/config.d/`
 
 here you have parts of the config named to fit what the yinclude, these will sourced into the main config file automatically. 
 
