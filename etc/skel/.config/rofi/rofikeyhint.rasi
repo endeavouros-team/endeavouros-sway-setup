@@ -1,6 +1,6 @@
 /*******************************************************
  * ROFI-wayland configs sway keyhinter for EndeavourOS
- * Maintainer: joekamprad <joekamprad@endeavouros.com>
+ * Maintainer: joekamprad <joekamprad //at// endeavouros //dot// com>
  *******************************************************/
 configuration {
     font:                           "Noto Sans Regular 10";
