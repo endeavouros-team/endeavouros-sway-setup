@@ -162,7 +162,7 @@
   },
   "custom/ppd": {
     "return-type": "text",
-    "format": "",
+    "format": " ",
     "tooltip": true,
     "tooltip-format": "click to view/set power profile",
     "on-click": "exec ~/.config/sway/scripts/power-profiles"
