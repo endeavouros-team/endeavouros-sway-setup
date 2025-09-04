@@ -109,10 +109,10 @@ bindsym --release Print exec $HOME/.config/sway/scripts/screenshot
 # screencast
 
 # Start recording (select area)
-bindsym $mod+Shift+y exec $HOME/.config/sway/scripts/screencast-select
+bindsym $mod+Shift+y exec $HOME/.config/sway/scripts/swaycast
 
 # Stop recording
-bindsym $mod+Shift+x exec $HOME/.config/sway/scripts/screencast-select stop
+bindsym $mod+Shift+x exec $HOME/.config/sway/scripts/swaycast stop
 
 # switch output
 bindsym $mod+p exec $HOME/.config/sway/scripts/audio-device-switch
