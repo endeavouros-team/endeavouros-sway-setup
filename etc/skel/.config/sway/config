@@ -100,10 +100,10 @@ floating_modifier $mod
 # screenshot
 
 # take a screenshot of a selection:
-bindsym $mod+Print exec $HOME/.config/sway/scripts/screenshot-select
+bindsym $mod+Print exec $HOME/.config/sway/scripts/swayshot -s
 
 # Shot of all screens in one pic after releasing print button:
-bindsym --release Print exec $HOME/.config/sway/scripts/screenshot
+bindsym --release Print exec $HOME/.config/sway/scripts/swayshot -a
 
 
 # screencast
