@@ -3,7 +3,7 @@
 Main() {
 
     local command=(
-        yad --title="EndeavourOS i3-wm keybindings:" --no-buttons --geometry=400x345-15-400 --list
+        yad --title="EndeavourOS sway-wm keybindings:" --no-buttons --geometry=400x345-15-400 --list
         --column=key: --column=description: --column=command:
         "ESC" "close this app" ""
         "=" "modkey" "(set mod Mod4)"
