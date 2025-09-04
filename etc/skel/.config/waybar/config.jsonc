@@ -26,6 +26,7 @@
     "custom/separator",
     "custom/disk",
     // "custom/disktmp",
+    "battery",
     "custom/separator",
     "custom/net",
     "custom/separator",
@@ -41,12 +42,12 @@
 
   "sway/workspaces": {},
 
-"clock": {
-  "locale": "de_DE.UTF-8",
-  "format": "{:L%a %d.%m.%Y %H:%M:%S}",
-  "tooltip-format": "{:L%A, %d. %B %Y}",
-  "interval": 1
-},
+  "clock": {
+    "locale": "de_DE.UTF-8",
+    "format": "{:L%a %d.%m.%Y %H:%M:%S}",
+    "tooltip-format": "{:L%A, %d. %B %Y}",
+    "interval": 1
+  },
 
   "custom/separator": {
     "format": "\u200B",
@@ -69,6 +70,7 @@
     "format": " GPU {}",
     "on-click": "kitty -e sh -c 'watch sensors'"
   },
+
   "custom/cputemp": {
     "exec": "~/.config/sway/scripts/cputemp",
     "interval": 5,
@@ -77,6 +79,7 @@
     "format": " CPU {}",
     "on-click": "kitty -e sh -c 'watch sensors'"
   },
+
   "custom/mem": {
     "exec": "~/.config/sway/scripts/memory",
     "interval": 5,
@@ -85,6 +88,7 @@
     "format": " Ram:{}",
     "on-click": "kitty -e sh -c 'watch free'"
   },
+
   "custom/disk": {
     "exec": "~/.config/sway/scripts/disk",
     "interval": 5,
@@ -92,15 +96,31 @@
     "tooltip": false,
     "format": " {} free",
     "on-click": "kitty -e sh -c 'duf; echo Press Enter to close...; read'"
-},
+  },
+
   "custom/disktmp": {
     "exec": "~/.config/sway/scripts/nvmetemp",
     "interval": 5,
     "return-type": "text",
     "tooltip": false,
-    "format": "  {}",
+    "format": " {}",
     "on-click": "kitty -e sh -c 'watch free'"
   },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "{icon} {capacity}% ",
+    "format-plugged": "{icon} {capacity}% ",
+    "format-full": "{icon} {capacity}% ",
+    "format-icons": ["", "", "", "", ""],
+    "on-click": "$HOME/.config/sway/scripts/waybar_toggle && $HOME/.config/sway/scripts/waybar_toggle",
+    "tooltip-format": "{}\nClick to reload Waybar"
+  },
+
   "custom/net": {
     "exec": "~/.config/sway/scripts/bandwidth2",
     "interval": 5,
@@ -108,21 +128,23 @@
     "tooltip": false,
     "format": " {}"
   },
+
   "pulseaudio": {
-        "scroll-step": 2,
-        "format": "󰝚 {volume}% {icon}",
-        "format-muted":"󰝟  muted",
-        "format-icons": {
-            "headphones": " ",
-            "handsfree": " ",
-            "headset": " ",
-            "phone": " ",
-            "portable": " ",
-            "car": " ",
-            "default": ["󰕿 ", "󰖀 ", "󰕾 "]
-        },
-        "on-click": "pavucontrol"
+    "scroll-step": 2,
+    "format": "󰝚 {volume}% {icon}",
+    "format-muted": "󰝟 muted",
+    "format-icons": {
+      "headphones": " ",
+      "handsfree": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": ["󰕿 ", "󰖀 ", "󰕾 "]
+    },
+    "on-click": "pavucontrol"
   },
+
   "custom/weather": {
     "exec": "~/.config/sway/scripts/openweather",
     "interval": 1800,
@@ -130,10 +152,12 @@
     "tooltip": false,
     "on-click": "xdg-open https://openweathermap.org/city/2950159"
   },
+
   "tray": {
     "icon-size": 16,
     "spacing": 10
   },
+
   "custom/notification": {
     "tooltip": false,
     "format": "{} {icon}",
@@ -153,6 +177,5 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  },
+  }
 }
-
