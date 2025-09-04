@@ -15,11 +15,11 @@ sway setup for EndeavourOS based on the [i3 setup](https://github.com/endeavouro
 8. [thunar](https://docs.xfce.org/xfce/thunar/start) as filemanager, including setup to open kitty terminal in path, and filextractor
 9. [bash](https://www.gnu.org/software/bash/bash.html) using a nice welcome message and fortune cookies enabled, plus history with up and down arrow buttons
 10. [gtklock](https://github.com/jovanlanik/gtklock) as lock screen
+11. [swayosd](https://github.com/ErikReider/SwayOSD) as OSD for volume brighness and others
 
 ![screenshot](sway-eos.png)
 
 # Things mostly working now but some parts still need some fixes/setup:
 * battery indicator is still missing
-* keybinding helper needs some changes
 * workspace icons and how the act plus binding apps to them need some changes. 
 
