@@ -1,60 +1,69 @@
 #!/bin/bash
 # Original: https://gitlab.com/Nmoleo/i3-volume-brightness-indicator
-# Angepasst für Sway, Wayland, brightnessctl & mako
+# Adapted for Sway, Wayland, brightnessctl & swaync
 
 bar_color="#7f7fff"
 volume_step=5
 brightness_step=5
 max_volume=100
 
-# Lautstärke holen
+# Get current volume (first channel only)
 get_volume() {
     pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]{1,3}(?=%)' | head -1
 }
 
-# Mute-Status holen
+# Get mute status
 get_mute() {
     pactl get-sink-mute @DEFAULT_SINK@ | grep -Po '(?<=Mute: )(yes|no)'
 }
 
-# Lautstärke-Icon
+# Decide which volume icon to show
 get_volume_icon() {
     local volume=$(get_volume)
     local mute=$(get_mute)
     if [ "$volume" -eq 0 ] || [ "$mute" == "yes" ]; then
-        volume_icon=""
+        volume_icon=""   # muted
     elif [ "$volume" -lt 50 ]; then
-        volume_icon=""
+        volume_icon=""   # low volume
     else
-        volume_icon=""
+        volume_icon=""   # high volume
     fi
 }
 
-# Volume-Notification
+# Show volume notification with swaync (replace-id prevents stacking)
 show_volume_notif() {
     local volume=$(get_volume)
     get_volume_icon
-    notify-send -t 1000 -h int:value:$volume -h string:x-dunst-stack-tag:volume "$volume_icon  $volume%"
+    notify-send -t 1000 --replace-id=100 -h int:value:$volume "$volume_icon  $volume%"
 }
 
-# Helligkeit holen (brightnessctl gibt z. B. „intel_backlight,actual,100,90%“ zurück)
+# Get current brightness (strip % sign)
 get_brightness() {
     brightnessctl -m | awk -F, '{print $4}' | tr -d '%'
 }
 
-# Icon für brightness
+# Decide which brightness icon to show
 get_brightness_icon() {
-    brightness_icon=""
+    local brightness=$(get_brightness)
+    if [ "$brightness" -le 20 ]; then
+        brightness_icon=""   # very low brightness (moon)
+    elif [ "$brightness" -le 50 ]; then
+        brightness_icon=""   # medium brightness (circle)
+    elif [ "$brightness" -le 80 ]; then
+        brightness_icon=""   # high brightness (sun)
+    else
+        brightness_icon="🌞"   # max brightness (sun emoji)
+    fi
 }
 
-# Brightness-Notification
+# Show brightness notification with swaync (replace-id prevents stacking)
 show_brightness_notif() {
     local brightness=$(get_brightness)
     get_brightness_icon
-    notify-send -t 1000 -h int:value:$brightness -h string:x-dunst-stack-tag:brightness "$brightness_icon  $brightness%"
+    notify-send -t 1000 --replace-id=101 -h int:value:$brightness "$brightness_icon  $brightness%"
 }
 
-# Hauptlogik
+# Main logic
 case "$1" in
     volume_up)
         pactl set-sink-mute @DEFAULT_SINK@ 0
@@ -87,4 +96,3 @@ case "$1" in
         exit 1
         ;;
 esac
-
