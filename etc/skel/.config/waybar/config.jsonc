@@ -117,7 +117,7 @@
     "format-plugged": "{icon} {capacity}% ",
     "format-full": "{icon} {capacity}% ",
     "format-icons": ["", "", "", "", ""],
-    "on-click": "$HOME/.config/sway/scripts/waybar_toggle && $HOME/.config/sway/scripts/waybar_toggle",
+    "on-click": "$HOME/.config/sway/scripts/waybar_toggle && $HOME/.config/sway/scripts/waybar_toggle &",
     "tooltip-format": "{}\nClick to reload Waybar"
   },
 
