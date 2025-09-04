@@ -1,36 +1,64 @@
 #!/usr/bin/env bash
+
 # Simple power-profiles-daemon switcher using rofi-wayland and static theme, with notification
+#
+# Copyright (C) 2025 Johannes Kamprad
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
 
-declare -A options=(
-  [" Performance"]="powerprofilesctl set performance"
-  [" Balanced"]="powerprofilesctl set balanced"
-  [" Power Saver"]="powerprofilesctl set power-saver"
-  [" Cancel"]=""
-)
+# needs rofi config:
+# $HOME/.config/rofi/powermenu.rasi
 
-ROFI_CMD="rofi"
 ROFI_THEME="${HOME}/.config/rofi/power-profiles.rasi"
-current_profile="$(powerprofilesctl get 2>/dev/null)"
-ROFI_ARGS=(-dmenu -i -theme "$ROFI_THEME" -p "" -mesg "Current: [$current_profile]")
 
+# Dependency checks
 command -v powerprofilesctl >/dev/null 2>&1 || { echo "powerprofilesctl not found"; exit 1; }
-command -v "$ROFI_CMD" >/dev/null 2>&1 || { echo "rofi not found"; exit 1; }
-command -v notify-send >/dev/null 2>&1 || { echo "notify-send not found, notifications disabled."; notify_send_missing=true; }
+command -v rofi >/dev/null 2>&1 || { echo "rofi not found"; exit 1; }
+if ! command -v notify-send >/dev/null 2>&1; then
+  notify_send_missing=true
+fi
 
-declare -A menu
-for key in "${!options[@]}"; do
-  profile="${options[$key]##* }"
-  if [[ "$key" == " Cancel" ]] || powerprofilesctl list | grep -q "$profile"; then
-    menu["$key"]="${options[$key]}"
-  fi
-done
+current_profile="$(powerprofilesctl get 2>/dev/null)"
+ROFI_ARGS=(-dmenu -i -theme "$ROFI_THEME" -p "Change Profile" -mesg "<b>Current used:</b> $current_profile" -markup-rows)
 
-selection="$(printf '%s\n' "${!menu[@]}" | sort | "$ROFI_CMD" "${ROFI_ARGS[@]}")"
+# Menu entries
+cancel="  Cancel"
+perf="  Performance"
+balanced="  Balanced"
+powersave="  Power Saver"
+# sets chancel to be on top
+options="$cancel"
 
-if [[ -n "$selection" && -n "${menu[$selection]}" ]]; then
-  ${menu[$selection]}
-  # Send notification except for Cancel
-  if [[ "$selection" != " Cancel" && -z "${notify_send_missing}" ]]; then
-    notify-send -i dialog-information "Power Profile Changed" "New profile: ${selection}"
-  fi
+if powerprofilesctl list | grep -q "performance"; then
+  options="$options\n$perf"
+fi
+if powerprofilesctl list | grep -q "balanced"; then
+  options="$options\n$balanced"
+fi
+if powerprofilesctl list | grep -q "power-saver"; then
+  options="$options\n$powersave"
+fi
+
+# Show menu
+chosen="$(echo -e "$options" | rofi "${ROFI_ARGS[@]}")"
+
+# Run selection
+case $chosen in
+    "$perf")
+        powerprofilesctl set performance
+        ;;
+    "$balanced")
+        powerprofilesctl set balanced
+        ;;
+    "$powersave")
+        powerprofilesctl set power-saver
+        ;;
+    "$cancel"|"")
+        exit 0
+        ;;
+esac
+
+# Send notification if available
+if [[ "$chosen" != "$cancel" && -z "${notify_send_missing}" ]]; then
+  notify-send -i dialog-information "Power Profile Changed" "New profile: ${chosen}"
 fi
