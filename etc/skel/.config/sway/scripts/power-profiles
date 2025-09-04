@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Simple power-profiles-daemon switcher using rofi-wayland and static theme, with notification
+
+declare -A options=(
+  [" Performance"]="powerprofilesctl set performance"
+  [" Balanced"]="powerprofilesctl set balanced"
+  [" Power Saver"]="powerprofilesctl set power-saver"
+  [" Cancel"]=""
+)
+
+ROFI_CMD="rofi"
+ROFI_THEME="${HOME}/.config/rofi/power-profiles.rasi"
+current_profile="$(powerprofilesctl get 2>/dev/null)"
+ROFI_ARGS=(-dmenu -i -theme "$ROFI_THEME" -p "" -mesg "Current: [$current_profile]")
+
+command -v powerprofilesctl >/dev/null 2>&1 || { echo "powerprofilesctl not found"; exit 1; }
+command -v "$ROFI_CMD" >/dev/null 2>&1 || { echo "rofi not found"; exit 1; }
+command -v notify-send >/dev/null 2>&1 || { echo "notify-send not found, notifications disabled."; notify_send_missing=true; }
+
+declare -A menu
+for key in "${!options[@]}"; do
+  profile="${options[$key]##* }"
+  if [[ "$key" == " Cancel" ]] || powerprofilesctl list | grep -q "$profile"; then
+    menu["$key"]="${options[$key]}"
+  fi
+done
+
+selection="$(printf '%s\n' "${!menu[@]}" | sort | "$ROFI_CMD" "${ROFI_ARGS[@]}")"
+
+if [[ -n "$selection" && -n "${menu[$selection]}" ]]; then
+  ${menu[$selection]}
+  # Send notification except for Cancel
+  if [[ "$selection" != " Cancel" && -z "${notify_send_missing}" ]]; then
+    notify-send -i dialog-information "Power Profile Changed" "New profile: ${selection}"
+  fi
+fi
