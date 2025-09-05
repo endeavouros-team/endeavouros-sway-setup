@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+killall waybar
+$HOME/.config/sway/scripts/waybar_toggle
