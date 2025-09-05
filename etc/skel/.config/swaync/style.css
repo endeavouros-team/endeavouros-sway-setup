@@ -250,6 +250,7 @@
 
 .notification-group .notification-group-headers {
   /* Notification Group Headers */
+  font-size: 12px;
 }
 
 .notification-group .notification-group-headers .notification-group-icon {
