@@ -20,7 +20,8 @@ sway setup for EndeavourOS based on the [i3 setup](https://github.com/endeavouro
 ![screenshot](sway-eos.png)
 
 # Things mostly working now but some parts still need some fixes/setup:
-* workspace icons and how the act plus binding apps to them need some changes.
+* workspace handling is still strange i will need to set a general basic usable no clue ;)
+* keybindings are not generic too
 
 **open weather:**
 
