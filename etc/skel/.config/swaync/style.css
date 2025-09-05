@@ -14,6 +14,8 @@
   --notification-icon-size: 32px;
   --notification-app-icon-size: calc(var(--notification-icon-size) / 3);
   --notification-group-icon-size: 32px;
+  --font-size-body: 12px;
+  --font-size-summary: 14px;
 }
 
 .close-button {
