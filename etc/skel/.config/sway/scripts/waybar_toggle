@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 
-# hide and unhide waybar instances
-# by drastically killing and reanimate them
-
 STATEFILE="/tmp/waybar_toggle.state"
 
 if pgrep -x waybar > /dev/null; then
-    # Waybar runs = kill
+    # Waybar läuft → kill
     killall waybar
     echo "off" > "$STATEFILE"
 else
-    # Waybar does not run = start all instances
-    for cfg in ~/.config/waybar/config*.jsonc; do
-        # Derive style path by replacing "config" with "style" and ".jsonc" with ".css"
-        style="${cfg/config/style}"
-        style="${style%.jsonc}.css"
+    # Waybar läuft nicht → alle JSONC starten
+    for cfg in ~/.config/waybar/*.jsonc; do
+        # Nur existierende Dateien
+        [[ -f "$cfg" ]] || continue
+
+        # Basisname ohne Endung
+        base="${cfg%.jsonc}"
+        style="${base}.css"
 
         if [[ -f "$style" ]]; then
             waybar -c "$cfg" -s "$style" &
@@ -24,4 +24,5 @@ else
     done
     echo "on" > "$STATEFILE"
 fi
+
 
