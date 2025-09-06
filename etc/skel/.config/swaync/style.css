@@ -13,7 +13,7 @@
   --text-color-disabled: rgb(150, 150, 150);
   --notification-icon-size: 32px;
   --notification-app-icon-size: calc(var(--notification-icon-size) / 3);
-  --notification-group-icon-size: 32px;
+  --notification-group-icon-size: 24px;
   --font-size-body: 12px;
   --font-size-summary: 14px;
 }
@@ -75,8 +75,8 @@
 }
 
 .notification-row .notification-background .notification.critical {
-  /* Critical Priority Notification */
-  border: 1px solid #FFD700; /* Gelber Rahmen nur für critical */
+  /* Critical Priority Notification - yellow border */
+  border: 1px solid #FFD700;
 }
 
 .notification-row .notification-background .notification .notification-default-action {
@@ -234,11 +234,11 @@
 }
 
 .notification-group.normal {
-  /* Low Priority Group */
+  /* Normal Priority Group */
 }
 
 .notification-group.critical {
-  /* Low Priority Group */
+  /* Critical Priority Group */
 }
 
 .notification-group .notification-group-close-button .close-button {
@@ -252,16 +252,18 @@
 
 .notification-group .notification-group-headers {
   /* Notification Group Headers */
-  font-size: 12px;
+  font-size: 14px;
+}
+
+.notification-group .notification-group-headers .notification-group-header {
+  color: var(--text-color);
+  font-size: inherit; /* erbt von oben */
+  font-weight: 500;
 }
 
 .notification-group .notification-group-headers .notification-group-icon {
   color: var(--text-color);
   -gtk-icon-size: var(--notification-group-icon-size);
-}
-
-.notification-group .notification-group-headers .notification-group-header {
-  color: var(--text-color);
 }
 
 .notification-group .notification-group-buttons {
@@ -295,7 +297,7 @@
 }
 
 .control-center {
-  background: rgba(48, 24, 73, 0.8); /* #301849 mit 80% Deckkraft */
+  background: rgba(48, 24, 73, 0.8);
   color: var(--text-color);
   border-radius: 12px;
 }
@@ -423,7 +425,7 @@
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay > box > button {
-  /* Change player control buttons */
+  /* Player control buttons */
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay > box > button:hover {
@@ -431,11 +433,11 @@
 }
 
 .widget-mpris > box > button {
-  /* Change player side buttons */
+  /* Side player buttons */
 }
 
 .widget-mpris > box > button:disabled {
-  /* Change player side buttons insensitive */
+  /* Side player buttons insensitive */
 }
 
 /* Buttons widget */
@@ -566,4 +568,3 @@
 .button {
     font-size: 9px;
 }
-
