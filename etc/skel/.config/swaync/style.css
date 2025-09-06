@@ -4,9 +4,9 @@
   --noti-bg: 48, 24, 73;
   --noti-bg-alpha: 0.8;
   --noti-bg-darker: rgb(3, 2, 16c);
-  --noti-bg-hover: rgba(48, 24, 73, 0.85);  /* etwas heller + mehr Deckkraft */
-  --noti-bg-focus: rgba(48, 24, 73, 0.95);  /* noch kräftiger für Focus */
-  --bg-selected: #6c3bbf;                   /* ein leuchtender Violettton als "Highlight" */
+  --noti-bg-hover: rgba(48, 24, 73, 0.85);
+  --noti-bg-focus: rgba(48, 24, 73, 0.95);
+  --bg-selected: #6c3bbf;
   --noti-close-bg: rgb(78, 78, 78);
   --noti-close-bg: rgb(255, 127, 127);
   --noti-close-bg-hover: rgb(255, 153, 153);
@@ -41,7 +41,7 @@
 }
 
 .notification-icon {
-  margin-right: 12px; /* Abstand zum Text */
+  margin-right: 12px;
 }
 
 .notification-row {
