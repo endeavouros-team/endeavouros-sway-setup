@@ -24,7 +24,7 @@ nwg-displays
 nwg-look
 playerctl
 polkit-gnome
-rofi-wayland
+rofi
 scrot
 slurp
 swappy
