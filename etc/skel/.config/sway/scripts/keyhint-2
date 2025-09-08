@@ -1,3 +1,7 @@
+#!/bin/sh
+
+# keyhint rofi tool to search used keybindings in sway
+
 sway_CONFIG=$HOME/.config/sway/config
 mod_key=$(sed -nre 's/^set \$mod (.*)/\1/p' ${sway_CONFIG})
 grep "^bindsym" ${sway_CONFIG} \

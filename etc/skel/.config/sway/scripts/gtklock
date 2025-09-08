@@ -1,3 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# individual starter for gtklock using default EndeavourOS background
+# to be used in $HOME/.config/sway/config.d/autostart_applications
 
 gtklock -c ~/.config/gtklock/config.ini -s ~/.config/gtklock/style.css -b /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png -t "%H:%M:%S"

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Simple power-profiles-daemon switcher using rofi-wayland and static theme, with notification
+# Simple power-profiles-daemon switcher using rofi and static theme, with notification
 #
 # Copyright (C) 2025 Johannes Kamprad
 #

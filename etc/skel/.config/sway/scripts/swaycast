@@ -20,7 +20,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Author: Johannes Kamprad (joekamprad)
-#
+
 
 # needed packages: `sudo pacman -Syu --needed slurp wl-screenrec xdg-user-dirs`
 # wl-screenrec currently only in AUR will be added to EndeavourOS repo in case of release

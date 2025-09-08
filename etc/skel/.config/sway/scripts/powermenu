@@ -9,10 +9,11 @@
 
 # needs rofi config:
 # $HOME/.config/rofi/powermenu.rasi
+# set to be used on sway
 
 ROFI_THEME="${HOME}/.config/rofi/powermenu.rasi"
 # Define possible lock scripts/commands (edit this list as you like)
-LOCK_SCRIPTS=("swaylock" "swaylock-effects" "i3lock" "$HOME/.config/sway/scripts/gtklock")
+LOCK_SCRIPTS=("$HOME/.config/sway/scripts/gtklock" "swaylock" "swaylock-effects" "i3lock")
 
 # Find available lock script
 find_lock_script() {

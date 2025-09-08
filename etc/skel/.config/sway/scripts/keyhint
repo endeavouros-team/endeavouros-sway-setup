@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# simple yad gui to show default EndeavourOS sway keybindings
 
 Main() {
 
