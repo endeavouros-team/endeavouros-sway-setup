@@ -12,4 +12,5 @@ pacman -S --needed --noconfirm - < packages-repository.txt
 cd /
 rm -R endeavouros-sway-setup
 systemctl enable ly.service
+systemctl disable getty@tty2.service
 systemctl enable swayosd-libinput-backend.service
