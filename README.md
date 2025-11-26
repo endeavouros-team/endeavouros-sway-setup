@@ -26,7 +26,7 @@ sway setup for EndeavourOS based on the [i3 setup](https://github.com/endeavouro
 **open weather:**
 
 run `~/.config/sway/scripts/openweather -s` to create setup you will need:
-1. Fee API key from: https://openweathermap.org/api
+1. Free API key from: https://openweathermap.org/api
 2. city IDs from: https://openweathermap.org/find
 
 Open waybar config and enable weather module by removing the commenting // there:
