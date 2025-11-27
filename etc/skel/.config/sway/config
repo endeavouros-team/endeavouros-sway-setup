@@ -5,8 +5,10 @@ include $HOME/.config/sway/outputs
 # make sure it loads gtk configs
 exec_always $HOME/.config/sway/scripts/import-gsettings
 
-# setting mod variable to windows key
+### Cursor theme and size ###
+seat seat0 xcursor_theme Qogir-Dark 16
 
+# setting mod variable to windows key
 set $mod Mod4
 
 # focus_wrapping
