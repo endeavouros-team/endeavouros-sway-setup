@@ -3,6 +3,7 @@ autotiling
 awesome-terminal-fonts
 blueman
 bluetui
+brightnessctl
 dex
 engrampa
 fortune-mod
