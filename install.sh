@@ -11,7 +11,7 @@ sudo pacman -S --needed --noconfirm - < packages-repository.txt
 cd /
 rm -R endeavouros-sway-setup
 # start DM (ly)
-sudo systemctl enable ly.service
+systemctl enable ly@tty2.service
 # disable TTY2 to be free for ly
 sudo systemctl disable getty@tty2.service
 # needed for swayosd
