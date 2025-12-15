@@ -7,13 +7,13 @@ cp -R .config .local .icons $HOME/
 cp  .bashrc .gtkrc-2.0 packages-AUR.txt $HOME/
 # make scripts executable
 chmod -R +x $HOME/.config/sway/scripts
-pacman -S --needed --noconfirm - < packages-repository.txt 
+sudo pacman -S --needed --noconfirm - < packages-repository.txt 
 cd /
 rm -R endeavouros-sway-setup
 # start DM (ly)
-systemctl enable ly.service
+sudo systemctl enable ly.service
 # disable TTY2 to be free for ly
-systemctl disable getty@tty2.service
+sudo systemctl disable getty@tty2.service
 # needed for swayosd
-systemctl enable swayosd-libinput-backend.service
+sudo systemctl enable swayosd-libinput-backend.service
 echo "sway is now setup for your current user, you may reboot to login to sway"
