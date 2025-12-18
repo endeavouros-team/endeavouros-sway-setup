@@ -1,0 +1,215 @@
+# EndeavourOS sway custom keybindings
+# will get sourced into $HOME/.config/sway/config
+
+bindsym $mod+Return exec kitty
+
+# open Filemanager
+#bindsym $mod+t exec thunar
+
+# open browser
+bindsym $mod+w exec firefox
+
+## action starters:
+
+# Toggle border
+bindsym $mod+x border toggle
+
+# kill focused window
+bindsym F4 kill
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+#move floating window
+#floating_modifier Mod3
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout
+bindsym $mod+e layout toggle all
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+s focus child
+
+# switch to workspace
+bindsym $mod+1    workspace  $ws1
+bindsym $mod+2    workspace  $ws2
+bindsym $mod+3    workspace  $ws3
+bindsym $mod+4    workspace  $ws4
+bindsym $mod+5    workspace  $ws5
+
+# switch workspace with numpad
+bindcode $mod+87 workspace $ws1
+bindcode $mod+88 workspace $ws2
+bindcode $mod+89 workspace $ws3
+bindcode $mod+83 workspace $ws4
+bindcode $mod+84 workspace $ws5
+
+
+# move focused container to workspace
+bindsym $mod+Shift+1    move container to workspace  $ws1
+bindsym $mod+Shift+2    move container to workspace  $ws2
+bindsym $mod+Shift+3    move container to workspace  $ws3
+bindsym $mod+Shift+4    move container to workspace  $ws4
+bindsym $mod+Shift+5    move container to workspace  $ws5
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+    bindsym Left   resize shrink width  5 px or 5 ppt
+    bindsym Down   resize shrink height 5 px or 5 ppt
+    bindsym Up     resize grow height   5 px or 5 ppt
+    bindsym Right  resize grow width    5 px or 5 ppt
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+mode "mouse" {
+    # set your three speeds here
+
+    set $slow 1
+    set $quick 10
+    set $fast 50
+
+}
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+z move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+z scratchpad show
+
+
+# toggle window layouts
+bindsym $mod+n layout stacking
+bindsym $mod+m layout tabbed
+bindsym $mod+b layout default
+
+# rofi-wayland application menu
+
+bindsym $mod+d exec rofi -modi drun -show drun \
+                -config $HOME/.config/rofi/rofidmenu.rasi
+
+bindsym $mod+Shift+D exec rofi -show window \
+                -config $HOME/.config/rofi/rofidmenu.rasi
+
+bindsym F1 exec $HOME/.config/sway/scripts/keyhint-2
+
+# screenshot
+
+# take a screenshot of a selection:
+bindsym $mod+Print exec $HOME/.config/sway/scripts/swayshot -s
+
+# Shot of all screens in one pic after releasing print button:
+bindsym --release Print exec $HOME/.config/sway/scripts/swayshot -a
+
+# screencast
+
+# Start recording (select area)
+bindsym $mod+Shift+y exec $HOME/.config/sway/scripts/swaycast
+
+# Stop recording
+bindsym $mod+Shift+x exec $HOME/.config/sway/scripts/swaycast stop
+
+# switch output
+bindsym $mod+p exec $HOME/.config/sway/scripts/audio-device-switch
+
+# new empty workspace in addition to existing ones:
+bindsym $mod+Shift+n exec $HOME/.config/sway/scripts/new_workspace
+
+# screen lock
+bindsym $mod+l exec $HOME/.config/sway/scripts/gtklock_config
+
+# bars on and off
+bindsym F3 exec $HOME/.config/sway/scripts/waybar_toggle
+
+#extra keys:
+bindsym XF86Calculator exec galculator
+
+#exit-menu
+bindsym $mod+Shift+e exec $HOME/.config/sway/scripts/powermenu
+
+# restart sway inplace (preserves your layout/session, can be used to upgrade sway)
+bindsym $mod+Shift+r reload
+
+# audio keys
+
+# swayosd volume / brightness (https://github.com/ErikReider/SwayOSD)
+
+# Sink volume raise optionally with --device
+bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
+
+# Sink volume lower optionally with --device
+bindsym XF86AudioLowerVolume exec  swayosd-client --output-volume lower
+
+# Sink volume toggle mute
+bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
+
+# Source volume toggle mute
+bindsym XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
+
+# Volume raise with custom value
+#bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume 15
+# Volume lower with custom value
+#bindsym XF86AudioLowerVolume exec swayosd-client --output-volume -15
+
+# Volume raise with max value
+#bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise --max-volume 120
+# Volume lower with max value
+#bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower --max-volume 120
+
+# Sink volume raise with custom value optionally with --device
+# https://github.com/ErikReider/SwayOSD/tree/main?tab=readme-ov-file#notes-on-using---device
+#bindsym XF86AudioRaiseVolume exec  swayosd-client --output-volume +10 --device alsa_output.pci-0000_11_00.4.analog-stereo.monitor
+# Sink volume lower with custom value optionally with --device
+#bindsym XF86AudioLowerVolume exec  swayosd-client --output-volume -10 --device alsa_output.pci-0000_11_00.4.analog-stereo.monitor
+
+# Capslock (If you don't want to use the backend)
+#bindsym --release Caps_Lock exec swayosd-client --caps-lock
+# Capslock but specific LED name (/sys/class/leds/)
+#bindsym --release Caps_Lock exec swayosd-client --caps-lock-led input19::capslock
+
+# Brightness raise
+bindsym XF86MonBrightnessUp exec swayosd-client --brightness raise
+
+# Brightness lower
+bindsym XF86MonBrightnessDown exec swayosd-client --brightness lower
+
+# Brightness raise with custom value('+' sign needed)
+#bindsym XF86MonBrightnessUp  exec swayosd-client --brightness +10
+# Brightness lower with custom value('-' sign needed)
+#bindsym XF86MonBrightnessDown exec swayosd-client --brightness -10
+
+# Media player controls (playerctl)
+# https://github.com/altdesktop/playerctl
+bindsym XF86AudioPlay exec  --no-startup-id playerctl play-pause
+#bindsym XF86AudioPause exec  --no-startup-id playerctl pause
+bindsym XF86AudioNext exec  --no-startup-id playerctl next
+bindsym XF86AudioPrev exec  --no-startup-id playerctl previous
