@@ -8,7 +8,7 @@ here you have parts of the config named to fit what the yinclude, these will sou
 
 ## Firefox is autostarting at each login?
 
-Open `${HOME}/.config/sway/config.d/autostart_applications`
+Open `${HOME}/.config/sway/config.d/autostart`
 Add/remove `#` at the start of the line to disable/enable auto start at login:
 
  
@@ -35,7 +35,7 @@ needs to get implemented
 
 **[dex](https://man.archlinux.org/man/extra/dex/dex.1.en) is used to auto start applications on startup in sway.**
  
-Open `${HOME}/.config/sway/config.d/autostart_applications`
+Open `${HOME}/.config/sway/config.d/autostart`
   
 Add/remove `#` at the start of the line to disable/enable xdg auto start.
   
@@ -83,14 +83,6 @@ bindsym $mod+Shift+y exec $HOME/.config/sway/scripts/screencast-select
 # Stop recording
 bindsym $mod+Shift+x exec $HOME/.config/sway/scripts/screencast-select stop
 ```
-
-This will only work on real Hardware with a dedicated GPU.
-
-And you will need to install (build-->install) `wl-screenrec` from AUR:
-
-`yay -S wl-screenrec`
-
-This is needed to be able to use the tool. 
 
 It is taken from sway-tools:
 
