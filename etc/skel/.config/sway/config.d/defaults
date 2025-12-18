@@ -1,4 +1,6 @@
-##set floating (nontiling) for special apps
+# EndeavourOS sway default window handling
+
+# set floating (nontiling) for special apps
 # type: `app_id`
 # in a terminal and focus a window with your mouse to get the id of it
 
@@ -23,15 +25,15 @@ for_window [app_id="engrampa"] floating enable
 for_window [title="^Welcome v.*$"] floating enable
 
 
-## update notification
+# update notification
 for_window [title="eos-update-notifier: updates available!"] floating enable
 for_window [title="eos_yad_RunCmdTermBashOpt.*"] floating enable
 
-##fullscreen apps
-#for_window [app_id="Xxxx" instance="xxxx"] fullscreen enable
+# fullscreen apps
+# for_window [app_id="Xxxx" instance="xxxx"] fullscreen enable
 
 
-## Make all Thunar windows floating
+# Make all Thunar windows floating
 for_window [app_id="thunar"] floating enable
 # But exclude ones with "- Thunar" in the title
 for_window [app_id="thunar" title=".*- Thunar.*"] floating disable
@@ -39,4 +41,3 @@ for_window [app_id="thunar" title=".*- Thunar.*"] floating disable
 
 # telegram no round corners?
 for_window [app_id="org.telegram.desktop"] border pixel 1
-

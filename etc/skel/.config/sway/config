@@ -1,11 +1,29 @@
-# user config directory
+# EndeavourOS sway default config
+# will include all configs under $HOME/.config/sway/config.d/
+# Use the dropin configs there to change settings, these configs are there:
+# autostart - everything to be automatically started with the session
+# defaults - default window handling
+# input - input device configuration
+# keybindings - custom keybindings
+# workspaces - workspace handling
+
+# user scripts can be found under `$HOME/.config/sway/scripts/`
+# make sure marking them executable to be used in waybar or other tools
+# these are the pathes to default used tool setups:
+# $HOME/.config/gtklock
+# $HOME/.config/rofi
+# $HOME/.config/swaync
+# $HOME/.config/swayosd
+# $HOME/.config/waybar
+
+# Dropin directories directory (these will get sourced into this config
 include $HOME/.config/sway/config.d/*
 include $HOME/.config/sway/outputs
 
 # make sure it loads gtk configs
 exec_always $HOME/.config/sway/scripts/import-gsettings
 
-### Cursor theme and size ###
+# Cursor theme and size
 seat seat0 xcursor_theme Qogir-Dark 16
 
 # setting mod variable to windows key
@@ -16,21 +34,6 @@ focus_wrapping yes
 
 # round corners --> needs swayfx: `yay -S swayfx`
 #corner_radius 4
-
-#####################
-# workspace layout: #
-#####################
-
-# default tiling mode:
-workspace_layout default
-
-# stacking layout:
-# Each window will be fullscreen and tabbed top to bottom.
-#workspace_layout stacking
-
-# tabbed layout:
-# Each new window will open fullscreen as a tab (left to right)
-#workspace_layout tabbed
 
 # gaps:
 # Set inner/outer gaps
@@ -43,35 +46,6 @@ set $smart_borders off
 default_border pixel 1
 default_floating_border pixel 2
 
-# workspace naming
-set $ws1  
-set $ws2  
-set $ws3  
-set $ws4  
-set $ws5  
-set $ws6  
-set $ws7  
-set $ws8  
-set $ws9  
-set $ws10   
-
-#bind program to workspace
-# type: `app_id`
-# in a terminal and focus a window with your mouse to get the id of it
-assign [app_id="thunar"] $ws2
-assign [app_id="xed"] $ws5
-#assign [app_id="org.telegram.desktop"] $ws10
-assign [app_id="(?i)firefox"] $ws3
-#assign [app_id="thunderbird"] $ws4
-#assign [app_id="libreoffice-writer"] $ws5
-#assign [app_id="(?i)libreoffice"] $ws5
-#assign [app_id="(?i)libreoffice.*"] $ws5
-#assign [app_id="libreoffice"] $ws5
-#assign [app_id="gimp"] $ws7
-#assign [app_id="inkscape"] $ws7
-# window "title" works too:
-#assign [title="Oracle VirtualBox Manager"] $ws6
-
 # qt-app fix for title bar:
 for_window [app_id="^.*"] border pixel 1
 
@@ -81,61 +55,11 @@ hide_edge_borders both
 #popup_during_fullscreen leave_fullscreen
 #show_marks yes
 
-# small window for videos
-bindsym $mod+y fullscreen disable; floating enable; resize set 422 240; sticky enable; move position 870 25
-
-# Assume you are on workspace "1: www" and switch to "2: IM" using mod+2
-# because somebody sent you a message. You don’t need to remember
-# where you came from now, you can just press $mod+2 again to switch back to "1: www".
-set $workspace_auto_back_and_forth yes
-
 # turn on mouse following
 focus_follows_mouse no
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-
-#####################
-# keybindings part: #
-#####################
-
-# screenshot
-
-# take a screenshot of a selection:
-bindsym $mod+Print exec $HOME/.config/sway/scripts/swayshot -s
-
-# Shot of all screens in one pic after releasing print button:
-bindsym --release Print exec $HOME/.config/sway/scripts/swayshot -a
-
-
-# screencast
-
-# Start recording (select area)
-bindsym $mod+Shift+y exec $HOME/.config/sway/scripts/swaycast
-
-# Stop recording
-bindsym $mod+Shift+x exec $HOME/.config/sway/scripts/swaycast stop
-
-# switch output
-bindsym $mod+p exec $HOME/.config/sway/scripts/audio-device-switch
-
-# new empty workspace in addition to existing ones:
-bindsym $mod+Shift+n exec $HOME/.config/sway/scripts/new_workspace
-
-# screen lock
-bindsym $mod+l exec $HOME/.config/sway/scripts/gtklock_config
-
-# bars on and off
-bindsym F3 exec $HOME/.config/sway/scripts/waybar_toggle
-
-#extra keys:
-bindsym XF86Calculator exec galculator
-
-#exit-menu
-bindsym $mod+Shift+e exec $HOME/.config/sway/scripts/powermenu
-
-# restart sway inplace (preserves your layout/session, can be used to upgrade sway)
-bindsym $mod+Shift+r reload
 
 # configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
 
@@ -148,136 +72,10 @@ exec_always {
     export TERMINAL=kitty
 }
 
-bindsym $mod+Return exec kitty
-
-# open Filemanager
-#bindsym $mod+t exec thunar
-
-# open browser
-bindsym $mod+w exec firefox
-
-## action starters:
-
-# Toggle border
-bindsym $mod+x border toggle
-
-# kill focused window
-bindsym F4 kill
-
-# change focus
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
-#move floating window
-#floating_modifier Mod3
-
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen
-
-# change container layout
-bindsym $mod+e layout toggle all
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-bindsym $mod+d focus child
-
-
-# switch to workspace
-bindsym $mod+1    workspace  $ws1
-bindsym $mod+2    workspace  $ws2
-bindsym $mod+3    workspace  $ws3
-bindsym $mod+4    workspace  $ws4
-bindsym $mod+5    workspace  $ws5
-
-# switch workspace with numpad
-bindcode $mod+87 workspace $ws1
-bindcode $mod+88 workspace $ws2
-bindcode $mod+89 workspace $ws3
-bindcode $mod+83 workspace $ws4
-bindcode $mod+84 workspace $ws5
-
-
-# move focused container to workspace
-bindsym $mod+Shift+1    move container to workspace  $ws1
-bindsym $mod+Shift+2    move container to workspace  $ws2
-bindsym $mod+Shift+3    move container to workspace  $ws3
-bindsym $mod+Shift+4    move container to workspace  $ws4
-bindsym $mod+Shift+5    move container to workspace  $ws5
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-    bindsym Left   resize shrink width  5 px or 5 ppt
-    bindsym Down   resize shrink height 5 px or 5 ppt
-    bindsym Up     resize grow height   5 px or 5 ppt
-    bindsym Right  resize grow width    5 px or 5 ppt
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
-
-mode "mouse" {
-    # set your three speeds here
-
-    set $slow 1
-    set $quick 10
-    set $fast 50
-
-}
-
-# Make the currently focused window a scratchpad
-bindsym $mod+Shift+z move scratchpad
-
-# Show the first scratchpad window
-bindsym $mod+z scratchpad show
-
-
-# toggle window layouts
-bindsym $mod+n layout stacking
-bindsym $mod+m layout tabbed
-bindsym $mod+b layout default
-
-#################################
-# rofi-wayland application menu #
-#################################
-
-bindsym F9 exec rofi -modi drun -show drun \
-                -config $HOME/.config/rofi/rofidmenu.rasi 
-
-bindsym F10 exec rofi -show window \
-                -config $HOME/.config/rofi/rofidmenu.rasi
-
-bindsym F1 exec $HOME/.config/sway/scripts/keyhint-2
-
-
-#############
-# wallpaper #
-#############
+# wallpaper (static set)
 exec_always swaybg -i /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png -m fill
-
-
-
-
+# On multi display setup you can also set per display
+#exec_always swaybg \
+#  -o DP-3 -i /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png -m fill \
+#  -o DP-1 -i /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png -m fill
+# get your display names (DP-3 DP-1) with `swaymsg -t get_outputs`

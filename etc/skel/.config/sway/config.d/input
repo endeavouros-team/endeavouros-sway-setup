@@ -1,5 +1,5 @@
-### Input configuration
-#
+# EndeavourOS sway input device configuration
+
 # Read `man 5 sway-input` for more information about this section.
 
 # Enable numlock by default
@@ -9,4 +9,3 @@ input type:keyboard xkb_numlock enabled
 exec_always {
     'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
 }
-

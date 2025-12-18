@@ -1,11 +1,13 @@
+# EndeavourOS sway autostart configuration
+# everything to be automatically started with the session
+
+# Import DISPLAY, WAYLAND_DISPLAY, SWAYSOCK into user/systemd session
+# so GUI apps started via systemctl or DBus use the correct Wayland display.
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
-# dbus session?
-#exec dbus-run-session sway
-
-# Idle configuration
+# Enable swayidle to send idle hints (1 = active) for better idle handling
 exec swayidle idlehint 1
 
 # Sway Notification Center (swaync)
@@ -26,7 +28,7 @@ exec_always swayidle -w \
   before-sleep '$HOME/.config/sway/scripts/gtklock_config'
 
 # osd für volume (swayosd)
-exec swayosd-server -s ~/.config/swayosd/style.css 
+exec swayosd-server -s ~/.config/swayosd/style.css
 #On setups with multiple monitors, if you only want to show the osd on the focused monitor
 #swayosd-client --monitor "$(swaymsg -t get_outputs | jq -r '.[] | select(.focused == true).name')" --output-volume raise
 
@@ -40,27 +42,30 @@ exec waybar -c $HOME/.config/waybar/config.jsonc -s $HOME/.config/waybar/style.c
 # Autotiling
 exec autotiling
 
-# cliphist
+# Keep clipboard history updated for text and images
+# by watching the clipboard and storing changes in 'cliphist'.
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
-# autostart apps
+# autostarting apps (comment with # to stop autostarting)
 exec firefox https://codeberg.org/joekamprad/endeavouros-sway-setup/src/branch/main/force-knowledge.md
 #exec  sleep 5 && telegram-desktop
 
 exec sleep 3 && blueman-applet
 
-# tools/helper
+## tools/helper
 
-## keyhelper:
+# Start the Polkit authentication agent for GUI privilege prompts
+# so apps can request admin rights in the Sway session.
 exec  /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-##tools
+# saving a backup of installed packages as a list
 exec  sh ~/.config/sway/scripts/packagelist.sh
 
 # dex execute .desktop files
+# see here: https://man.archlinux.org/man/extra/dex/dex.1.en
 exec  dex --autostart --environment sway
 
-# osd für volume
+# osd (on screen display) für volume
 exec swayosd-server -s ~/.config/swayosd/style.css
 exec swayosd-client --monitor "$(swaymsg -t get_outputs | jq -r '.[] | select(.focused == true).name')" --output-volume raise
