@@ -6,6 +6,15 @@ cd endeavouros-sway-setup/etc/skel/
 cp -R .config .local .icons /home/$username/
 cp  .bashrc .gtkrc-2.0 packages-AUR.txt /home/$username/
 cp ../../force-knowledge.md "/home/$username/.config/sway/readme.md"
+git clone https://github.com/killajoe/sway_tools.git
+cp sway_tools/gracefully_exit/gracefully_exit /home/$username/.config/sway/scripts/
+cp sway_tools/new_workspace/new_workspace /home/$username/config/sway/scripts/
+cp sway_tools/powermenu/powermenu /home/$username/.config/sway/scripts/
+cp sway_tools/power_profiles_switcher/power_profiles_switcher /home/$username/.config/sway/scripts/
+cp sway_tools/swaycast/swaycast /home/$username/.config/sway/scripts/
+cp sway_tools/swayshot/swayshot /home/$username/.config/sway/scripts/
+cp sway_tools/waybar_toggle/waybar_toggle /home/$username/.config/sway/scripts/
+cp sway_tools/weather/openweather /home/$username/.config/sway/scripts/
 chown -R $username:$username /home/$username
 chmod -R +x /home/$username/.config/sway/scripts
 pacman -S --needed --noconfirm - < packages-repository.txt 
