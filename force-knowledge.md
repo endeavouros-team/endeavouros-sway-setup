@@ -4,7 +4,24 @@ The main configuration file for endeavouros-sway can be found at `"${HOME}"/.con
 
 `${HOME}/.config/sway/config.d/`
 
-here you have parts of the config named to fit what the yinclude, these will sourced into the main config file automatically. 
+here you have parts of the config named to fit what they include, these will sourced into the main config file automatically.
+
+* autostart - everything to be automatically started with the session
+* defaults - default window handling
+* input - input device configuration
+* workspaces - workspace handling
+* keybindings - custom keybindings
+
+User scripts can be found under `$HOME/.config/sway/scripts/`
+make sure marking them executable to be used in waybar or other tools
+
+Here are the pathes to default used tool setups:
+
+* $HOME/.config/gtklock
+* $HOME/.config/rofi
+* $HOME/.config/swaync
+* $HOME/.config/swayosd
+* $HOME/.config/waybar
 
 ## Firefox is autostarting at each login?
 
