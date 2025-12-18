@@ -44,6 +44,7 @@ ttf-jetbrains-mono-nerd
 tumbler
 unzip
 waybar
+wf-recorder
 wl-clipboard
 xdg-user-dirs
 xed
