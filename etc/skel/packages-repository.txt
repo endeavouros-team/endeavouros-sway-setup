@@ -4,6 +4,8 @@ awesome-terminal-fonts
 blueman
 bluetui
 brightnessctl
+cliphist
+nwg-clipman
 dex
 engrampa
 fortune-mod
