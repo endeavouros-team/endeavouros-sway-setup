@@ -1,2 +1,1 @@
-kvantum-theme-arc
-wl-screenrec
+kvantum-theme-arc-git
