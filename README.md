@@ -22,6 +22,11 @@ sway setup for EndeavourOS based on the [i3 setup](https://github.com/endeavouro
 # Things mostly working now but some parts still need some fixes/setup:
 * workspace handling is still strange i will need to set a general basic usable no clue ;)
 * keybindings are not generic too
+* missing option to be able to run in case Nvidia drivers are used
+* Ly latest changes made it not loading sway the first time starting it on fresh install, 
+  but works fine if you start sway once from command line..(error is "file not found") 
+  (If you switch to TTY4 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F4</kbd> 
+  login as you user and simpply type `sway` once... and reboot it will work fine over ly)
 
 **open weather:**
 
