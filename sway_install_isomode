@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 # Maintainer: joekamprad [joekamprad //a_t// endeavouros.com]
+# This is to be used inside EndeavourOS ISO livesession
+# Adding it as custom install-script to Welcome and it will install on target
+# make sure to choose No-Desktop option. 
+
 username="$1"
 git clone https://codeberg.org/joekamprad/endeavouros-sway-setup.git
 cd endeavouros-sway-setup/etc/skel/
