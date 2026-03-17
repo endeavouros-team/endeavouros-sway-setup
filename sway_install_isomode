@@ -15,7 +15,8 @@ cp sway_tools/new_workspace/new_workspace /home/$username/config/sway/scripts/
 # using gracefully powermenu needs gracefully_exit script
 cp sway_tools/powermenu/powermenu_gracefully /home/$username/.config/sway/scripts/powermenu
 cp sway_tools/gracefully_exit/gracefully_exit /home/$username/.config/sway/scripts/
-cp sway_tools/power_profiles_switcher/power_profiles_switcher /home/$username/.config/sway/scripts/
+cp sway_tools/power_profiles_switcher/power-profiles /home/$username/.config/sway/scripts/
+cp sway_tools/power_profiles_switcher/power-profiles.rasi /home/$username/.config/rofi/power-profiles.rasi
 cp sway_tools/swaycast/swaycast /home/$username/.config/sway/scripts/
 cp sway_tools/swayshot/swayshot /home/$username/.config/sway/scripts/
 cp sway_tools/waybar_toggle/waybar_toggle /home/$username/.config/sway/scripts/
