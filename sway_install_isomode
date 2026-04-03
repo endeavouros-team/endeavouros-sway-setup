@@ -67,7 +67,7 @@ for item in "${TOOLS[@]}"; do
 done
 
 # Copy Rofi theme for power profiles
-cp "$TOOLS_DIR/power_profiles_switcher/power-profile.rasi" "$USER_HOME/.config/rofi/"
+cp "$TOOLS_DIR/power_profiles_switcher/power-profiles.rasi" "$USER_HOME/.config/rofi/"
 
 # 5. Permissions and Executables
 echo ">> Setting permissions..."
