@@ -39,7 +39,7 @@ mkdir -p "$SCRIPT_DIR"
 echo ">> Deploying skel files..."
 cd "$REPO_DIR/etc/skel/"
 
-# Use -a (archive) to preserve attributes during copy
+# copy configs and files.
 cp -ar .config .local .icons "$USER_HOME/"
 cp .bashrc .gtkrc-2.0 packages-AUR.txt "$USER_HOME/"
 cp ../../force-knowledge.md "$USER_HOME/.config/sway/readme.md"
@@ -76,8 +76,8 @@ chmod -R +x "$SCRIPT_DIR"
 chown -R "$USER_NAME:$USER_NAME" "$USER_HOME"
 
 # 6. System Packages and Services
-echo ">> Installing packages and enabling services..."
-# Note: In ISO context, we don't need sudo as the installer runs as root
+echo ">> Installing packages and enable ly-login and swayosd-libinput service..."
+
 pacman -S --needed --noconfirm - < "$REPO_DIR/etc/skel/packages-repository.txt"
 
 systemctl enable ly@tty2.service
@@ -89,5 +89,5 @@ echo ">> Cleaning up..."
 rm -rf "$REPO_DIR" "$TOOLS_DIR"
 
 echo "-----------------------------------------------"
-echo "ISO Installation Step Complete for $USER_NAME"
+echo "Sway Installation Complete for $USER_NAME"
 echo "-----------------------------------------------"
