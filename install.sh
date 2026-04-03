@@ -61,7 +61,7 @@ TOOLS=(
     "new_workspace/new_workspace"
     "powermenu/powermenu_gracefully:powermenu"
     "gracefully_exit/gracefully_exit"
-    "power_profiles_switcher/power_profiles_switcher"
+    "power_profiles_switcher/power-profiles"
     "swaycast/swaycast"
     "swayshot/swayshot"
     "waybar_toggle/waybar_toggle"
@@ -71,10 +71,14 @@ TOOLS=(
 for item in "${TOOLS[@]}"; do
     src="${item%%:*}"
     dest="${item#*:}"
-    # If no custom destination name is provided, use the original filename
     [ "$dest" == "$src" ] && dest=$(basename "$src")
     cp "$TOOLS_DIR/$src" "$SCRIPT_DIR/$dest"
 done
+
+# NEW: Copy the Rofi theme for the power profiles switcher
+echo ">> Installing Rofi themes for tools..."
+mkdir -p "$HOME/.config/rofi"
+cp "$TOOLS_DIR/power_profiles_switcher/power-profile.rasi" "$HOME/.config/rofi/"
 
 # Make all scripts in the directory executable
 chmod -R +x "$SCRIPT_DIR"
