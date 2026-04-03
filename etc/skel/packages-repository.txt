@@ -26,6 +26,9 @@ libnotify
 ly
 mpv
 network-manager-applet
+noto-fonts
+noto-fonts-emoji
+ttf-noto-nerd
 nwg-displays
 nwg-look
 playerctl
