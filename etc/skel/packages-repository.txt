@@ -9,6 +9,7 @@ nwg-clipman
 dex
 engrampa
 fortune-mod
+fuzzel
 galculator
 grim
 gtklock
