@@ -1,1 +1,2 @@
+swayfx
 kvantum-theme-arc-git
