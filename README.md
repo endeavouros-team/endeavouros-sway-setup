@@ -1,6 +1,6 @@
 # EndeavourOS sway setup / dotfiles
 
-sway setup for EndeavourOS based on the [i3 setup](https://github.com/endeavouros-team/endeavouros-i3wm-setup)
+sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavouros-team/endeavouros-i3wm-setup)
 
 ![bash](sway-eos-bash.png)
 
@@ -16,17 +16,14 @@ sway setup for EndeavourOS based on the [i3 setup](https://github.com/endeavouro
 9. [bash](https://www.gnu.org/software/bash/bash.html) using a nice welcome message and fortune cookies enabled, plus history with up and down arrow buttons
 10. [gtklock](https://github.com/jovanlanik/gtklock) as lock screen
 11. [swayosd](https://github.com/ErikReider/SwayOSD) as OSD for volume brightness and others
+12. [kitty](https://sw.kovidgoyal.net/kitty/) as terminal [currently]
 
 ![screenshot](sway-eos.png)
 
-# Things mostly working now but some parts still need some fixes/setup:
-* workspace handling is still strange i will need to set a general basic usable no clue ;)
-* keybindings are not generic too
+# Things mostly working but some parts still need some fixes/setup:
+* workspace handling
+* keybindings are not generic
 * missing option to be able to run in case Nvidia drivers are used
-* Ly latest changes made it not loading sway the first time starting it on fresh install, 
-  but works fine if you start sway once from command line..(error is "file not found") 
-  (If you switch to TTY4 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F4</kbd> 
-  login as you user and simpply type `sway` once... and reboot it will work fine over ly)
 
 **open weather:**
 
