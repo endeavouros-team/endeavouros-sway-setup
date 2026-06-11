@@ -24,7 +24,8 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 * workspace handling
 * keybindings are not generic
 * missing option to be able to run in case Nvidia drivers are used
-* you want more fancy? install [swayfx](https://github.com/WillPower3309/swayfx) from AUR: `yay -S swayfx` and let it replace say package.
+* you want more fancy? install [swayfx](https://github.com/WillPower3309/swayfx) from AUR:
+  `yay -S swayfx` and let it replace sway package.
 
 **open weather:**
 
