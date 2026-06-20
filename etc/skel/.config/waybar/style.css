@@ -57,5 +57,7 @@ button:hover {
 
 #custom-notification {
   font-family: "NotoSansMono Nerd Font";
+  font-size: 12px;
+  padding: 0 10px;
 }
 
