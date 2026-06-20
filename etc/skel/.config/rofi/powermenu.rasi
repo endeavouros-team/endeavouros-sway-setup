@@ -1,8 +1,7 @@
 /*******************************************************
- * ROFI-wayland configs sway powermenu for EndeavourOS
- * Maintainer: joekamprad <joekamprad@endeavouros.com>
+ * ROFI-wayland configs sway keyhinter for EndeavourOS
+ * Maintainer: joekamprad <joekamprad //at// endeavouros //dot// com>
  *******************************************************/
-
 configuration {
     font:                           "Noto Sans Regular 10";
     show-icons:                     false;
@@ -12,7 +11,7 @@ configuration {
     fullscreen:                     false;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
-    monitor:                        "DP-3";
+    /*monitor:                        "DP-3";*/
 }
 
 
