@@ -1,6 +1,6 @@
 /*******************************************************
- * ROFI deep purple colors for EndeavourOS
- * Maintainer: joekamprad <joekamprad@endeavouros.com>
+ * ROFI-wayland configs for EndeavourOS
+ * Maintainer: joekamprad <joekamprad //at// endeavouros //dot// com>
  *******************************************************/
 * {
     selected-normal-foreground:  rgba ( 255, 127, 127, 100 % );
