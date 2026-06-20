@@ -5,10 +5,12 @@
 Main() {
 
     local command=(
-        yad --title="EndeavourOS sway-wm keybindings:" --no-buttons --geometry=400x345-15-400 --list
-        --column=key: --column=description: --column=command:
+        yad --title="EndeavourOS SWAY keybindings:" --no-buttons --geometry=400x300-15-400 --list
+        --column-align="lcc"
+        --header-align="ccc"
+        --column="key combination" --column="description" --column=""
         "ESC" "close this app" ""
-        "=" "modkey" "(set mod Mod4)"
+        "=" "set mod-key to the win-key" ""
         "+enter" "open a terminal" ""
         "+Shift+n" "new empty workspace" ""
         "+w" "open Browser" ""
