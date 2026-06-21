@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# used with: active window switcher
+# bindsym $mod+Shift+D exec rofi -show window \
+#                -config $HOME/.config/rofi/rofidmenu.rasi
+# inside keybindings
+
 # Define the lengths for each column
 ws_length=2
 app_id_length=14
