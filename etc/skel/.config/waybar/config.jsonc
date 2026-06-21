@@ -35,6 +35,7 @@
     "custom/ppd",
     "custom/separator",
     "custom/notification",
+    "custom/keyhint",
     "custom/separator",
     "clock",
     "custom/separator",
@@ -72,6 +73,13 @@
     "tooltip": false,
     "format": " GPU {}",
     "on-click": "kitty -e sh -c 'watch sensors'"
+  },
+
+    "custom/keyhint": {
+    "format": "",
+    "tooltip": "keybind helper",
+    "on-click": "~/.config/sway/scripts/keyhint",
+    "return-type": "text"
   },
 
   "custom/cputemp": {
