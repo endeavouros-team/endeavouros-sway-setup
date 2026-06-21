@@ -4,7 +4,7 @@
 bindsym $mod+Return exec kitty
 
 # open Filemanager
-bindsym $mod+n exec thunar
+bindsym $mod+Shift+t exec thunar
 
 # open browser
 bindsym $mod+w exec firefox
@@ -126,16 +126,16 @@ bindsym F1 exec $HOME/.config/sway/scripts/keyhint-2
 bindsym $mod+p exec $HOME/.config/sway/scripts/audio-device-switch
 
 # new empty workspace in addition to existing ones:
-bindsym $mod+Shift+n exec $HOME/.config/sway/scripts/new_workspace
+bindsym $mod+Shift+n exec sway-new-workspace
 
 # bars on and off
-bindsym F3 exec $HOME/.config/sway/scripts/waybar_toggle
+bindsym F3 exec waybar-toggle
 
 # screen lock
 bindsym $mod+l exec $HOME/.config/sway/scripts/gtklock_config
 
 #exit-menu
-bindsym $mod+Shift+e exec $HOME/.config/sway/scripts/powermenu
+bindsym $mod+Shift+e exec sway-powermenu
 
 # restart sway inplace (preserves your layout/session, can be used to upgrade sway)
 bindsym $mod+Shift+r reload
@@ -148,18 +148,18 @@ bindsym XF86Calculator exec galculator
 # screenshot
 
 # take a screenshot of a selection:
-bindsym $mod+Print exec $HOME/.config/sway/scripts/swayshot -s
+bindsym $mod+Print exec swayshot -s
 
 # Shot of all screens in one pic after releasing print button:
-bindsym --release Print exec $HOME/.config/sway/scripts/swayshot -a
+bindsym --release Print exec swayshot -a
 
 # screencast
 
 # Start recording (select area)
-bindsym $mod+Shift+y exec $HOME/.config/sway/scripts/swaycast
+bindsym $mod+Shift+y exec swaycast
 
 # Stop recording
-bindsym $mod+Shift+x exec $HOME/.config/sway/scripts/swaycast stop
+bindsym $mod+Shift+x exec swaycast stop
 
 ## audio keys
 

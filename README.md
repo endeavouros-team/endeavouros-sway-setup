@@ -1,4 +1,4 @@
-# EndeavourOS sway setup 
+# EndeavourOS sway setup / dotfiles
 
 sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavouros-team/endeavouros-i3wm-setup)
 
@@ -19,13 +19,6 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 12. [kitty](https://sw.kovidgoyal.net/kitty/) as terminal [currently]
 
 ![screenshot](sway-eos.png)
-
-# Things mostly working, some parts still need some fixes/setup:
-* workspace handling
-  
-~* keybindings are not generic~
-
-~* missing option to be able to run in case Nvidia drivers are used~
 
 ## you want more fancy? 
 

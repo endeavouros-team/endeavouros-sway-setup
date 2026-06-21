@@ -35,9 +35,11 @@
     "tray",
     "custom/separator",
     "custom/ppd",
+    "custom/separator",
     "custom/reload",
     "custom/separator",
     "custom/notification",
+    "custom/separator",
     "custom/keyhint",
     "custom/separator",
     "clock",
@@ -79,7 +81,7 @@
   },
 
   "custom/keyhint": {
-    "format": "",
+    "format": "  ",
     "tooltip": "keybind helper",
     "on-click": "~/.config/sway/scripts/keyhint",
     "return-type": "text"
@@ -135,7 +137,7 @@
   },
 
   "custom/reload": {
-    "format": "󰑐",
+    "format": "󰑐 ",
     "tooltip": true,
     "tooltip-format": "Click to reload Waybar",
     "on-click": "~/.config/sway/scripts/waybar_toggle && sleep 0.1 && ~/.config/sway/scripts/waybar_toggle"

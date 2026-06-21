@@ -1,6 +1,7 @@
-# Check if the shell is interactive
-if [[ $- == *i* ]]; then
+# /etc/bash.bashrc.d/eos-sway-bash-config.bash
+# Global interactive shell configuration for EndeavourOS Sway environment
 
+if [[ $- == *i* ]]; then
     # Readline bindings for history search via arrow keys
     bind '"\e[A":history-search-backward'
     bind '"\e[B":history-search-forward'
@@ -21,11 +22,10 @@ if [[ $- == *i* ]]; then
     echo -e "▶  \c "
     uname -r
     echo -e " "
-    echo -e "🥠"
 
-    # Execute fortune if binary is available to prevent command not found errors
     if command -v fortune >/dev/null 2>&1; then
+        echo -e "🥠"
         fortune
+        echo -e " "
     fi
-    echo -e " "
 fi

@@ -16,6 +16,9 @@
 # $HOME/.config/swayosd
 # $HOME/.config/waybar
 
+# setting mod variable to windows key
+set $mod Mod4
+
 # Dropin directories directory (these will get sourced into this config
 include $HOME/.config/sway/config.d/*
 include $HOME/.config/sway/outputs
@@ -31,11 +34,11 @@ exec_always $HOME/.config/sway/scripts/import-gsettings
 # Cursor theme and size
 seat seat0 xcursor_theme Qogir-Dark 16
 
-# setting mod variable to windows key
-set $mod Mod4
-
 # focus_wrapping
 focus_wrapping yes
+
+# focus new windows
+focus_on_window_activation focus
 
 # round corners --> needs swayfx: `yay -S swayfx`
 #corner_radius 4

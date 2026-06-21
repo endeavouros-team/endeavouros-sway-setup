@@ -31,7 +31,7 @@ Add/remove `#` at the start of the line to disable/enable auto start at login:
  
 ```
 # autostart apps
-exec firefox https://codeberg.org/joekamprad/endeavouros-sway-setup/src/branch/main/force-knowledge.md
+exec firefox https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/force-knowledge.md
 #exec  sleep 5 && telegram-desktop
 ```
 
@@ -39,7 +39,7 @@ After (changed setting, firefox will not auto start at login)
 
 ```
 # autostart apps
-#exec firefox https://codeberg.org/joekamprad/endeavouros-sway-setup/src/branch/main/force-knowledge.md
+#exec firefox https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/force-knowledge.md
 #exec  sleep 5 && telegram-desktop
 ```
 
@@ -95,26 +95,29 @@ You can see // is the commenting sign for disable modules:
 
 ```
 # Start recording (select area)
-bindsym $mod+Shift+y exec $HOME/.config/sway/scripts/screencast-select
+bindsym $mod+Shift+y exec screencast-select
 
 # Stop recording
-bindsym $mod+Shift+x exec $HOME/.config/sway/scripts/screencast-select stop
+bindsym $mod+Shift+x exec screencast-select stop
 ```
 
 It is taken from sway-tools:
 
-https://github.com/killajoe/sway_tools/tree/main
+https://github.com/killajoe/sway_tools
+
+In case you want to modify one or the other of the sway_tools scripts you can copy them to users path:
+`cp /usr/bin/sway-powermenu ~/.local/usr/bin/` and edit from there.
  
 
 ## Reset Configuration
 
 
-The default configuration file for endeavouros-sway can be found [here:](https://codeberg.org/joekamprad/endeavouros-sway-setup/raw/branch/main/etc/skel/.config/sway/config).
+The default configuration file for endeavouros-sway can be found [here:](https://raw.githubusercontent.com/endeavouros-team/endeavouros-sway-setup/refs/heads/main/skel/.config/sway/config).
 
 To replace your current configuration with the default of endeavouros-sway run the following command. This will also make a backup of your current configuration at `"${HOME}"/.config/sway/config.1`
 
 ```
-wget --backups=1 https://codeberg.org/joekamprad/endeavouros-sway-setup/raw/branch/main/etc/skel/.config/sway/config -P "${HOME}"/.config/sway/
+wget --backups=1 https://raw.githubusercontent.com/endeavouros-team/endeavouros-sway-setup/refs/heads/main/skel/.config/sway/config -P "${HOME}"/.config/sway/
 ```
 
 ## Help

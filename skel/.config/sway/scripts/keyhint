@@ -7,7 +7,7 @@
 Main() {
 
     local command=(
-        yad --title="EndeavourOS SWAY keybindings:" --no-buttons --geometry=500x325-20-400 --list
+        yad --title="EndeavourOS SWAY keybindings:" --no-buttons --geometry=500x350-20-400 --list
         --column-align="lcc"
         --header-align="ccc"
         --column="key combination" --column="description" --column=""
@@ -18,7 +18,7 @@ Main() {
         "+Shift+n" "new empty workspace" ""
         "+Shift+e" "logout menu" ""
         "+w" "open Browser" ""
-        "+n" "open Filebrowser" ""
+        "+Shift+n" "open Filebrowser" ""
         "+d" "app menu" ""
         "+q" "close focused app" ""
         "󰐪-key" "screenshot" ""

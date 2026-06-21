@@ -1,6 +1,5 @@
 arc-gtk-theme-eos
 autotiling
-awesome-terminal-fonts
 blueman
 bluetui
 brightnessctl
@@ -23,7 +22,6 @@ gvfs-nfs
 inotify-tools
 jq
 kitty
-kvantum
 libnotify
 mpv
 network-manager-applet
@@ -49,7 +47,7 @@ thunar-media-tags-plugin
 thunar-shares-plugin
 thunar-vcs-plugin
 thunar-volman
-ttf-jetbrains-mono-nerd
+ttf-nerd-fonts-symbols
 ttf-noto-nerd
 tumbler
 unzip
