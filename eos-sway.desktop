@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Sway (EndeavourOS)
+Comment=Sway a nice Wayland compositor
+Exec=eos-sway-wrapper
+Type=Application
+DesktopNames=sway;wlroots;swayfx
