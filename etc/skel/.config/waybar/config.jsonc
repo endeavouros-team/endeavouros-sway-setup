@@ -35,6 +35,7 @@
     "tray",
     "custom/separator",
     "custom/ppd",
+    "custom/reload"
     "custom/separator",
     "custom/notification",
     "custom/keyhint",
@@ -130,10 +131,16 @@
     "format-plugged": "{icon} {capacity}% ",
     "format-full": "{icon} {capacity}% ",
     "format-icons": ["", "", "", "", ""],
-    "on-click": "~/.config/sway/scripts/waybar_toggle && ~/.config/sway/scripts/waybar_toggle",
-    "tooltip-format": "{}\nClick to reload Waybar"
+    "tooltip-format": "{time}" 
   },
 
+"custom/reload": {
+    "format": "󰑐",
+    "tooltip": true,
+    "tooltip-format": "Click to reload Waybar",
+    "on-click": "~/.config/sway/scripts/waybar_toggle && sleep 0.1 && ~/.config/sway/scripts/waybar_toggle"
+}
+  
   "custom/net": {
     "exec": "~/.config/sway/scripts/bandwidth2",
     "interval": 5,
