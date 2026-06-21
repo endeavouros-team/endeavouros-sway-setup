@@ -11,6 +11,7 @@ engrampa
 fortune-mod
 fuzzel
 galculator
+greetd
 grim
 gtklock
 gvfs
@@ -24,12 +25,12 @@ jq
 kitty
 kvantum
 libnotify
-ly
 mpv
 network-manager-applet
 noto-fonts
 noto-fonts-emoji
 ttf-noto-nerd
+tuigreet
 nwg-displays
 nwg-look
 playerctl

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 # Maintainer: joekamprad
 # Description: Set up Sway on a base EndeavourOS install (should work on most arch-based)
 # backing up under backup_old_configs_$DATE
@@ -44,13 +45,13 @@ mkdir -p "$HOME/.local"
 mkdir -p "$HOME/.icons"
 
 # Copying contents to preserve existing non-conflicting files
-cp -R "$REPO_DIR"/etc/skel/.config/* "$HOME/.config/"
-cp -R "$REPO_DIR"/etc/skel/.local/* "$HOME/.local/"
-cp -R "$REPO_DIR"/etc/skel/.icons/* "$HOME/.icons/"
-cp "$REPO_DIR"/etc/skel/.bashrc "$HOME/"
+cp -R "$REPO_DIR"/skel/.config/* "$HOME/.config/"
+cp -R "$REPO_DIR"/skel/.local/* "$HOME/.local/"
+cp -R "$REPO_DIR"/skel/.icons/* "$HOME/.icons/"
+cp "$REPO_DIR"/skel/.bashrc "$HOME/"
 # Handle .gtkrc-2.0 gracefully as it might not always be present
-cp "$REPO_DIR"/etc/skel/.gtkrc-2.0 "$HOME/" 2>/dev/null || true
-cp "$REPO_DIR"/etc/skel/packages-AUR.txt "$HOME/"
+cp "$REPO_DIR"/skel/.gtkrc-2.0 "$HOME/" 2>/dev/null || true
+cp "$REPO_DIR"/skel/packages-AUR.txt "$HOME/"
 
 # 4. Set up Sway Tools
 echo ">> Installing Sway helper scripts..."
