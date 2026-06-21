@@ -68,13 +68,17 @@
   background: rgba(var(--noti-bg), var(--noti-bg-alpha));
 }
 
+/* Low Priority Notification */
+/*
 .notification-row .notification-background .notification.low {
-  /* Low Priority Notification */
 }
+*/
 
+/* Normal Priority Notification */
+/*
 .notification-row .notification-background .notification.normal {
-  /* Normal Priority Notification */
 }
+*/
 
 .notification-row .notification-background .notification.critical {
   /* Critical Priority Notification - yellow border */
@@ -231,17 +235,23 @@
   background: var(--noti-bg-focus);
 }
 
+/* Low Priority Group */
+/*
 .notification-group.low {
-  /* Low Priority Group */
 }
+*/
 
+/* Low Priority Group */
+/*
 .notification-group.normal {
-  /* Normal Priority Group */
 }
+*/
 
+/* Low Priority Group */
+/*
 .notification-group.critical {
-  /* Critical Priority Group */
 }
+*/
 
 .notification-group .notification-group-close-button .close-button {
   margin: 12px 20px;
@@ -268,13 +278,17 @@
   -gtk-icon-size: var(--notification-group-icon-size);
 }
 
+/* Low Priority Group */
+/*
 .notification-group .notification-group-buttons {
-  /* Notification Group Buttons */
 }
+*/
 
+/* When another group is expanded, lower the opacity of the collapsed ones */
+/*
 .notification-group.collapsed {
-  /* When another group is expanded, lower the opacity of the collapsed ones */
 }
+*/
 
 .notification-group.collapsed.not-expanded {
   opacity: 0.4;
@@ -284,10 +298,12 @@
   background-color: rgba(var(--noti-bg), 1);
 }
 
-.notification-group.collapsed .notification-row:not(:last-child) {
   /* Top notification in stack */
   /* Set lower stacked notifications opacity to 0 */
+  /*
+.notification-group.collapsed .notification-row:not(:last-child) {
 }
+*/
 
 .notification-group.collapsed .notification-row:not(:last-child) .notification-action,
 .notification-group.collapsed .notification-row:not(:last-child) .notification-default-action {
@@ -426,21 +442,27 @@
   font-size: 1.1rem;
 }
 
+/* Player control buttons */
+/*
 .widget-mpris .widget-mpris-player .mpris-overlay > box > button {
-  /* Player control buttons */
 }
+*/
 
 .widget-mpris .widget-mpris-player .mpris-overlay > box > button:hover {
   background-color: var(--mpris-button-hover);
 }
 
+/* Side player buttons */
+/*
 .widget-mpris > box > button {
-  /* Side player buttons */
 }
+*/
 
+/* Side player buttons */
+/*
 .widget-mpris > box > button:disabled {
-  /* Side player buttons insensitive */
 }
+*/
 
 /* Buttons widget */
 .widget-buttons-grid {
@@ -453,13 +475,17 @@
   border-radius: 12px;
 }
 
+/* Side player buttons */
+/*
 .widget-buttons-grid flowboxchild > button.toggle:checked {
-  /* style given to the active toggle button */
 }
+*/
 
 /* Menubar widget */
+/*
 .widget-menubar {
-  /* The revealer buttons */
+*/
+/* The revealer buttons */
   /* .AnyName { Name defined in config after #
     background-color: rgba(var(--noti-bg), 1.0);
     padding: 8px;
@@ -475,13 +501,17 @@
   .AnyName>button:hover {
     background-color: var(--noti-bg-hover);
   } */
+/*
 }
+*/
 
-.widget-menubar > .menu-button-bar {
   /* The left button container */
   /* The right button container */
   /* The left and right button container */
+/*
+.widget-menubar > .menu-button-bar {
 }
+*/
 
 .widget-menubar > .menu-button-bar > .start {
   margin-left: 8px;

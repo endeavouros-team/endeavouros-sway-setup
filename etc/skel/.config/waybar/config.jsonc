@@ -35,7 +35,7 @@
     "tray",
     "custom/separator",
     "custom/ppd",
-    "custom/reload"
+    "custom/reload",
     "custom/separator",
     "custom/notification",
     "custom/keyhint",
@@ -134,12 +134,12 @@
     "tooltip-format": "{time}" 
   },
 
-"custom/reload": {
+  "custom/reload": {
     "format": "󰑐",
     "tooltip": true,
     "tooltip-format": "Click to reload Waybar",
     "on-click": "~/.config/sway/scripts/waybar_toggle && sleep 0.1 && ~/.config/sway/scripts/waybar_toggle"
-}
+  },
   
   "custom/net": {
     "exec": "~/.config/sway/scripts/bandwidth2",
