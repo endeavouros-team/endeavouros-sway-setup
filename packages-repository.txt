@@ -5,13 +5,13 @@ blueman
 bluetui
 brightnessctl
 cliphist
-nwg-clipman
 dex
 engrampa
 fortune-mod
 fuzzel
 galculator
 greetd
+greetd-tuigreet
 grim
 gtklock
 gvfs
@@ -29,8 +29,7 @@ mpv
 network-manager-applet
 noto-fonts
 noto-fonts-emoji
-ttf-noto-nerd
-tuigreet
+nwg-clipman
 nwg-displays
 nwg-look
 playerctl
@@ -51,6 +50,7 @@ thunar-shares-plugin
 thunar-vcs-plugin
 thunar-volman
 ttf-jetbrains-mono-nerd
+ttf-noto-nerd
 tumbler
 unzip
 waybar
