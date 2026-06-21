@@ -22,7 +22,9 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 
 # Things mostly working, some parts still need some fixes/setup:
 * workspace handling
+  
 ~* keybindings are not generic~
+
 ~* missing option to be able to run in case Nvidia drivers are used~
 
 ## you want more fancy? 
