@@ -16,6 +16,15 @@
 # $HOME/.config/swayosd
 # $HOME/.config/waybar
 
+# Dropin directories directory (these will get sourced into this config
+include $HOME/.config/sway/config.d/*
+include $HOME/.config/sway/outputs
+
+# Import environment and signal graphical session startup to systemd
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway XDG_RUNTIME_DIR && \
+     systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_RUNTIME_DIR && \
+     systemctl --user start sway-session.target
+
 # make sure it loads gtk configs
 exec_always $HOME/.config/sway/scripts/import-gsettings
 
@@ -24,10 +33,6 @@ seat seat0 xcursor_theme Qogir-Dark 16
 
 # setting mod variable to windows key
 set $mod Mod4
-
-# Dropin directories directory (these will get sourced into this config
-include $HOME/.config/sway/config.d/*
-include $HOME/.config/sway/outputs
 
 # focus_wrapping
 focus_wrapping yes
@@ -74,6 +79,7 @@ exec_always {
 
 # wallpaper (static set)
 exec_always swaybg -i /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png -m fill
+
 # On multi display setup you can also set per display
 #exec_always swaybg \
 #  -o DP-3 -i /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png -m fill \
