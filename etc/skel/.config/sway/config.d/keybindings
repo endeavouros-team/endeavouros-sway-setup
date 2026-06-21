@@ -4,18 +4,18 @@
 bindsym $mod+Return exec kitty
 
 # open Filemanager
-#bindsym $mod+t exec thunar
+bindsym $mod+n exec thunar
 
 # open browser
 bindsym $mod+w exec firefox
 
-## action starters:
+## actions:
 
 # Toggle border
 bindsym $mod+x border toggle
 
 # kill focused window
-bindsym F4 kill
+bindsym $mod+q kill
 
 # change focus
 bindsym $mod+Left focus left
@@ -112,18 +112,38 @@ bindsym $mod+n layout stacking
 bindsym $mod+m layout tabbed
 bindsym $mod+b layout default
 
-## rofi-wayland menues
+# rofi-wayland application menu
 
-# app launcher
 bindsym $mod+d exec rofi -modi drun -show drun \
                 -config $HOME/.config/rofi/rofidmenu.rasi
-                
-# active window switcher
+
 bindsym $mod+Shift+D exec rofi -show window \
                 -config $HOME/.config/rofi/rofidmenu.rasi
-                
-# active keyhint finder
+
 bindsym F1 exec $HOME/.config/sway/scripts/keyhint-2
+
+# switch output
+bindsym $mod+p exec $HOME/.config/sway/scripts/audio-device-switch
+
+# new empty workspace in addition to existing ones:
+bindsym $mod+Shift+n exec $HOME/.config/sway/scripts/new_workspace
+
+# bars on and off
+bindsym F3 exec $HOME/.config/sway/scripts/waybar_toggle
+
+# screen lock
+bindsym $mod+l exec $HOME/.config/sway/scripts/gtklock_config
+
+#exit-menu
+bindsym $mod+Shift+e exec $HOME/.config/sway/scripts/powermenu
+
+# restart sway inplace (preserves your layout/session, can be used to upgrade sway)
+bindsym $mod+Shift+r reload
+
+#extra keys:
+
+#calculator
+bindsym XF86Calculator exec galculator
 
 # screenshot
 
@@ -141,28 +161,7 @@ bindsym $mod+Shift+y exec $HOME/.config/sway/scripts/swaycast
 # Stop recording
 bindsym $mod+Shift+x exec $HOME/.config/sway/scripts/swaycast stop
 
-# switch output
-bindsym $mod+p exec $HOME/.config/sway/scripts/audio-device-switch
-
-# new empty workspace in addition to existing ones:
-bindsym $mod+Shift+n exec $HOME/.config/sway/scripts/new_workspace
-
-# screen lock
-bindsym $mod+l exec $HOME/.config/sway/scripts/gtklock_config
-
-# bars on and off
-bindsym F3 exec $HOME/.config/sway/scripts/waybar_toggle
-
-#extra keys:
-bindsym XF86Calculator exec galculator
-
-#exit-menu
-bindsym $mod+Shift+e exec $HOME/.config/sway/scripts/powermenu
-
-# restart sway inplace (preserves your layout/session, can be used to upgrade sway)
-bindsym $mod+Shift+r reload
-
-# audio keys
+## audio keys
 
 # swayosd volume / brightness (https://github.com/ErikReider/SwayOSD)
 
