@@ -1,4 +1,4 @@
-# EndeavourOS sway setup / dotfiles
+# EndeavourOS sway setup 
 
 sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavouros-team/endeavouros-i3wm-setup)
 
