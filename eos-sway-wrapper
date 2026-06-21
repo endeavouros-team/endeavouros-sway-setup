@@ -1,0 +1,17 @@
+#!/bin/sh
+# /usr/bin/eos-sway-wrapper
+# autofix sway session start if on Nvidia
+
+# Check if the NVIDIA kernel module is loaded
+if [ -d /sys/module/nvidia ]; then
+    # Set NVIDIA specific environment variables
+    export WLR_NO_HARDWARE_CURSORS=1
+    export GBM_BACKEND=nvidia-drm
+    export __GLX_VENDOR_LIBRARY_NAME=nvidia
+    
+    # Launch Sway with the unsupported GPU flag
+    exec sway --unsupported-gpu "$@"
+else
+    # Launch Sway normally for AMD / Intel / Nouveau
+    exec sway "$@"
+fi
