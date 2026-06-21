@@ -79,7 +79,7 @@ chown -R "$USER_NAME:$USER_NAME" "$USER_HOME"
 # 6. System Packages and Services
 echo ">> Installing packages and enable ly-login and swayosd-libinput service..."
 
-pacman -S --needed --noconfirm - < "$REPO_DIR/etc/skel/packages-repository.txt"
+pacman -S --needed --noconfirm - < "$REPO_DIR/packages-repository.txt"
 
 systemctl enable ly@tty2.service
 systemctl disable getty@tty2.service

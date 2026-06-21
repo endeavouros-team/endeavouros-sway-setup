@@ -86,7 +86,7 @@ chmod -R +x "$SCRIPT_DIR"
 
 # 5. System Packages and Services
 echo ">> Installing system dependencies (sudo required)..."
-sudo pacman -S --needed --noconfirm - < "$REPO_DIR/etc/skel/packages-repository.txt"
+sudo pacman -S --needed --noconfirm - < "$REPO_DIR/packages-repository.txt"
 
 echo ">> Enabling LY login Manager service..."
 sudo systemctl enable ly@tty2.service
