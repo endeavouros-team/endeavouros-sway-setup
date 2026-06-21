@@ -1,4 +1,4 @@
-# EndeavourOS sway setup / dotfiles
+# EndeavourOS Sway setup
 
 sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavouros-team/endeavouros-i3wm-setup)
 
@@ -20,7 +20,7 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 
 ![screenshot](sway-eos.png)
 
-## you want more fancy? 
+## you want more fancy?
 
 install [swayfx](https://github.com/WillPower3309/swayfx) from AUR:
 `yay -S swayfx` and let it replace sway package.
@@ -40,7 +40,4 @@ Open waybar config and enable weather module by removing the commenting // there
     // "custom/weather"
     "custom/separator"
   ],
-``` 
-
-
-
+```
