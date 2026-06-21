@@ -1,25 +1,29 @@
 #!/usr/bin/env bash
 
 # simple yad gui to show default EndeavourOS sway keybindings
+# used with the keyboard symbol click from panel
+# in addition you have interactive keybind searcher with F1 key
 
 Main() {
 
     local command=(
-        yad --title="EndeavourOS SWAY keybindings:" --no-buttons --geometry=400x300-15-400 --list
+        yad --title="EndeavourOS SWAY keybindings:" --no-buttons --geometry=500x320-20-400 --list
         --column-align="lcc"
         --header-align="ccc"
         --column="key combination" --column="description" --column=""
         "ESC" "close this app" ""
-        "=" "set mod-key to the win-key" ""
+        "F1" "open keybinding helper" ""
+        "=" "mod-key is set to the win-key" ""
         "+enter" "open a terminal" ""
         "+Shift+n" "new empty workspace" ""
+        "+Shift+e" "logout menu" ""
         "+w" "open Browser" ""
         "+n" "open Filebrowser" ""
         "+d" "app menu" ""
         "+q" "close focused app" ""
-        "Print-key" "screenshot" ""
-        "+Shift+e" "logout menu" ""
-        "F1" "open keybinding helper" ""
+        "󰐪-key" "screenshot" ""
+        "+Shift+y" "start screencast of a selectable area" ""
+        "+Shift+x" "stop screencast" "󰕨"
     )
 
     "${command[@]}"
