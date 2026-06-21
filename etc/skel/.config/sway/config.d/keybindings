@@ -112,14 +112,17 @@ bindsym $mod+n layout stacking
 bindsym $mod+m layout tabbed
 bindsym $mod+b layout default
 
-# rofi-wayland application menu
+## rofi-wayland menues
 
+# app launcher
 bindsym $mod+d exec rofi -modi drun -show drun \
                 -config $HOME/.config/rofi/rofidmenu.rasi
-
+                
+# active window switcher
 bindsym $mod+Shift+D exec rofi -show window \
                 -config $HOME/.config/rofi/rofidmenu.rasi
-
+                
+# active keyhint finder
 bindsym F1 exec $HOME/.config/sway/scripts/keyhint-2
 
 # screenshot
