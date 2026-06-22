@@ -20,14 +20,8 @@ for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="galculator"] floating enable
 for_window [app_id="Galculator"] floating enable
 for_window [title="Warning"] floating enable
-for_window [title="Configure eos-update-notifier"] floating enable
 for_window [app_id="engrampa"] floating enable
 for_window [title="^Welcome v.*$"] floating enable
-
-
-# update notification
-for_window [title="eos-update-notifier: updates available!"] floating enable
-for_window [title="eos_yad_RunCmdTermBashOpt.*"] floating enable
 
 # fullscreen apps
 # for_window [app_id="Xxxx" instance="xxxx"] fullscreen enable

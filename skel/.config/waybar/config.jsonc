@@ -67,7 +67,7 @@
   "custom/power-menu": {
     "format": "⏻",
     "tooltip": "Power Menu",
-    "on-click": "~/.config/sway/scripts/powermenu",
+    "on-click": "sway-gracefully-exit",
     "return-type": "text"
   },
 
@@ -140,7 +140,7 @@
     "format": "󰑐 ",
     "tooltip": true,
     "tooltip-format": "Click to reload Waybar",
-    "on-click": "~/.config/sway/scripts/waybar_toggle && sleep 0.1 && ~/.config/sway/scripts/waybar_toggle"
+    "on-click": "waybar-toggle && sleep 0.1 && waybar-toggle"
   },
   
   "custom/net": {
@@ -168,7 +168,7 @@
   },
 
   "custom/weather": {
-    "exec": "~/.config/sway/scripts/openweather",
+    "exec": "sway-openweather",
     "interval": 1800,
     "return-type": "text",
     "tooltip": false,
@@ -185,7 +185,7 @@
     "format": " ",
     "tooltip": true,
     "tooltip-format": "click to view/set power profile",
-    "on-click": "exec ~/.config/sway/scripts/power-profiles"
+    "on-click": "sway-power-profiles"
   },
 
   "custom/notification": {

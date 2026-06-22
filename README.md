@@ -6,7 +6,7 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 
 # includes:
 1. [waybar](https://github.com/Alexays/Waybar) with tray, powermenu, systemmonitors, worksapce buttons and audio control
-2. [rofi](https://github.com/davatorium/rofi) for menues (Application menu and others)
+2. [rofi-wayland](https://github.com/lbonn/rofi) for menues (Application menu and others)
 3. [swaync](https://github.com/ErikReider/SwayNotificationCenter) notification, including swaync center for easy access to old notifications.
 4. [sway tools](https://github.com/killajoe/sway_tools/tree/main)
 5. [greetd](https://git.sr.ht/~kennylevinsen/greetd) with [tuigreet](https://github.com/apognu/tuigreet) (as login manager)
@@ -25,5 +25,19 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 install [swayfx](https://github.com/WillPower3309/swayfx) from AUR:
 `yay -S swayfx` and let it replace sway package.
 
-## open weather
-[sway_tools/weather/README](https://github.com/killajoe/sway_tools/blob/main/weather/README.md)
+**open weather:**
+
+run `~/.config/sway/scripts/openweather -s` to create setup you will need:
+1. Free API key from: https://openweathermap.org/api
+2. city IDs from: https://openweathermap.org/find
+
+Open waybar config and enable weather module by removing the commenting // there:
+
+` nano ~/.config/waybar/config.jsonc`
+
+```
+"modules-center": [
+    // "custom/weather"
+    "custom/separator"
+  ],
+```
