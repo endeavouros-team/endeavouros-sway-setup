@@ -10,32 +10,14 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 3. [swaync](https://github.com/ErikReider/SwayNotificationCenter) notification, including swaync center for easy access to old notifications.
 4. [sway tools](https://github.com/killajoe/sway_tools/tree/main)
 5. [greetd](https://git.sr.ht/~kennylevinsen/greetd) with [tuigreet](https://github.com/apognu/tuigreet) (as login manager)
-6. start with using [kitty](https://sw.kovidgoyal.net/kitty/) terminal but may will fallback to foot
-7. [nwg-look](https://github.com/nwg-piotr/nwg-look) and [nwg-displays](https://github.com/nwg-piotr/nwg-displays) for setup/change gtk theme and display settings. Awesome tools made by piotr: [nwg](https://nwg-piotr.github.io/nwg-shell/)
-8. [thunar](https://docs.xfce.org/xfce/thunar/start) as filemanager, including setup to open kitty terminal in path, and filextractor
-9. [bash](https://www.gnu.org/software/bash/bash.html) using a nice welcome message and fortune cookies enabled, plus history with up and down arrow buttons
-10. [gtklock](https://github.com/jovanlanik/gtklock) as lock screen
-11. [swayosd](https://github.com/ErikReider/SwayOSD) as OSD for volume brightness and others
-12. [kitty](https://sw.kovidgoyal.net/kitty/) as terminal [currently]
+6. [nwg-look](https://github.com/nwg-piotr/nwg-look) and [nwg-displays](https://github.com/nwg-piotr/nwg-displays) for setup/change gtk theme and display settings. Awesome tools made by piotr: [nwg](https://nwg-piotr.github.io/nwg-shell/)
+7. [thunar](https://docs.xfce.org/xfce/thunar/start) as filemanager, including setup to open kitty terminal in path, and filextractor
+8. [bash](https://www.gnu.org/software/bash/bash.html) using a nice welcome message and fortune cookies enabled, plus history with up and down arrow buttons
+9. [gtklock](https://github.com/jovanlanik/gtklock) as lock screen
+10. [swayosd](https://github.com/ErikReider/SwayOSD) as OSD for volume brightness and others
+11. [kitty](https://sw.kovidgoyal.net/kitty/) as terminal [currently]
 
 ## you want more fancy?
 
 install [swayfx](https://github.com/WillPower3309/swayfx) from AUR:
 `yay -S swayfx` and let it replace sway package.
-
-**open weather:**
-
-run `~/.config/sway/scripts/openweather -s` to create setup you will need:
-1. Free API key from: https://openweathermap.org/api
-2. city IDs from: https://openweathermap.org/find
-
-Open waybar config and enable weather module by removing the commenting // there:
-
-` nano ~/.config/waybar/config.jsonc`
-
-```
-"modules-center": [
-    // "custom/weather"
-    "custom/separator"
-  ],
-```
