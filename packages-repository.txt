@@ -6,7 +6,6 @@ brightnessctl
 cliphist
 dex
 engrampa
-fortune-mod
 fuzzel
 galculator
 greetd
