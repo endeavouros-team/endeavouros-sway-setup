@@ -49,7 +49,7 @@ mkdir -p "$SCRIPT_DIR"
 
 # Mapping: SourcePath:DestinationName
 TOOLS=(
-    "new_workspace/sway-new_workspace"
+    "new_workspace/sway-new-workspace"
     "powermenu/sway-powermenu-gracefully"
     "gracefully_exit/sway-gracefully-exit"
     "power_profiles_switcher/sway-power-profiles"
