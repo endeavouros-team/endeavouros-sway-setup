@@ -119,7 +119,7 @@ systemctl enable greetd.service
 systemctl enable swayosd-libinput-backend.service
 
 # 9. adding sway session starter with Nvidia Driver support
-cp "$REPO_DIR/eos-sway.desktop "/usr/share/wayland-sessions/"
+cp "$REPO_DIR/eos-sway.desktop" "/usr/share/wayland-sessions/"
 cp "$REPO_DIR/eos-sway-wrapper" "/usr/bin/"
 chmod +x "/usr/bin/eos-sway-wrapper"
 
