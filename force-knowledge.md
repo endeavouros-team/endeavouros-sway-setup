@@ -18,7 +18,7 @@ make sure marking them executable to be used in waybar or other tools.
 
 Tools from the [sway_tools](https://github.com/killajoe/sway_tools/tree/main) collection are installed systemwide, 
 
-you can edit them if you cope them into users path under '~/.local/usr/bin/'
+you can edit them if you copy them into users path under '~/.local/bin/'
 
 These are currently:
 * sway-gracefully-exit
@@ -129,7 +129,7 @@ It is taken from sway-tools:
 [sway_tools](https://github.com/killajoe/sway_tools)
 
 In case you want to modify one or the other of the sway_tools scripts you can copy them to users path:
-`cp /usr/bin/sway-powermenu ~/.local/usr/bin/` and edit from there.
+`cp /usr/bin/sway-powermenu ~/.local/bin/` and edit from there.
  
 
 ## Reset Configuration
