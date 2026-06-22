@@ -31,11 +31,11 @@ These are currently:
 
 Here are the pathes to default used tool setups:
 
-* ~/.config/gtklock
-* ~/.config/rofi
-* ~/.config/swaync
-* ~/.config/swayosd
-* ~/.config/waybar
+`~/.config/gtklock`
+`~/.config/rofi`
+`~/.config/swaync`
+`~/.config/swayosd`
+`~/.config/waybar`
 
 ## Firefox is autostarting at each login?
 
