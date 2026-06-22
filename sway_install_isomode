@@ -40,7 +40,7 @@ echo ">> installing config files..."
 
 # copy configs and files.
 cp -ar "$REPO_DIR/skel/.config" "$REPO_DIR/skel/.local" "$REPO_DIR/skel/.icons" "$USER_HOME/"
-cp "$REPO_DIR/skel/.gtkrc-2.0" "$USER_HOME/"
+cp "$REPO_DIR/skel/.gtkrc-2.0" "$REPO_DIR/skel/.profile" "$USER_HOME/"
 cp "$REPO_DIR/force-knowledge.md" "$USER_HOME/.config/sway/readme.md"
 
 # 5. Install Sway Tools
