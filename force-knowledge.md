@@ -63,7 +63,7 @@ After (changed setting, firefox will not auto start at login)
 
 
 ## Disable the battery indicator
-needs to get implemented .. [joe do not forget abot this!]
+needs to get implemented .. [joe do not forget about this!]
 
 
 ## Autostart Implementation
