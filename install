@@ -43,10 +43,12 @@ echo ">> Installing system dependencies (sudo required)..."
 sudo pacman -S --needed --noconfirm - < "$REPO_DIR/packages-repository.txt"
 
 echo ">> installing config files..."
-# copy configs and files.
-cp -ar "$REPO_DIR/skel/.config" "$REPO_DIR/skel/.local" "$REPO_DIR/skel/.icons" "$USER_HOME/"
-cp "$REPO_DIR/skel/.gtkrc-2.0" "$REPO_DIR/skel/.profile" "$USER_HOME/"
-cp "$REPO_DIR/force-knowledge.md" "$USER_HOME/.config/sway/readme.md"
+cp -R "$REPO_DIR"/skel/.config/* "$HOME/.config/"
+cp -R "$REPO_DIR"/skel/.local/* "$HOME/.local/"
+cp -R "$REPO_DIR"/skel/.icons/* "$HOME/.icons/"
+# Handle .gtkrc-2.0 gracefully as it might not always be present
+cp "$REPO_DIR"/skel/.gtkrc-2.0 "$HOME/" 2>/dev/null || true
+cp "$REPO_DIR"/skel/.profile "$HOME/" 2>/dev/null || true
 
 # 4. Set up Sway Tools
 echo ">> Installing Sway helper scripts..."
