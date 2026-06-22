@@ -9,7 +9,7 @@ set -e  # Exit immediately if a command exits with a non-zero status
 # --- Configuration ---
 DATE=$(date +%Y%m%d_%H%M%S)
 BACKUP_DIR="$HOME/backup_old_configs_$DATE"
-SCRIPT_DIR="$HOME/.config/sway/scripts"
+SCRIPT_DIR="$HOME/.local/bin"
 REPO_DIR="/tmp/endeavouros-sway-setup"
 TOOLS_DIR="/tmp/sway_tools"
 
@@ -35,38 +35,33 @@ done
 
 # 2. Download Sources
 echo ">> Cloning repositories to /tmp..."
-git clone https://codeberg.org/joekamprad/endeavouros-sway-setup.git "$REPO_DIR"
+git clone https://github.com/endeavouros-team/endeavouros-sway-setup.git "$REPO_DIR"
 git clone https://github.com/killajoe/sway_tools.git "$TOOLS_DIR"
 
 # 3. Install Base Configuration
-echo ">> Installing configuration files..."
-mkdir -p "$HOME/.config"
-mkdir -p "$HOME/.local"
-mkdir -p "$HOME/.icons"
+echo ">> Installing system dependencies (sudo required)..."
+sudo pacman -S --needed --noconfirm - < "$REPO_DIR/packages-repository.txt"
 
-# Copying contents to preserve existing non-conflicting files
-cp -R "$REPO_DIR"/skel/.config/* "$HOME/.config/"
-cp -R "$REPO_DIR"/skel/.local/* "$HOME/.local/"
-cp -R "$REPO_DIR"/skel/.icons/* "$HOME/.icons/"
-cp "$REPO_DIR"/skel/.bashrc "$HOME/"
-# Handle .gtkrc-2.0 gracefully as it might not always be present
-cp "$REPO_DIR"/skel/.gtkrc-2.0 "$HOME/" 2>/dev/null || true
-cp "$REPO_DIR"/skel/packages-AUR.txt "$HOME/"
+echo ">> installing config files..."
+# copy configs and files.
+cp -ar "$REPO_DIR/skel/.config" "$REPO_DIR/skel/.local" "$REPO_DIR/skel/.icons" "$USER_HOME/"
+cp "$REPO_DIR/skel/.gtkrc-2.0" "$REPO_DIR/skel/.profile" "$USER_HOME/"
+cp "$REPO_DIR/force-knowledge.md" "$USER_HOME/.config/sway/readme.md"
 
 # 4. Set up Sway Tools
 echo ">> Installing Sway helper scripts..."
 mkdir -p "$SCRIPT_DIR"
 
-# SourcePath:DestinationName (if renaming is needed)
+# Mapping: SourcePath:DestinationName
 TOOLS=(
-    "new_workspace/new_workspace"
-    "powermenu/powermenu_gracefully:powermenu"
-    "gracefully_exit/gracefully_exit"
-    "power_profiles_switcher/power-profiles"
+    "new_workspace/sway-new-workspace"
+    "powermenu/sway-powermenu-gracefully"
+    "gracefully_exit/sway-gracefully-exit"
+    "power_profiles_switcher/sway-power-profiles"
     "swaycast/swaycast"
     "swayshot/swayshot"
-    "waybar_toggle/waybar_toggle"
-    "weather/openweather"
+    "waybar_toggle/waybar-toggle"
+    "weather/sway-openweather"
 )
 
 for item in "${TOOLS[@]}"; do
@@ -76,24 +71,63 @@ for item in "${TOOLS[@]}"; do
     cp "$TOOLS_DIR/$src" "$SCRIPT_DIR/$dest"
 done
 
-# NEW: Copy the Rofi theme for the power profiles switcher
-echo ">> Installing Rofi themes for tools..."
-mkdir -p "$HOME/.config/rofi"
-cp "$TOOLS_DIR/power_profiles_switcher/power-profile.rasi" "$HOME/.config/rofi/"
+# switch name for powermenu
+mv "$SCRIPT_DIR/sway-powermenu-gracefully" "$SCRIPT_DIR/sway-powermenu"
+
+# Copy Rofi theme for power profiles and powermenu
+cp "$TOOLS_DIR/power_profiles_switcher/power-profiles.rasi" "$USER_HOME/.config/rofi/"
+cp "$TOOLS_DIR/powermenu/powermenu.rasi" "$USER_HOME/.config/rofi/"
 
 # Make all scripts in the directory executable
 chmod -R +x "$SCRIPT_DIR"
 
-# 5. System Packages and Services
-echo ">> Installing system dependencies (sudo required)..."
-sudo pacman -S --needed --noconfirm - < "$REPO_DIR/packages-repository.txt"
+# 5. Set up greetd greeter tuigreet
 
-echo ">> Enabling LY login Manager service..."
-sudo systemctl enable ly@tty2.service
-sudo systemctl disable getty@tty2.service
+if [ ! -f "$REPO_DIR/config.toml" ]; then
+    echo "ERROR: Source configuration file not found at: $REPO_DIR/config.toml" >&2
+    exit 1
+fi
+
+if [ -f "/etc/greetd/config.toml" ]; then
+    echo "====================================================================="
+    echo "WARNING: An existing greetd configuration was found."
+    echo "A backup will be created at: /etc/greetd/config.toml.bak"
+    echo "The /etc/greetd/config.toml will be overwritten with the prepared version."
+    echo "====================================================================="
+
+    # Execute backup with root privileges
+    if sudo cp "/etc/greetd/config.toml" "/etc/greetd/config.toml.bak"; then
+        echo "==> Backup successfully created."
+    else
+        echo "ERROR: Failed to create backup. Aborting." >&2
+        exit 1
+    fi
+
+    # Execute file copy with root privileges
+    if sudo cp "$REPO_DIR/config.toml" "/etc/greetd/config.toml"; then
+        echo "==> /etc/greetd/config.toml has been successfully updated from repository."
+    else
+        echo "ERROR: Failed to copy the configuration file." >&2
+        exit 1
+    fi
+else
+    echo "ERROR: /etc/greetd/config.toml not found. Is greetd installed?" >&2
+    exit 1
+fi
+
+# 6. System Services
+echo ">> enable greetd and swayosd-libinput service..."
+
+sudo systemctl enable greetd.service
 sudo systemctl enable swayosd-libinput-backend.service
 
-# 6. Cleanup
+# 7. adding sway session starter with Nvidia Driver support
+sudo cp "$REPO_DIR/eos-sway.desktop "/usr/share/wayland-sessions/"
+sudo cp "$REPO_DIR/eos-sway-wrapper" "/usr/bin/"
+sudo chmod +x "/usr/bin/eos-sway-wrapper"
+
+
+# 8. Cleanup
 echo ">> Cleaning up temporary files..."
 rm -rf "$REPO_DIR" "$TOOLS_DIR"
 
