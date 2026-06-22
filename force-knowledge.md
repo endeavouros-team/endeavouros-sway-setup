@@ -1,8 +1,8 @@
 # Dive into configuring your Sway WM setup
 
-The main configuration file for endeavouros-sway can be found at `"${HOME}"/.config/sway/config`. and to make structure clean, you will find other parts of the config in its dropin path:
+The main configuration file for endeavouros-sway can be found at `~/.config/sway/config`. and to make structure clean, you will find other parts of the config in its dropin path:
 
-`${HOME}/.config/sway/config.d/`
+`~/.config/sway/config.d/`
 
 here you have parts of the config named to fit what they include, these will sourced into the main config file automatically.
 
@@ -12,20 +12,34 @@ here you have parts of the config named to fit what they include, these will sou
 * workspaces - workspace handling
 * keybindings - custom keybindings
 
-User scripts can be found under `$HOME/.config/sway/scripts/`
-make sure marking them executable to be used in waybar or other tools
+User scripts can be found under `~/.config/sway/scripts/`
+
+make sure marking them executable to be used in waybar or other tools.
+
+Tools from the [sway_tools](https://github.com/killajoe/sway_tools/tree/main) collection are installed systemwide, 
+
+you can edit them if you cope them into users path under '~/.local/usr/bin/'
+
+These are currently:
+* sway-gracefully-exit
+* sway-new-workspace
+* sway-power-profiles
+* sway-powermenu
+* swaycast and swayshot
+* waybar-toggle
+* sway-openweather
 
 Here are the pathes to default used tool setups:
 
-* $HOME/.config/gtklock
-* $HOME/.config/rofi
-* $HOME/.config/swaync
-* $HOME/.config/swayosd
-* $HOME/.config/waybar
+* ~/.config/gtklock
+* ~/.config/rofi
+* ~/.config/swaync
+* ~/.config/swayosd
+* ~/.config/waybar
 
 ## Firefox is autostarting at each login?
 
-Open `${HOME}/.config/sway/config.d/autostart`
+Open `~/.config/sway/config.d/autostart`
 Add/remove `#` at the start of the line to disable/enable auto start at login:
 
  
@@ -45,14 +59,14 @@ After (changed setting, firefox will not auto start at login)
 
 
 ## Disable the battery indicator
-needs to get implemented 
+needs to get implemented .. [joe fo not fotrget abot this!]
 
 
 ## Autostart Implementation
 
 **[dex](https://man.archlinux.org/man/extra/dex/dex.1.en) is used to auto start applications on startup in sway.**
  
-Open `${HOME}/.config/sway/config.d/autostart`
+Open `~/.config/sway/config.d/autostart`
   
 Add/remove `#` at the start of the line to disable/enable xdg auto start.
   
@@ -94,16 +108,21 @@ You can see // is the commenting sign for disable modules:
 ## screencast
 
 ```
-# Start recording (select area)
-bindsym $mod+Shift+y exec screencast-select
+# Screencast keybindings
 
-# Stop recording
-bindsym $mod+Shift+x exec screencast-select stop
+# Start recording (select area, no audio)
+bindsym --release $mod+Shift+y exec $HOME/.config/sway/scripts/swaycast
+
+# Start recording (select area, with audio)
+bindsym --release $mod+Shift+a exec $HOME/.config/sway/scripts/swaycast --audio
+
+# Stop active recording
+bindsym --release $mod+Shift+x exec $HOME/.config/sway/scripts/swaycast --stop
 ```
 
 It is taken from sway-tools:
 
-https://github.com/killajoe/sway_tools
+[sway_tools](https://github.com/killajoe/sway_tools)
 
 In case you want to modify one or the other of the sway_tools scripts you can copy them to users path:
 `cp /usr/bin/sway-powermenu ~/.local/usr/bin/` and edit from there.
