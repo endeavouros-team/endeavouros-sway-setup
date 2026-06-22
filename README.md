@@ -26,18 +26,4 @@ install [swayfx](https://github.com/WillPower3309/swayfx) from AUR:
 `yay -S swayfx` and let it replace sway package.
 
 **open weather:**
-
-run `~/.config/sway/scripts/openweather -s` to create setup you will need:
-1. Free API key from: https://openweathermap.org/api
-2. city IDs from: https://openweathermap.org/find
-
-Open waybar config and enable weather module by removing the commenting // there:
-
-` nano ~/.config/waybar/config.jsonc`
-
-```
-"modules-center": [
-    // "custom/weather"
-    "custom/separator"
-  ],
-```
+[sway_tools/weather/README](https://github.com/killajoe/sway_tools/blob/main/weather/README.md)
