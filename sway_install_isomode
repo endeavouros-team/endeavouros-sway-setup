@@ -55,7 +55,7 @@ TOOLS=(
     "power_profiles_switcher/sway-power-profiles"
     "swaycast/swaycast"
     "swayshot/swayshot"
-    "waybar_toggle/waybar_toggle"
+    "waybar_toggle/waybar-toggle"
     "weather/sway-openweather"
 )
 
