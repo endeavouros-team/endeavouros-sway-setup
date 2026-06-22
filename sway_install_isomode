@@ -71,7 +71,7 @@ mv "$SCRIPT_DIR/sway-powermenu-gracefully" "$SCRIPT_DIR/sway-powermenu"
 
 # Copy Rofi theme for power profiles and powermenu
 cp "$TOOLS_DIR/power_profiles_switcher/power-profiles.rasi" "$USER_HOME/.config/rofi/"
-cp "$TOOLS_DIR/power_profiles_switcher/powermenu.rasi" "$USER_HOME/.config/rofi/"
+cp "$TOOLS_DIR/powermenu/powermenu.rasi" "$USER_HOME/.config/rofi/"
 
 # 6. Permissions and Executables
 echo ">> Setting permissions..."
