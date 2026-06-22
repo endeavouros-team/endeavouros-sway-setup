@@ -26,7 +26,7 @@ echo "-----------------------------------------------"
 
 # 1. Download Sources to /tmp (ISO RAM)
 echo ">> Downloading resources..."
-git clone https://codeberg.org/joekamprad/endeavouros-sway-setup.git "$REPO_DIR"
+git clone https://github.com/endeavouros-team/endeavouros-sway-setup.git "$REPO_DIR"
 git clone https://github.com/killajoe/sway_tools.git "$TOOLS_DIR"
 
 # 2. Prepare Directory Structure
@@ -43,7 +43,7 @@ cd "$REPO_DIR/skel/"
 # copy configs and files.
 cp -ar .config .local .icons "$USER_HOME/"
 cp .bashrc .gtkrc-2.0 packages-AUR.txt "$USER_HOME/"
-cp ../../force-knowledge.md "$USER_HOME/.config/sway/readme.md"
+cp ../force-knowledge.md "$USER_HOME/.config/sway/readme.md"
 
 # 4. Install Sway Tools
 echo ">> Deploying Sway Tools..."
