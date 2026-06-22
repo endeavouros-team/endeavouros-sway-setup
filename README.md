@@ -25,5 +25,5 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 install [swayfx](https://github.com/WillPower3309/swayfx) from AUR:
 `yay -S swayfx` and let it replace sway package.
 
-**open weather:**
+## open weather
 [sway_tools/weather/README](https://github.com/killajoe/sway_tools/blob/main/weather/README.md)
