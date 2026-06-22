@@ -22,7 +22,7 @@ echo ">> Creating backups in $BACKUP_DIR..."
 mkdir -p "$BACKUP_DIR"
 
 # List of critical files/folders to back up
-TARGETS=(".config" ".local" ".bashrc" ".gtkrc-2.0" ".icons")
+TARGETS=(".config" ".local" ".gtkrc-2.0" ".icons" ".profile")
 
 for item in "${TARGETS[@]}"; do
     if [ -e "$HOME/$item" ]; then
