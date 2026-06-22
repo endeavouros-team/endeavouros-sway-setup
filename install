@@ -77,8 +77,9 @@ done
 mv "$SCRIPT_DIR/sway-powermenu-gracefully" "$SCRIPT_DIR/sway-powermenu"
 
 # Copy Rofi theme for power profiles and powermenu
-cp "$TOOLS_DIR/power_profiles_switcher/power-profiles.rasi" "$USER_HOME/.config/rofi/"
-cp "$TOOLS_DIR/powermenu/powermenu.rasi" "$USER_HOME/.config/rofi/"
+mkdir -p "$HOME/.config/rofi/"
+cp "$TOOLS_DIR/power_profiles_switcher/power-profiles.rasi" "$HOME/.config/rofi/"
+cp "$TOOLS_DIR/powermenu/powermenu.rasi" "$HOME/.config/rofi/"
 
 # Make all scripts in the directory executable
 chmod -R +x "$SCRIPT_DIR"
@@ -124,7 +125,7 @@ sudo systemctl enable greetd.service
 sudo systemctl enable swayosd-libinput-backend.service
 
 # 7. adding sway session starter with Nvidia Driver support
-sudo cp "$REPO_DIR/eos-sway.desktop "/usr/share/wayland-sessions/"
+sudo cp "$REPO_DIR/eos-sway.desktop" "/usr/share/wayland-sessions/"
 sudo cp "$REPO_DIR/eos-sway-wrapper" "/usr/bin/"
 sudo chmod +x "/usr/bin/eos-sway-wrapper"
 
