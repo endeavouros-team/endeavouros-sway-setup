@@ -131,7 +131,9 @@ In case you want to modify one or the other of the sway_tools scripts you can co
 ## Reset Configuration
 
 
-The default configuration file for endeavouros-sway can be found [here:](https://raw.githubusercontent.com/endeavouros-team/endeavouros-sway-setup/refs/heads/main/skel/.config/sway/config).
+The default configuration file for endeavouros-sway can be found
+
+[here:](https://raw.githubusercontent.com/endeavouros-team/endeavouros-sway-setup/refs/heads/main/skel/.config/sway/config).
 
 To replace your current configuration with the default of endeavouros-sway run the following command. This will also make a backup of your current configuration at `"${HOME}"/.config/sway/config.1`
 
