@@ -1,0 +1,62 @@
+skel/
+├── .config/
+│   ├── fontconfig/
+│   │   └── fonts.conf
+│   ├── gtk-3.0/
+│   │   └── settings.ini
+│   ├── gtk-4.0/
+│   │   └── settings.ini
+│   ├── gtklock/
+│   │   ├── config.ini
+│   │   └── style.css
+│   ├── kitty/
+│   │   ├── kitty-color.conf
+│   │   └── kitty.conf
+│   ├── rofi/
+│   │   ├── config.rasi
+│   │   ├── rofidmenu.rasi
+│   │   └── rofikeyhint.rasi
+│   ├── sway/
+│   │   ├── config
+│   │   ├── config.d/
+│   │   │   ├── autostart
+│   │   │   ├── defaults
+│   │   │   ├── input
+│   │   │   ├── keybindings
+│   │   │   └── workspaces
+│   │   └── scripts/
+│   │       ├── audio-device-switch
+│   │       ├── bandwidth2
+│   │       ├── cputemp
+│   │       ├── cpu_usage
+│   │       ├── disk
+│   │       ├── gputemp
+│   │       ├── gtklock
+│   │       ├── import-gsettings
+│   │       ├── keyhint
+│   │       ├── keyhint-2
+│   │       ├── memory
+│   │       ├── nvmetemp
+│   │       └── temperature
+│   ├── swaync/
+│   │   ├── config.json
+│   │   └── style.css
+│   ├── swayosd/
+│   │   └── style.css
+│   ├── Thunar/
+│   │   └── uca.xml
+│   └── waybar/
+│       ├── config.jsonc
+│       └── style.css
+├── .icons/
+│   └── default/
+│       └── index.theme
+├── .local/
+│   └── share/
+│       ├── nwg-look/
+│       │   └── gsettings
+│       └── rofi/
+│           └── themes/
+│               └── deep-purple.rasi
+├── .gtkrc-2.0
+└── .profile
