@@ -110,7 +110,7 @@
     "interval": 5,
     "return-type": "text",
     "tooltip": false,
-    "format": " {} free",
+    "format": " {} ",
     "on-click": "kitty -e sh -c 'duf; echo Press Enter to close...; read'"
   },
 
@@ -132,7 +132,7 @@
     "format-charging": "{icon} {capacity}% ",
     "format-plugged": "{icon} {capacity}% ",
     "format-full": "{icon} {capacity}% ",
-    "format-icons": ["", "", "", "", ""],
+    "format-icons": [" ", " ", " ", " ", " "],
     "tooltip-format": "{time}" 
   },
 
