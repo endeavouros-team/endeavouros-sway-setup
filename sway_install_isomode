@@ -76,6 +76,8 @@ cp "$TOOLS_DIR/powermenu/powermenu.rasi" "$USER_HOME/.config/rofi/"
 # 6. Permissions and Executables
 echo ">> Setting permissions..."
 chmod -R +x "$SCRIPT_DIR"
+# only till i switched all scripts over to .local/bin
+chmod -R +x ""$USER_HOME/.config/sway/scripts"
 
 # CRITICAL: Fix ownership because git/cp were run as root in the ISO
 chown -R "$USER_NAME:$USER_NAME" "$USER_HOME"
