@@ -72,7 +72,7 @@
   },
 
   "custom/gputemp": {
-    "exec": "~/.config/sway/scripts/gputemp",
+    "exec": "~/.local/bin/gputemp",
     "interval": 5,
     "return-type": "text",
     "tooltip": false,
@@ -83,12 +83,12 @@
   "custom/keyhint": {
     "format": "  ",
     "tooltip": "keybind helper",
-    "on-click": "~/.config/sway/scripts/keyhint",
+    "on-click": "~/.local/bin/keyhint",
     "return-type": "text"
   },
 
   "custom/cputemp": {
-    "exec": "~/.config/sway/scripts/cputemp",
+    "exec": "~/.local/bin/cputemp",
     "interval": 5,
     "return-type": "text",
     "tooltip": false,
@@ -97,7 +97,7 @@
   },
 
   "custom/mem": {
-    "exec": "~/.config/sway/scripts/memory",
+    "exec": "~/.local/bin/memory",
     "interval": 60,
     "return-type": "text",
     "tooltip": true,
@@ -105,14 +105,14 @@
     "on-click": "kitty -e sh -c 'watch free'"
   },
   "custom/disk": {
-    "exec": "~/.config/sway/scripts/disk",
+    "exec": "~/.local/bin/disk",
     "interval": 60,
     "return-type": "json",
     "format": " {text} ",
     "on-click": "kitty -e sh -c 'duf; echo Press Enter to close...; read'"
   },
   "custom/disktmp": {
-    "exec": "~/.config/sway/scripts/nvmetemp",
+    "exec": "~/.local/bin/nvmetemp",
     "interval": 5,
     "return-type": "text",
     "tooltip": false,
@@ -141,7 +141,7 @@
   },
   
   "custom/net": {
-    "exec": "~/.config/sway/scripts/bandwidth2",
+    "exec": "~/.local/bin/bandwidth2",
     "interval": 5,
     "return-type": "text",
     "tooltip": false,

@@ -22,10 +22,10 @@ exec swaync
 
 # screen locker
 exec_always swayidle -w \
-  timeout 280 '$HOME/.config/sway/scripts/gtklock_config' \
+  timeout 280 '$HOME/.local/bin/gtklock_config' \
   timeout 300 'swaymsg "output * dpms off"' \
   resume 'swaymsg "output * dpms on"' \
-  before-sleep '$HOME/.config/sway/scripts/gtklock_config'
+  before-sleep '$HOME/.local/bin/gtklock_config'
 
 # osd für volume (swayosd)
 exec swayosd-server -s ~/.config/swayosd/style.css

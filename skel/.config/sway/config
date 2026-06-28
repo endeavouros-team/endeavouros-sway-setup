@@ -7,7 +7,7 @@
 # workspaces - workspace handling
 # keybindings - custom keybindings
 
-# user scripts can be found under `$HOME/.config/sway/scripts/`
+# user scripts can be found under `$HOME/.local/bin/`
 # make sure marking them executable to be used in waybar or other tools
 # these are the pathes to default used tool setups:
 # $HOME/.config/gtklock
@@ -29,7 +29,7 @@ exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSO
      systemctl --user start sway-session.target
 
 # make sure it loads gtk configs
-exec_always $HOME/.config/sway/scripts/import-gsettings
+exec_always $HOME/.local/bin/import-gsettings
 
 # Cursor theme and size
 seat seat0 xcursor_theme Qogir-Dark 16
