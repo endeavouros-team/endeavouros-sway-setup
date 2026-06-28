@@ -9,6 +9,10 @@
 
 # user scripts can be found under `$HOME/.local/bin/`
 # make sure marking them executable to be used in waybar or other tools
+# to edit sway_tools copy these to the users path example:
+# `cp /usr/bin/sway_powermenu $HOME/.local/bin/`
+# and edit from there, it will overwrite systemwide script.
+
 # these are the pathes to default used tool setups:
 # $HOME/.config/gtklock
 # $HOME/.config/rofi

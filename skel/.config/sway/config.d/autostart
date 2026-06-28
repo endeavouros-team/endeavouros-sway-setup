@@ -60,7 +60,7 @@ exec sleep 3 && blueman-applet
 exec  /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # saving a backup of installed packages as a list
-exec  sh ~/.config/sway/scripts/packagelist.sh
+exec  sh ~/.local/bin/packagelist.sh
 
 # dex execute .desktop files
 # see here: https://man.archlinux.org/man/extra/dex/dex.1.en

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# only a simple way to output system monitoring on the waybar
+# edit to your needs
+
 # Main System Harddrive free space monitoring
 # shows available space on systemdrive
 # and mouse over (hoover) shows Model Name and total space.
