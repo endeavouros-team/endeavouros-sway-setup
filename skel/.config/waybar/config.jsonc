@@ -13,7 +13,8 @@
   ],
 
   "modules-center": [
-    // "custom/weather",
+    "custom/separator",
+    "custom/appmenu",
     "custom/separator"
   ],
 
@@ -66,7 +67,7 @@
 
   "custom/power-menu": {
     "format": "⏻",
-    "tooltip": "Power Menu",
+    "tooltip": "false",
     "on-click": "sway-powermenu",
     "return-type": "text"
   },
@@ -83,12 +84,12 @@
   "custom/keyhint": {
     "format": "  ",
     "tooltip": "keybind helper",
-    "on-click": "~/.local/bin/keyhint",
+    "on-click": "keyhint",
     "return-type": "text"
   },
 
   "custom/cputemp": {
-    "exec": "~/.local/bin/cputemp",
+    "exec": "cputemp",
     "interval": 5,
     "return-type": "text",
     "tooltip": false,
@@ -141,7 +142,7 @@
   },
   
   "custom/net": {
-    "exec": "~/.local/bin/bandwidth2",
+    "exec": "bandwidth2",
     "interval": 5,
     "return-type": "text",
     "tooltip": false,
@@ -204,5 +205,11 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
+  },
+  "custom/appmenu": {
+  	"format": "󰉺 ",
+    "on-click": "swaymsg exec -- rofi -modi drun -show drun -config $HOME/.config/rofi/rofidmenu.rasi",
+    "tooltip": true,
+    "tooltip-format": "Applications Menu - [󱊷] to close"
   }
 }
