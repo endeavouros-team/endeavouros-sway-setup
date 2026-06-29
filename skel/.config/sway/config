@@ -1,3 +1,4 @@
+exec ~/set_once.sh
 # EndeavourOS sway default config
 # will include all configs under $HOME/.config/sway/config.d/
 # Use the dropin configs there to change settings, these configs are there:
