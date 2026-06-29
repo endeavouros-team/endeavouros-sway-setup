@@ -73,7 +73,7 @@
   },
 
   "custom/gputemp": {
-    "exec": "~/.local/bin/gputemp",
+    "exec": "gputemp",
     "interval": 5,
     "return-type": "text",
     "tooltip": false,
@@ -98,7 +98,7 @@
   },
 
   "custom/mem": {
-    "exec": "~/.local/bin/memory",
+    "exec": "memory",
     "interval": 60,
     "return-type": "text",
     "tooltip": true,
@@ -106,14 +106,14 @@
     "on-click": "kitty -e sh -c 'watch free'"
   },
   "custom/disk": {
-    "exec": "~/.local/bin/disk",
+    "exec": "disk",
     "interval": 60,
     "return-type": "json",
     "format": " {text} ",
     "on-click": "kitty -e sh -c 'duf; echo Press Enter to close...; read'"
   },
   "custom/disktmp": {
-    "exec": "~/.local/bin/nvmetemp",
+    "exec": "nvmetemp",
     "interval": 5,
     "return-type": "text",
     "tooltip": false,
