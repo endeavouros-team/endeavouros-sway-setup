@@ -5,6 +5,16 @@
 # Enable numlock by default
 input type:keyboard xkb_numlock enabled
 
+# Touchpad
+input type:touchpad {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+}
+
+# Enable numlock by default
+input type:keyboard xkb_numlock enabled
+
 # Set keyboard layout and variant based on current system settings
 exec_always {
     'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
