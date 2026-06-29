@@ -12,6 +12,7 @@ for_window [app_id="eos-quickstart"] floating enable
 for_window [app_id="blueman-manager"] floating enable
 for_window [app_id="bluetooth-sendto"] floating enable
 for_window [app_id="gpk-application"] floating enable
+for_window [class="Yad" instance="yad"] floating enable
 for_window [app_id="yad"] floating enable
 for_window [app_id="system-config-printer"] floating enable
 for_window [app_id="zoom"] floating enable
@@ -22,6 +23,15 @@ for_window [app_id="Galculator"] floating enable
 for_window [title="Warning"] floating enable
 for_window [app_id="engrampa"] floating enable
 for_window [title="^Welcome v.*$"] floating enable
+
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [window_role="About"] floating enable
+for_window [title="Picture in picture"] floating enable, sticky enable
 
 # fullscreen apps
 # for_window [app_id="Xxxx" instance="xxxx"] fullscreen enable
