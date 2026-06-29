@@ -40,7 +40,7 @@ echo ">> installing config files..."
 
 # copy configs and files.
 cp -ar "$REPO_DIR/skel/.config" "$REPO_DIR/skel/.local" "$REPO_DIR/skel/.icons" "$USER_HOME/"
-cp "$REPO_DIR/skel/.gtkrc-2.0" "$REPO_DIR/skel/.profile" "$USER_HOME/"
+cp "$REPO_DIR/skel/.gtkrc-2.0" "$REPO_DIR/skel/.profile" "$REPO_DIR/skel/set_once.sh" "$REPO_DIR/skel/xed.dconf" "$USER_HOME/"
 cp "$REPO_DIR/force-knowledge.md" "$USER_HOME/.config/sway/readme.md"
 
 # 5. Install Sway Tools
@@ -75,10 +75,10 @@ cp "$TOOLS_DIR/powermenu/powermenu.rasi" "$USER_HOME/.config/rofi/"
 
 # 6. Permissions and Executables
 echo ">> Setting permissions..."
-chmod -R +x "$SCRIPT_DIR"
-
-# CRITICAL: Fix ownership because git/cp were run as root in the ISO
+# Fix ownership because git/cp were run as root in the ISO
 chown -R "$USER_NAME:$USER_NAME" "$USER_HOME"
+chmod -R +x "$SCRIPT_DIR"
+chmod +x "$USER_HOME/set_once.sh"
 
 # 7. Set up greetd greeter tuigreet
 
