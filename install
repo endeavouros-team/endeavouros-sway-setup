@@ -52,6 +52,8 @@ cp "$REPO_DIR"/skel/.profile "$HOME/.profile" 2>/dev/null || true
 echo ">> make xed nice looking..."
 dbus-launch dconf load / < "$REPO_DIR"/xed.dconf
 rm "$REPO_DIR"/xed.dconf
+echo ">> remove not needed set_once from sway config"
+sed -i 's|\(exec ~/set_once.sh\)|# \1|' "$HOME/.config/sway/config"
 
 # 4. Set up Sway Tools
 echo ">> Installing Sway helper scripts..."
