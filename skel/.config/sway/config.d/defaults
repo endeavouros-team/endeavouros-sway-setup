@@ -35,3 +35,7 @@ for_window [app_id="thunar" title=".*- Thunar.*"] floating disable
 
 # telegram no round corners?
 for_window [app_id="org.telegram.desktop"] border pixel 1
+
+# Inhibit idle, if apps are fullscreen omit screensaver
+for_window [app_id="firefox"] inhibit_idle fullscreen
+for_window [app_id="mpv"] inhibit_idle fullscreen
