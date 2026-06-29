@@ -47,8 +47,8 @@ cp -R "$REPO_DIR"/skel/.config/* "$HOME/.config/"
 cp -R "$REPO_DIR"/skel/.local/* "$HOME/.local/"
 cp -R "$REPO_DIR"/skel/.icons/* "$HOME/.icons/"
 # Handle .gtkrc-2.0 gracefully as it might not always be present
-cp "$REPO_DIR"/skel/.gtkrc-2.0 "$HOME/" 2>/dev/null || true
-cp "$REPO_DIR"/skel/.profile "$HOME/" 2>/dev/null || true
+cp "$REPO_DIR"/skel/.gtkrc-2.0 "$HOME/.gtkrc-2.0" 2>/dev/null || true
+cp "$REPO_DIR"/skel/.profile "$HOME/.profile" 2>/dev/null || true
 
 # 4. Set up Sway Tools
 echo ">> Installing Sway helper scripts..."
