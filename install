@@ -49,6 +49,9 @@ cp -R "$REPO_DIR"/skel/.icons/* "$HOME/.icons/"
 # Handle .gtkrc-2.0 gracefully as it might not always be present
 cp "$REPO_DIR"/skel/.gtkrc-2.0 "$HOME/.gtkrc-2.0" 2>/dev/null || true
 cp "$REPO_DIR"/skel/.profile "$HOME/.profile" 2>/dev/null || true
+echo ">> make xed nice looking..."
+dbus-launch dconf load / < "$REPO_DIR"/xed.dconf
+rm "$REPO_DIR"/xed.dconf
 
 # 4. Set up Sway Tools
 echo ">> Installing Sway helper scripts..."
