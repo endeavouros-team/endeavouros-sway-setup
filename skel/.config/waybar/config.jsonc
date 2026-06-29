@@ -83,7 +83,8 @@
 
   "custom/keyhint": {
     "format": "  ",
-    "tooltip": "keybind helper",
+    "tooltip": true,
+    "tooltip-format": "keybind helper",
     "on-click": "keyhint",
     "return-type": "text"
   },
@@ -91,18 +92,20 @@
   "custom/cputemp": {
     "exec": "cputemp",
     "interval": 5,
-    "return-type": "text",
-    "tooltip": false,
     "format": " CPU {}",
+    "return-type": "text",
+    "tooltip": true,
+    "tooltip-format": "Click to watch sensors",
     "on-click": "kitty -e sh -c 'watch sensors'"
   },
 
   "custom/mem": {
     "exec": "memory",
     "interval": 60,
+    "format": " Ram:{}",
     "return-type": "text",
     "tooltip": true,
-    "format": " Ram:{}",
+    "tooltip-format": "Click for detailed RAM monitor",
     "on-click": "kitty -e sh -c 'watch free'"
   },
   "custom/disk": {
@@ -115,10 +118,9 @@
   "custom/disktmp": {
     "exec": "nvmetemp",
     "interval": 5,
-    "return-type": "text",
-    "tooltip": false,
     "format": " {}",
-    "on-click": "kitty -e sh -c 'watch free'"
+    "return-type": "text",
+    "tooltip": false
   },
 
   "battery": {
@@ -131,7 +133,7 @@
     "format-plugged": "{icon} {capacity}% ",
     "format-full": "{icon} {capacity}% ",
     "format-icons": [" ", " ", " ", " ", " "],
-    "tooltip-format": "{time}" 
+    "tooltip-format": "{time}"
   },
 
   "custom/reload": {
@@ -140,7 +142,7 @@
     "tooltip-format": "Click to reload Waybar",
     "on-click": "waybar-toggle && sleep 0.1 && waybar-toggle"
   },
-  
+
   "custom/net": {
     "exec": "bandwidth2",
     "interval": 5,
@@ -207,9 +209,9 @@
     "escape": true
   },
   "custom/appmenu": {
-  	"format": "󰉺 ",
+  	"format": "󰍜 ",
     "on-click": "swaymsg exec -- rofi -modi drun -show drun -config $HOME/.config/rofi/rofidmenu.rasi",
     "tooltip": true,
-    "tooltip-format": "Applications Menu - [󱊷] to close"
+    "tooltip-format": "Application Menu - [󱊷] to close"
   }
 }
