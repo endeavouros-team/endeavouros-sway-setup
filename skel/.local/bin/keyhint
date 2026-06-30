@@ -13,7 +13,7 @@ Main() {
         --column="key combination" --column="description" --column=""
         "ESC" "close this app" ""
         "󰇘" "󰇘" "󰇘"
-        "F1" "open keybinding helper" ""
+        "F1" "open keybinding helper (searchtool)" ""
         "=" "mod-key is set to the win-key" ""
         "+enter" "open a terminal" ""
         "+Shift+n" "new empty workspace" ""

@@ -46,6 +46,56 @@ for_window [app_id="thunar" title=".*- Thunar.*"] floating disable
 # telegram no round corners?
 for_window [app_id="org.telegram.desktop"] border pixel 1
 
+# Window settings
+
+# focus new windows even if they open on another workspace
+for_window [class=".*"] focus
+
+# round corners --> needs swayfx: `yay -S swayfx`
+#corner_radius 6
+
+# gaps:
+# Set inner/outer gaps
+gaps {
+    inner 4
+    outer 2
+}
+
 # Inhibit idle, if apps are fullscreen omit screensaver
 for_window [app_id="firefox"] inhibit_idle fullscreen
 for_window [app_id="mpv"] inhibit_idle fullscreen
+
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
+set $smart_borders off
+
+default_floating_border pixel 2
+
+# qt-app fix for title bar:
+for_window [app_id="^.*"] border pixel 1
+
+# Hides vertical and horizontal borders when there's only one window.
+hide_edge_borders both
+
+# Window Borders
+# this makes window indicators invidible
+default_border none
+default_floating_border none
+for_window [class=".*"] border none
+for_window [app_id=".*"] border none
+
+# default sway options for focus indicator
+# set transparency for unfocused windows
+exec python3 ~/.local/bin/inactive-window-transparency.py -o 0.8
+# exclude apps that show changing content
+for_window [app_id="firefox"] opacy 1.0
+for_window [app_id="mpv"] opacy 1.0
+
+
+# swayfx only options for focus indicator
+# dim unfocused windows to indicate focused
+#default_dim_inactive 0.2
+#dim_inactive_colors.unfocused #030210
+# exclude apps that show changing content
+#for_window [app_id="firefox"] dim_inactive 0.0
+#for_window [app_id="mpv"] dim_inactive 0.0

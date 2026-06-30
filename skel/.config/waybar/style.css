@@ -5,7 +5,7 @@ window#waybar {
     color: #ffffff;
     border-radius: 7px; /* round corners needs swayfx */
     padding: 5px 10px;
-    min-height: 26px;
+    min-height: 22px;
 }
 
 button {
@@ -60,4 +60,3 @@ button:hover {
   font-size: 12px;
   padding: 0 10px;
 }
-

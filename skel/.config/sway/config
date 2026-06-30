@@ -42,29 +42,6 @@ seat seat0 xcursor_theme Qogir-Dark 16
 # focus_wrapping
 focus_wrapping yes
 
-# focus new windows even if they open on another workspace
-for_window [class=".*"] focus
-
-# round corners --> needs swayfx: `yay -S swayfx`
-#corner_radius 4
-
-# gaps:
-# Set inner/outer gaps
-gaps inner 3
-gaps outer 0
-
-# Smart borders (draw borders around container only if it is not the only container on this workspace)
-set $smart_borders off
-
-default_border pixel 1
-default_floating_border pixel 2
-
-# qt-app fix for title bar:
-for_window [app_id="^.*"] border pixel 1
-
-# Hides vertical and horizontal borders when there's only one window.
-hide_edge_borders both
-
 #popup_during_fullscreen leave_fullscreen
 #show_marks yes
 
