@@ -52,11 +52,24 @@
 
   "sway/workspaces": {},
 
-  "clock": {
-    // "locale": "de_DE.UTF-8",
+"clock": {
+    //"locale": "de_DE.UTF-8",
     "format": "{:L%a %d.%m.%Y %H:%M:%S}",
-    "tooltip-format": "{:L%A, %d. %B %Y}",
-    "interval": 1
+    "interval": 1,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "weeks-pos": "right",
+        "on-scroll": 1,
+        "format": {
+            "months": "<span color='#ffead3'><b>{}</b></span>",
+            "today": "<span color='#ff6b6b'><b><u>{}</u></b></span>"
+        }
+    },
+    "actions": {
+        "on-click-right": "mode"
+    }
   },
 
   "custom/separator": {
@@ -67,7 +80,8 @@
 
   "custom/power-menu": {
     "format": "⏻",
-    "tooltip": "false",
+    "tooltip": true,
+    "tooltip-format": "Power Menu",
     "on-click": "sway-powermenu",
     "return-type": "text"
   },

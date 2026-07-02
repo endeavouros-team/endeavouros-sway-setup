@@ -6,7 +6,7 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 
 # includes:
 1. [waybar](https://github.com/Alexays/Waybar) with tray, powermenu, systemmonitors, worksapce buttons and audio control
-2. [rofi-wayland](https://github.com/lbonn/rofi) for menues (Application menu and others)
+2. [rofi](https://github.com/lbonn/rofi) for menues (Application menu and others)
 3. [swaync](https://github.com/ErikReider/SwayNotificationCenter) notification, including swaync center for easy access to old notifications.
 4. [sway tools](https://github.com/killajoe/sway_tools/tree/main)
 5. [greetd](https://git.sr.ht/~kennylevinsen/greetd) with [tuigreet](https://github.com/apognu/tuigreet) (as login manager)
