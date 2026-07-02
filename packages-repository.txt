@@ -31,6 +31,8 @@ nwg-displays
 nwg-look
 playerctl
 polkit-gnome
+qt5ct
+qt6ct
 rofi
 scrot
 slurp

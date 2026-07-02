@@ -48,8 +48,8 @@ exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
 # autostarting apps (comment with # to stop autostarting)
-exec firefox https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/force-knowledge.md
-#exec  sleep 5 && telegram-desktop
+exec xdg-open https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/force-knowledge.md
+exec  sleep 5 && keyhint
 
 exec sleep 3 && blueman-applet
 
