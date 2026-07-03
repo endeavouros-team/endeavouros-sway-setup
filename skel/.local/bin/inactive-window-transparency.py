@@ -3,6 +3,8 @@
 # This script requires i3ipc-python package (install via `sudo pacman -S python-i3ipc`)
 # It makes inactive windows transparent. Use `transparency_val` variable to control
 # transparency strength in range of 0…1 or use the command line argument -o.
+# adding apps to be excluded from getting transparency by adding
+# to this list: EXCLUDED_APPS = ["firefox", "mpv"]
 
 import argparse
 import signal
