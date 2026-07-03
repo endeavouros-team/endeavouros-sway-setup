@@ -5,7 +5,7 @@
 # Copyright 2014 Benjamin Chretien <chretien at lirmm dot fr>
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-# Edited by Andreas Lindlbauer <endeavouros.mousily@aleeas.com>
+# Edited by Andreas Lindlbauer <endeavouros.mousily /at/ aleeas.com>
 
 use strict;
 use warnings;
