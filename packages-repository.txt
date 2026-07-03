@@ -26,7 +26,6 @@ mpv
 network-manager-applet
 noto-fonts
 noto-fonts-emoji
-nwg-clipman
 nwg-displays
 nwg-look
 playerctl
@@ -55,6 +54,8 @@ unzip
 waybar
 wf-recorder
 wl-clipboard
+xdg-desktop-portal-wlr
+xdg-desktop-portal-gtk
 xdg-user-dirs
 xed
 xorg-xwayland
