@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
-# This script requires i3ipc-python package (install it from a system package manager
-# or pip).
+# This script requires i3ipc-python package (install via `sudo pacman -S python-i3ipc`)
 # It makes inactive windows transparent. Use `transparency_val` variable to control
 # transparency strength in range of 0…1 or use the command line argument -o.
 
