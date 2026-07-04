@@ -70,11 +70,9 @@ TOOLS=(
     "waybar_toggle/waybar-toggle"
     "weather/sway-openweather"
 )
-
-for item in "${TOOLS[@]}"; do
-    src="${item%%:*}"
-    dest="${item#*:}"
-    [ "$dest" == "$src" ] && dest=$(basename "$src")
+for src in "${TOOLS[@]}"; do
+    # Extract the filename from the path (e.g., "sway-new-workspace")
+    dest=$(basename "$src")
     cp "$TOOLS_DIR/$src" "$SCRIPT_DIR/$dest"
 done
 
