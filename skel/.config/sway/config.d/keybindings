@@ -134,18 +134,18 @@ bindsym F3 exec waybar-toggle
 # screen lock
 bindsym $mod+l exec $HOME/.local/bin/gtklock_config
 
-#exit-menu
+# exit-menu
 bindsym $mod+Shift+e exec sway-powermenu
 
 # restart sway inplace (preserves your layout/session, can be used to upgrade sway)
 bindsym $mod+Shift+r reload
 
-#extra keys:
+## extra keys:
 
-#calculator
+# calculator
 bindsym XF86Calculator exec galculator
 
-# screenshot
+## screenshot
 
 # take a screenshot of a selection:
 bindsym $mod+Print exec swayshot -s
@@ -153,7 +153,7 @@ bindsym $mod+Print exec swayshot -s
 # Shot of all screens in one pic after releasing print button:
 bindsym --release Print exec swayshot -a
 
-# screencast
+## screencast
 
 # Start recording (select area)
 bindsym $mod+Shift+y exec swaycast
