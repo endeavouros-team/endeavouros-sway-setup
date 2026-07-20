@@ -30,6 +30,9 @@ wget https://raw.githubusercontent.com/endeavouros-team/endeavouros-sway-setup/r
 chmod +x ./install
 ./install
 ```
+# what will this do?
+This script automates the installation and deployment of a pre-configured Sway window manager environment for a specified user on an EndeavourOS system. It clones configuration and tool repositories, installs required package dependencies via pacman, deploys custom dotfiles and helper scripts, configures greetd as the display manager, and enables necessary systemd services.
+
 
 ## Install over EndeavourOS ISO/installer:
 
