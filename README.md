@@ -34,12 +34,10 @@ chmod +x ./install
 ## Install over EndeavourOS ISO/installer:
 
 1. copy the raw iso mode script url:
-
 [sway_install_isomode](https://raw.githubusercontent.com/endeavouros-team/endeavouros-sway-setup/refs/heads/main/sway_install_isomode)
 
 2. paste it into "fetch your install customization file (advanced)" option on screen ,in the booted installler ISO:
 ![2023-09-06_15-10](https://github.com/EndeavourOS-Community-Editions/.github/assets/16797647/0b5fb0dc-609f-479e-9669-94b961db089d)
 
-![2023-09-06_15-10_1](https://github.com/EndeavourOS-Community-Editions/.github/assets/16797647/5aebc38e-4864-428a-b2c9-1523f6b30443)
-
 3. run online install and choose **no-desktop** option, when selection for Desktops is shown up.
+![2023-09-06_15-10_1](https://github.com/EndeavourOS-Community-Editions/.github/assets/16797647/5aebc38e-4864-428a-b2c9-1523f6b30443)
