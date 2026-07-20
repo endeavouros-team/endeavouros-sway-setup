@@ -18,6 +18,15 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 11. [kitty](https://sw.kovidgoyal.net/kitty/) as terminal [currently]
 
 ![panel-helper](https://raw.githubusercontent.com/endeavouros-team/artwork-images-logo/refs/heads/master/eos-sway/doc.png)
+1. [Workspaces](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.config/sway/config.d/workspaces)
+2. [App-Menu](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.config/rofi/rofidmenu.rasi) (Rofi)
+3. [System Monitoring](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.config/waybar/config.jsonc)
+4. [Tray-Icons](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.config/waybar/config.jsonc)
+5. [Power-Profiles-Switcher](https://github.com/killajoe/sway_tools/tree/main/power_profiles_switcher)
+6. [Way-Bar Reloder Button](https://github.com/killajoe/sway_tools/tree/main/waybar_toggle)
+7. [Notification Tray](https://github.com/endeavouros-team/endeavouros-sway-setup/tree/main/skel/.config/swaync) (swayNC)
+8. [Simple Keybind Hinter ](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.local/bin/keyhint)(YAD)
+9. [Power Menu](https://github.com/killajoe/sway_tools/tree/main/powermenu) ([it gracefully exit the session](https://github.com/killajoe/sway_tools/tree/main/gracefully_exit))
 
 ## you want more fancy?
 
