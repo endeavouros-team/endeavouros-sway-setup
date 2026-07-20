@@ -63,6 +63,6 @@ It then deploys custom configuration files, Rofi themes, and helper utilities di
 
 This script is designed strictly for execution within the EndeavourOS ISO live environment to integrate with the user_commands.bash post-installation hook mechanism. 
 
-When configured via the Welcome app during an installation that uses the "No-Desktop" selection, the script runs in the target chroot environment with the newly created username passed as an argument. 
+Once added via the Welcome app, it works fully automatically during an installation that uses the "No-Desktop" selection, the script runs in the target chroot environment with the newly created username passed as an argument. 
 
-t will automatically clone the setup repositories, installs all required dependencies via pacman, populates the target new user's home directory with dotfiles and custom Sway utilities, configures greetd and systemd services, and sets correct ownership—resulting in a fully configured, ready-to-use Sway desktop upon the first reboot, without any additional intervention.
+t will automatically clone the setup repositories, installs all required dependencies via pacman, populates the target new user's home directory with dotfiles and custom Sway utilities, configures greetd and systemd services, and sets correct ownership—resulting in a fully configured, ready-to-use Sway desktop upon the first reboot.
