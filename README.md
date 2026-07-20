@@ -17,6 +17,7 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 10. [swayosd](https://github.com/ErikReider/SwayOSD) as OSD for volume brightness and others
 11. [kitty](https://sw.kovidgoyal.net/kitty/) as terminal [currently]
 
+# the panel (waybar)
 ![panel-helper](https://raw.githubusercontent.com/endeavouros-team/artwork-images-logo/refs/heads/master/eos-sway/doc.png)
 1. [Workspaces](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.config/sway/config.d/workspaces)
 2. [App-Menu](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.config/rofi/rofidmenu.rasi) (Rofi)
