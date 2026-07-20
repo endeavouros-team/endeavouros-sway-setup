@@ -31,8 +31,8 @@ chmod +x ./install
 ./install
 ```
 **what will this do?**
-This script backs up existing user configuration files to a timestamped folder before cloning and installing EndeavourOS Sway dotfiles, tools, and system package dependencies. It then configures greetd and systemd services for the Sway session, applies custom helper tools and desktop settings, and cleans up temporary installation files.
 
+This script backs up existing dotfiles to a timestamped directory before installing system dependencies and cloning the EndeavorOS Sway repositories. It then deploys custom configuration files, Rofi themes, and helper utilities directly into the current user's home directory, ultimately enabling greetdand systemd services to deliver a fully pre-configured, ready-to-use Sway environment upon reboot.
 
 ## Install over EndeavourOS ISO/installer:
 
