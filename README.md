@@ -1,7 +1,7 @@
 # EndeavourOS Sway setup
 
 sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavouros-team/endeavouros-i3wm-setup)
-
+# Get It, Break It, Love It
 ![screenshot](https://raw.githubusercontent.com/endeavouros-team/artwork-images-logo/refs/heads/master/eos-sway.png)
 
 # includes:
@@ -20,4 +20,26 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 ## you want more fancy?
 
 install [swayfx](https://github.com/WillPower3309/swayfx) from AUR:
+
 `yay -S swayfx` and let it replace sway package.
+
+## Manual install:
+
+```
+wget https://raw.githubusercontent.com/endeavouros-team/endeavouros-sway-setup/refs/heads/main/install
+chmod +x ./install
+./install
+```
+
+## Install over EndeavourOS ISO/installer:
+
+1. copy the raw iso mode script url:
+
+[sway_install_isomode](https://raw.githubusercontent.com/endeavouros-team/endeavouros-sway-setup/refs/heads/main/sway_install_isomode)
+
+2. paste it into "fetch your install customization file (advanced)" option on screen ,in the booted installler ISO:
+![2023-09-06_15-10](https://github.com/EndeavourOS-Community-Editions/.github/assets/16797647/0b5fb0dc-609f-479e-9669-94b961db089d)
+
+![2023-09-06_15-10_1](https://github.com/EndeavourOS-Community-Editions/.github/assets/16797647/5aebc38e-4864-428a-b2c9-1523f6b30443)
+
+3. run online install and choose **no-desktop** option, when selection for Desktops is shown up.
