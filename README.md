@@ -61,7 +61,7 @@ It then deploys custom configuration files, Rofi themes, and helper utilities di
 
 **what will the *sway_install_isomode* script do?**
 
-This script is designed strictly for execution within the EndeavourOS ISO live environment to integrate with the user_commands.bash post-installation hook mechanism. 
+This script is designed strictly for execution within the EndeavourOS ISO live environment to integrate with the [user_commands.bash](https://discovery.endeavouros.com/installation/customizing-the-endeavouros-install-process/2022/03/) post-installation hook mechanism. 
 
 Once added via the Welcome app, it works fully automatically during an installation that uses the "No-Desktop" selection, the script runs in the target chroot environment with the newly created username passed as an argument. 
 
