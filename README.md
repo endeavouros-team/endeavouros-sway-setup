@@ -42,7 +42,7 @@ wget https://raw.githubusercontent.com/endeavouros-team/endeavouros-sway-setup/r
 chmod +x ./install
 ./install
 ```
-**what will this do?**
+**what will the *install* script do?**
 
 This script backs up existing dotfiles to a timestamped directory before installing system dependencies and cloning the EndeavorOS Sway repositories. It then deploys custom configuration files, Rofi themes, and helper utilities directly into the current user's home directory, ultimately enabling greetdand systemd services to deliver a fully pre-configured, ready-to-use Sway environment upon reboot.
 
@@ -56,3 +56,7 @@ This script backs up existing dotfiles to a timestamped directory before install
 
 3. run online install and choose **no-desktop** option, when selection for Desktops is shown up.
 ![2023-09-06_15-10_1](https://github.com/EndeavourOS-Community-Editions/.github/assets/16797647/5aebc38e-4864-428a-b2c9-1523f6b30443)
+
+**what will the *sway_install_isomode* script do?**
+
+This script is designed strictly for execution within the EndeavourOS ISO live environment to integrate with the user_commands.bash post-installation hook mechanism. When configured via the Welcome app during an installation that uses the "No-Desktop" selection, the script runs in the target chroot environment with the newly created username passed as an argument. It automatically clones the setup repositories, installs all required dependencies via pacman, populates the target user's home directory with dotfiles and custom Sway utilities, configures greetd and systemd services, and sets correct ownership—resulting in a fully configured, ready-to-use Sway desktop upon the first reboot.
