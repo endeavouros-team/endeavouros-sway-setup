@@ -2,7 +2,7 @@
 
 sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavouros-team/endeavouros-i3wm-setup)
 # Get It, Break It, Love It
-![screenshot](https://raw.githubusercontent.com/endeavouros-team/artwork-images-logo/refs/heads/master/eos-sway.png)
+![screenshot](https://raw.githubusercontent.com/endeavouros-team/artwork-images-logo/refs/heads/master/eos-sway/eos-sway.png)
 
 # includes:
 1. [waybar](https://github.com/Alexays/Waybar) with tray, powermenu, systemmonitors, worksapce buttons and audio control
@@ -16,6 +16,8 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 9. [gtklock](https://github.com/jovanlanik/gtklock) as lock screen
 10. [swayosd](https://github.com/ErikReider/SwayOSD) as OSD for volume brightness and others
 11. [kitty](https://sw.kovidgoyal.net/kitty/) as terminal [currently]
+
+![panel-helper](https://raw.githubusercontent.com/endeavouros-team/artwork-images-logo/refs/heads/master/eos-sway/doc.png)
 
 ## you want more fancy?
 
