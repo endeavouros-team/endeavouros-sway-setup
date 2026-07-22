@@ -56,10 +56,10 @@ floating_modifier $mod
 #execsetxkbmap -layout de,us -option grp:win_space_toggle
 #execsetxkbmap -layout de,us -option 'grp:alt_c_toggle'
 
-# start a terminal
-set $term kitty
+# start a terminal (change to yoor beloved terminal in case)
+set $term foot
 exec_always {
-    export TERMINAL=kitty
+    export TERMINAL=foot
 }
 
 # wallpaper (static set)
