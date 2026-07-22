@@ -82,11 +82,13 @@ will include all configs under
 
 Use the dropin configs there to change settings, these configs are there:
 
-* autostart - everything to be automatically started with the session
-* defaults - default window handling
-* input - input device configuration
-* workspaces - workspace handling
-* keybindings - custom keybindings
+* **autostart** - everything to be automatically started with the session
+* **defaults** - default window handling
+* **input** - input device configuration
+* **workspaces** - workspace handling
+* **keybindings** - custom keybindings
+
+These configs will get sourced into the main user config automatically, edit them instead of the `$HOME/.config/sway/config`
 
 **User scripts can be found under `$HOME/.local/bin/`**
 
@@ -98,6 +100,7 @@ to edit sway_tools copy these to the users path example:
 and edit from there, it will overwrite systemwide script.
 
 **these are the pathes to default used tools**
+* $HOME/.config/foot
 * $HOME/.config/gtklock
 * $HOME/.config/rofi
 * $HOME/.config/swaync
@@ -106,5 +109,13 @@ and edit from there, it will overwrite systemwide script.
 
 **Environment variables can be easily set inside:**
 
-[$HOME/.profile](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.profile)
+[.profile](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.profile)
+
+## Links:
+
+https://swaywm.org/ :: https://github.com/swaywm/sway/wiki
+
+https://wiki.archlinux.org/title/Sway
+
+
 
