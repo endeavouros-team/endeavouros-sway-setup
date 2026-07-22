@@ -106,5 +106,5 @@ and edit from there, it will overwrite systemwide script.
 
 **Environment variables can be easily set inside:**
 
-`[$HOME/.profile](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.profile)`
+[$HOME/.profile](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.profile)
 
