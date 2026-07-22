@@ -37,6 +37,7 @@ install [swayfx](https://github.com/WillPower3309/swayfx) from AUR:
 
 and uncomment round corner settings in the config: 
 [defaults#Line54](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.config/sway/config.d/defaults#L54)
+
 ## Manual install:
 
 ```
@@ -70,3 +71,40 @@ Once added via the Welcome app, it works fully automatically during an installat
 It will automatically clone the setup repositories, installs all required dependencies via pacman, populates the target new user's home directory with dotfiles and custom Sway utilities, configures greetd and systemd services, and sets correct ownership.
 
 Resulting in a fully configured, ready-to-use Sway desktop upon the first reboot.
+
+## Tipps
+
+**EndeavourOS sway default config**
+
+will include all configs under 
+
+`$HOME/.config/sway/config.d/`
+
+Use the dropin configs there to change settings, these configs are there:
+
+* autostart - everything to be automatically started with the session
+* defaults - default window handling
+* input - input device configuration
+* workspaces - workspace handling
+* keybindings - custom keybindings
+
+**User scripts can be found under `$HOME/.local/bin/`**
+
+make sure marking them executable to be used in waybar or other tools
+to edit sway_tools copy these to the users path example:
+
+`cp /usr/bin/sway_powermenu $HOME/.local/bin/`
+
+and edit from there, it will overwrite systemwide script.
+
+**these are the pathes to default used tools**
+* $HOME/.config/gtklock
+* $HOME/.config/rofi
+* $HOME/.config/swaync
+* $HOME/.config/swayosd
+* $HOME/.config/waybar
+
+**Environment variables can be easily set inside:**
+
+`[$HOME/.profile](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.profile)`
+
