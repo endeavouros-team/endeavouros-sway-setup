@@ -6,6 +6,7 @@ brightnessctl
 cliphist
 dex
 engrampa
+foot
 fuzzel
 galculator
 greetd
@@ -20,7 +21,7 @@ gvfs-mtp
 gvfs-nfs
 inotify-tools
 jq
-kitty
+#kitty
 libnotify
 mpv
 network-manager-applet
