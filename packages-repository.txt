@@ -21,7 +21,6 @@ gvfs-mtp
 gvfs-nfs
 inotify-tools
 jq
-#kitty
 libnotify
 mpv
 network-manager-applet
