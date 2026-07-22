@@ -40,6 +40,8 @@ exec_always $HOME/.local/bin/import-gsettings
 seat seat0 xcursor_theme Qogir-Dark 16
 
 # set preferred terminal
+# usable with "terminal-alias" in scripts automatically
+# so if set here scripts can use the one you set default
 set $term foot
 
 # focus_wrapping

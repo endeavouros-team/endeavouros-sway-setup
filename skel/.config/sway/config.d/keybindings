@@ -1,7 +1,8 @@
 # EndeavourOS sway custom keybindings
 # will get sourced into $HOME/.config/sway/config
 
-bindsym $mod+Return exec kitty
+# "terminal-alias" will use set terminal from config
+bindsym $mod+Return exec terminal-alias
 
 # open Filemanager
 bindsym $mod+Shift+t exec thunar

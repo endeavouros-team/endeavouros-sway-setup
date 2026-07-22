@@ -97,7 +97,7 @@
     "return-type": "text",
     "tooltip": false,
     "format": " GPU {}",
-    "on-click": "$term -e sh -c 'watch sensors'"
+    "on-click": "terminal-alias -e sh -c 'watch sensors'"
   },
 
   "custom/keyhint": {
@@ -115,7 +115,7 @@
     "return-type": "text",
     "tooltip": true,
     "tooltip-format": "Click to watch sensors",
-    "on-click": "$term -e sh -c 'watch sensors'"
+    "on-click": "terminal-alias -e sh -c 'watch sensors'"
   },
 
   "custom/mem": {
@@ -125,7 +125,7 @@
     "return-type": "text",
     "tooltip": true,
     "tooltip-format": "Click for detailed RAM monitor",
-    "on-click": "$term -e sh -c 'watch free'"
+    "on-click": "terminal-alias -e sh -c 'watch free'"
   },
 
   "custom/disk": {
@@ -133,7 +133,7 @@
     "interval": 60,
     "return-type": "json",
     "format": " {text} ",
-    "on-click": "$term -e sh -c 'duf; echo Press Enter to close...; read'"
+    "on-click": "terminal-alias -e sh -c 'duf; echo Press Enter to close...; read'"
   },
 
   "custom/disktmp": {
@@ -246,7 +246,7 @@
 
   "custom/terminal": {
     "format": " ",
-    "on-click": "swaymsg exec -- $term",
+    "on-click": "swaymsg exec -- terminal-alias",
     "tooltip": true,
     "tooltip-format": "Terminal"
   },
