@@ -33,6 +33,7 @@ git clone https://github.com/killajoe/sway_tools.git "$TOOLS_DIR"
 # 3. System Packages and Services
 echo ">> Installing packages "
 
+pacman -Sy --noconfirm
 pacman -S --needed --noconfirm - < "$REPO_DIR/packages-repository.txt"
 
 # 4. Install Base Configuration
