@@ -3,7 +3,7 @@
 sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavouros-team/endeavouros-i3wm-setup)
 # Get It, Break It, Love It
 ![screenshot](https://raw.githubusercontent.com/endeavouros-team/artwork-images-logo/refs/heads/master/eos-sway/eos-sway.png)
-
+<small>Wallpaper credits goes to: https://github.com/UncleSpellbinder/EndeavourOS-HD-Wallpaper</small>
 # includes:
 1. [waybar](https://github.com/Alexays/Waybar) with tray, powermenu, systemmonitors, worksapce buttons and audio control
 2. [rofi](https://github.com/lbonn/rofi) for menues (Application menu and others)
