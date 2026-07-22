@@ -15,6 +15,12 @@
   "modules-center": [
     "custom/separator",
     "custom/appmenu",
+    "custom/separator",
+    "custom/browser",
+    "custom/separator",
+    "custom/terminal",
+    "custom/separator",
+    "custom/thunar",
     "custom/separator"
   ],
 
@@ -52,23 +58,22 @@
 
   "sway/workspaces": {},
 
-"clock": {
-    //"locale": "de_DE.UTF-8",
+  "clock": {
     "format": "{:L%a %d.%m.%Y %H:%M:%S}",
     "interval": 1,
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
-        "mode": "month",
-        "mode-mon-col": 3,
-        "weeks-pos": "right",
-        "on-scroll": 1,
-        "format": {
-            "months": "<span color='#ffead3'><b>{}</b></span>",
-            "today": "<span color='#ff6b6b'><b><u>{}</u></b></span>"
-        }
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "today": "<span color='#ff6b6b'><b><u>{}</u></b></span>"
+      }
     },
     "actions": {
-        "on-click-right": "mode"
+      "on-click-right": "mode"
     }
   },
 
@@ -92,7 +97,7 @@
     "return-type": "text",
     "tooltip": false,
     "format": " GPU {}",
-    "on-click": "kitty -e sh -c 'watch sensors'"
+    "on-click": "$term -e sh -c 'watch sensors'"
   },
 
   "custom/keyhint": {
@@ -110,7 +115,7 @@
     "return-type": "text",
     "tooltip": true,
     "tooltip-format": "Click to watch sensors",
-    "on-click": "kitty -e sh -c 'watch sensors'"
+    "on-click": "$term -e sh -c 'watch sensors'"
   },
 
   "custom/mem": {
@@ -120,15 +125,17 @@
     "return-type": "text",
     "tooltip": true,
     "tooltip-format": "Click for detailed RAM monitor",
-    "on-click": "kitty -e sh -c 'watch free'"
+    "on-click": "$term -e sh -c 'watch free'"
   },
+
   "custom/disk": {
     "exec": "disk",
     "interval": 60,
     "return-type": "json",
     "format": " {text} ",
-    "on-click": "kitty -e sh -c 'duf; echo Press Enter to close...; read'"
+    "on-click": "$term -e sh -c 'duf; echo Press Enter to close...; read'"
   },
+
   "custom/disktmp": {
     "exec": "nvmetemp",
     "interval": 5,
@@ -222,10 +229,32 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true
   },
+
   "custom/appmenu": {
-  	"format": "󰍜 ",
+    "format": "󰍜 ",
     "on-click": "swaymsg exec -- rofi -modi drun -show drun -config $HOME/.config/rofi/rofidmenu.rasi",
     "tooltip": true,
     "tooltip-format": "Application Menu - [󱊷] to close"
+  },
+
+  "custom/browser": {
+    "format": " ",
+    "on-click": "swaymsg exec -- xdg-open http://",
+    "tooltip": true,
+    "tooltip-format": "Web Browser"
+  },
+
+  "custom/terminal": {
+    "format": " ",
+    "on-click": "swaymsg exec -- $term",
+    "tooltip": true,
+    "tooltip-format": "Terminal"
+  },
+
+  "custom/thunar": {
+    "format": " ",
+    "on-click": "swaymsg exec -- thunar",
+    "tooltip": true,
+    "tooltip-format": "Thunar File Manager"
   }
 }

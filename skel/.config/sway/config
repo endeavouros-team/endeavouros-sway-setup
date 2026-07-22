@@ -39,6 +39,9 @@ exec_always $HOME/.local/bin/import-gsettings
 # Cursor theme and size
 seat seat0 xcursor_theme Qogir-Dark 16
 
+# set preferred terminal
+set $term foot
+
 # focus_wrapping
 focus_wrapping yes
 
@@ -55,12 +58,6 @@ floating_modifier $mod
 
 #execsetxkbmap -layout de,us -option grp:win_space_toggle
 #execsetxkbmap -layout de,us -option 'grp:alt_c_toggle'
-
-# start a terminal (change to yoor beloved terminal in case)
-set $term foot
-exec_always {
-    export TERMINAL=foot
-}
 
 # wallpaper (static set)
 exec_always swaybg -i /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png -m fill
