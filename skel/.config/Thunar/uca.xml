@@ -5,8 +5,8 @@
 	<name>Open Terminal Here</name>
 	<submenu></submenu>
 	<unique-id>1747666409199817-1</unique-id>
-	<command>kitty --working-directory=%f</command>
-	<description>Opens a Kitty terminal in the current directory</description>
+	<command>terminal-alias --working-directory=%f</command>
+	<description>Opens a terminal in the current directory</description>
 	<range></range>
 	<patterns>*</patterns>
 	<startup-notify/>
