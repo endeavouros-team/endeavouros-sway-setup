@@ -12,11 +12,11 @@ here you have parts of the config named to fit what they include, these will sou
 * workspaces - workspace handling
 * keybindings - custom keybindings
 
-User scripts can be found under `~/.config/sway/scripts/`
+User scripts can be found under `~/.local/bin/`
 
 make sure marking them executable to be used in waybar or other tools.
 
-Tools from the [sway_tools](https://github.com/killajoe/sway_tools/tree/main) collection are installed systemwide,
+Tools from the [sway_tools](https://github.com/killajoe/sway_tools/tree/main) collection are installed systemwide (/usr/bin/)
 
 you can edit them if you copy them into users path under '~/.local/bin/'
 
@@ -41,7 +41,7 @@ Here are the pathes to default used tool setups:
 
 `~/.config/waybar`
 
-## Firefox is autostarting at each login?
+## Firefox and keyhint is autostarting at each login?
 
 Open `~/.config/sway/config.d/autostart`
 Add/remove `#` at the start of the line to disable/enable auto start at login:
@@ -57,7 +57,7 @@ After (changed setting, firefox will not auto start at login)
 ```
 # autostart apps
 #exec firefox https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/force-knowledge.md
-#exec  sleep 5 && telegram-desktop
+#exec  sleep 2 && keyhint
 ```
 
 ## Autostart Implementation
