@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# backing up lists of installed packages
+# Backing up lists of installed packages
 
 # Set strict error handling
 set -euo pipefail
@@ -9,13 +9,21 @@ AUR_LIST="${HOME}/packages-AUR.txt"
 REPO_LIST="${HOME}/packages-repository.txt"
 
 # Export explicit foreign/AUR packages (installed from AUR or manually)
-if ! pacman -Qqem > "$AUR_LIST"; then
-    echo "Error: Failed to export AUR package list." >&2
-    exit 1
+# We capture the exit status because pacman returns 1 if no packages are found.
+if ! pacman -Qqem > "$AUR_LIST" 2>/dev/null; then
+    # If pacman failed but it's just because the list is empty (exit code 1), we clear the file and move on.
+    # If it's any other error code, we exit.
+    if [ ! -s "$AUR_LIST" ]; then
+        > "$AUR_LIST"
+    else
+        echo "Error: Failed to export AUR package list." >&2
+        exit 1
+    fi
 fi
 
-# Export native repository packages (explicitly installed, excluding dependencies)
-if ! pacman -Qqetn > "$REPO_LIST"; then
+# Export native repository packages (explicitly installed)
+# Note: -Qqen captures ALL explicitly installed packages, which is safer for backups than -Qqetn.
+if ! pacman -Qqen > "$REPO_LIST" 2>/dev/null; then
     echo "Error: Failed to export repository package list." >&2
     exit 1
 fi
@@ -28,3 +36,4 @@ REPO_COUNT=$(wc -l < "$REPO_LIST")
 echo "Package lists successfully updated:"
 echo "  - AUR/Foreign:  $AUR_LIST ($AUR_COUNT packages)"
 echo "  - Repository:   $REPO_LIST ($REPO_COUNT packages)"
+
