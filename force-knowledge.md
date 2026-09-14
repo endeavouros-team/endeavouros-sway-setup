@@ -16,7 +16,7 @@ User scripts can be found under `~/.local/bin/`
 
 make sure marking them executable to be used in waybar or other tools.
 
-Tools from the [sway_tools](https://github.com/killajoe/sway_tools/tree/main) collection are installed systemwide (/usr/bin/)
+Tools from the [sway_tools](https://github.com/killajoe/sway_tools/tree/main) collection is installed systemwide ( `/usr/bin/`)
 
 you can edit them if you copy them into users path under '~/.local/bin/'
 
