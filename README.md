@@ -51,27 +51,6 @@ This script backs up existing dotfiles to a timestamped directory before install
 
 It then deploys custom configuration files, Rofi themes, and helper utilities directly into the current user's home directory, ultimately enabling greetdand systemd services to deliver a fully pre-configured, ready-to-use Sway environment upon reboot.
 
-## Install over EndeavourOS ISO/installer:
-
-1. copy the raw iso mode script url:
-[sway_install_isomode](https://raw.githubusercontent.com/endeavouros-team/endeavouros-sway-setup/refs/heads/main/sway_install_isomode)
-
-2. paste it into "fetch your install customization file (advanced)" option on screen, in the booted installler ISO:
-![2023-09-06_15-10](https://github.com/EndeavourOS-Community-Editions/.github/assets/16797647/0b5fb0dc-609f-479e-9669-94b961db089d)
-
-3. run online install and choose **no-desktop** option, when selection for Desktops is shown up.
-![2023-09-06_15-10_1](https://github.com/EndeavourOS-Community-Editions/.github/assets/16797647/5aebc38e-4864-428a-b2c9-1523f6b30443)
-
-**what will the *sway_install_isomode* script do?**
-
-This script is designed strictly for execution within the EndeavourOS ISO live environment to integrate with the [user_commands.bash](https://discovery.endeavouros.com/installation/customizing-the-endeavouros-install-process/2022/03/) post-installation hook mechanism. 
-
-Once added via the Welcome app, it works fully automatically during an installation that uses the "No-Desktop" selection, the script runs in the target chroot environment with the newly created username passed as an argument. 
-
-It will automatically clone the setup repositories, installs all required dependencies via pacman, populates the target new user's home directory with dotfiles and custom Sway utilities, configures greetd and systemd services, and sets correct ownership.
-
-Resulting in a fully configured, ready-to-use Sway desktop upon the first reboot.
-
 ## Tipps
 
 **EndeavourOS sway default config**
