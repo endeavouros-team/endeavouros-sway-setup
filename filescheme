@@ -1,95 +1,74 @@
-├── config.toml
-├── eos-sway.desktop
-├── eos-sway-wrapper
-├── filescheme
-├── force-knowledge.md
-├── install
-├── LICENSE
-├── packages-repository.txt
-├── README.md
-├── skel
-│   ├── .config
-│   │   ├── fontconfig
-│   │   │   └── fonts.conf
-│   │   ├── foot
-│   │   │   └── foot.ini
-│   │   ├── gtk-3.0
-│   │   │   └── settings.ini
-│   │   ├── gtk-4.0
-│   │   │   └── settings.ini
+├── .config
+│   ├── fontconfig
+│   │   └── fonts.conf
+│   ├── foot
+│   │   └── foot.ini
+│   ├── gtk-3.0
+│   │   └── settings.ini
+│   ├── gtk-4.0
+│   │   └── settings.ini
+│   ├── gtklock
+│   │   ├── config.ini
+│   │   └── style.css
+│   ├── nano
+│   │   └── .nanorc
+│   ├── qt5ct
+│   │   └── qt5ct.conf
+│   ├── qt6ct
+│   │   └── qt6ct.conf
+│   ├── rofi
+│   │   ├── config.rasi
+│   │   ├── rofidmenu.rasi
+│   │   └── rofikeyhint.rasi
+│   ├── sway
+│   │   ├── config
+│   │   └── config.d
+│   │       ├── autostart
+│   │       ├── defaults
+│   │       ├── input
+│   │       ├── keybindings
+│   │       └── workspaces
+│   ├── swaync
+│   │   ├── config.json
+│   │   └── style.css
+│   ├── swayosd
+│   │   └── style.css
+│   ├── Thunar
+│   │   └── uca.xml
+│   └── waybar
+│       ├── config.jsonc
+│       └── style.css
+├── .gtkrc-2.0
+├── .icons
+│   └── default
+│       └── index.theme
+├── .local
+│   ├── bin
+│   │   ├── app_id
+│   │   ├── audio-device-switch
+│   │   ├── bandwidth2
+│   │   ├── cputemp
+│   │   ├── cpu_usage
+│   │   ├── disk
+│   │   ├── gputemp
 │   │   ├── gtklock
-│   │   │   ├── config.ini
-│   │   │   └── style.css
-│   │   ├── kitty
-│   │   │   ├── kitty-color.conf
-│   │   │   └── kitty.conf
-│   │   ├── qt5ct
-│   │   │   └── qt5ct.conf
-│   │   ├── qt6ct
-│   │   │   └── qt6ct.conf
-│   │   ├── rofi
-│   │   │   ├── config.rasi
-│   │   │   ├── rofidmenu.rasi
-│   │   │   └── rofikeyhint.rasi
-│   │   ├── sway
-│   │   │   ├── config
-│   │   │   └── config.d
-│   │   │       ├── autostart
-│   │   │       ├── defaults
-│   │   │       ├── input
-│   │   │       ├── keybindings
-│   │   │       └── workspaces
-│   │   ├── swaync
-│   │   │   ├── config.json
-│   │   │   └── style.css
-│   │   ├── swayosd
-│   │   │   └── style.css
-│   │   ├── Thunar
-│   │   │   └── uca.xml
-│   │   └── waybar
-│   │       ├── config.jsonc
-│   │       └── style.css
-│   ├── .gtkrc-2.0
-│   ├── .icons
-│   │   └── default
-│   │       └── index.theme
-│   ├── .local
-│   │   ├── bin
-│   │   │   ├── app_id
-│   │   │   ├── audio-device-switch
-│   │   │   ├── bandwidth2
-│   │   │   ├── cputemp
-│   │   │   ├── cpu_usage
-│   │   │   ├── disk
-│   │   │   ├── gputemp
-│   │   │   ├── gtklock
-│   │   │   ├── import-gsettings
-│   │   │   ├── inactive-window-transparency.py
-│   │   │   ├── keyhint
-│   │   │   ├── keyhint-2
-│   │   │   ├── memory
-│   │   │   ├── nvmetemp
-│   │   │   ├── packagelist
-│   │   │   ├── temperature
-│   │   │   └── terminal-alias
-│   │   └── share
-│   │       ├── nwg-look
-│   │       │   └── gsettings
-│   │       └── rofi
-│   │           └── themes
-│   │               └── deep-purple.rasi
-│   ├── nanorc
-│   ├── .profile
-│   ├── set_once.sh
-│   └── xed.dconf
-├── sway_install_isomode
-├── TODO.md
-├── tre
-└── tuigreet.command
+│   │   ├── import-gsettings
+│   │   ├── inactive-window-transparency.py
+│   │   ├── keyhint
+│   │   ├── keyhint-2
+│   │   ├── memory
+│   │   ├── nvmetemp
+│   │   ├── packagelist
+│   │   ├── temperature
+│   │   └── terminal-alias
+│   └── share
+│       ├── nwg-look
+│       │   └── gsettings
+│       └── rofi
+│           └── themes
+│               └── deep-purple.rasi
+├── .profile
+├── set_once.sh
+└── xed.dconf
 
-26 directories, 63 files
-
----
-
-generate:
-`tree -a -I ".git" > filesheme-new`
+25 directories, 49 files
