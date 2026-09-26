@@ -14,13 +14,7 @@
 
   "modules-center": [
     "custom/separator",
-    "custom/appmenu",
-    "custom/separator",
-    "custom/browser",
-    "custom/separator",
-    "custom/terminal",
-    "custom/separator",
-    "custom/thunar",
+    "group/launcher",
     "custom/separator"
   ],
 
@@ -52,14 +46,13 @@
     "clock",
     "custom/separator",
     "custom/power-menu",
-    "custom/separator",
     "custom/separator"
   ],
 
   "sway/workspaces": {},
 
   "clock": {
-    "format": "{:L%a %d.%m.%Y %H:%M:%S}",
+    "format": "{:L%a %d.%m.%Y %H:%M}",
     "interval": 1,
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -231,30 +224,51 @@
   },
 
   "custom/appmenu": {
-    "format": "󰍜 ",
+    "format": "   ",
     "on-click": "swaymsg exec -- rofi -modi drun -show drun -config $HOME/.config/rofi/rofidmenu.rasi",
     "tooltip": true,
     "tooltip-format": "Application Menu - [󱊷] to close"
   },
 
   "custom/browser": {
-    "format": " ",
+    "format": "   ",
     "on-click": "swaymsg exec -- xdg-open http://",
     "tooltip": true,
     "tooltip-format": "Web Browser"
   },
 
   "custom/terminal": {
-    "format": " ",
+    "format": "   ",
     "on-click": "swaymsg exec -- terminal-alias",
     "tooltip": true,
     "tooltip-format": "Terminal"
   },
 
   "custom/thunar": {
-    "format": " ",
-    "on-click": "swaymsg exec -- thunar",
+      "format": "   ",
+      "on-click": "swaymsg exec -- thunar",
+      "tooltip": true,
+      "tooltip-format": "Thunar File Manager"
+  },
+
+  "group/launcher": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/launcher-wrap",
+      "custom/appmenu",
+      "custom/browser",
+      "custom/terminal",
+      "custom/thunar"
+    ]
+  },
+
+  "custom/launcher-wrap": {
+    "format": "󰹯",
     "tooltip": true,
-    "tooltip-format": "Thunar File Manager"
+    "tooltip-format": "Launcher"
   }
 }
