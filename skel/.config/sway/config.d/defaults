@@ -86,7 +86,7 @@ for_window [app_id=".*"] border none
 
 # default sway options for focus indicator
 # set transparency for unfocused windows
-exec python3 ~/.local/bin/inactive-window-transparency.py -o 0.8
+exec python3 inactive-window-transparency.py -o 0.8
 # exclude apps that show changing content
 for_window [app_id="firefox"] opacy 1.0
 for_window [app_id="mpv"] opacy 1.0
