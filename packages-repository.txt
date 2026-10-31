@@ -30,6 +30,7 @@ nwg-displays
 nwg-look
 playerctl
 polkit-gnome
+python-i3ipc
 qt5ct
 qt6ct
 rofi

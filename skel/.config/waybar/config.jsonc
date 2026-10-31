@@ -225,7 +225,7 @@
 
   "custom/appmenu": {
     "format": "   ",
-    "on-click": "swaymsg exec -- rofi -modi drun -show drun -config $HOME/.config/rofi/rofidmenu.rasi",
+    "on-click": "swaymsg exec -- app_menu drun rofidmenu",
     "tooltip": true,
     "tooltip-format": "Application Menu - [󱊷] to close"
   },

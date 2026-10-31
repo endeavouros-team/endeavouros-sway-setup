@@ -113,6 +113,14 @@ bindsym $mod+n layout stacking
 bindsym $mod+m layout tabbed
 bindsym $mod+b layout default
 
+# app_menu (Rofi)
+# https://github.com/killajoe/sway_tools/tree/main/app_menu
+# to customize copy it to users path:
+# cp /usr/share/sway_tools/rofi/rofidmenu.rasi ~/.config/rofi/
+# and modify to your needs
+bindsym $mod+d exec "app_menu drun rofidmenu"
+bindsym $mod+Shift+D exec "app_menu window rofidmenu"
+
 bindsym F1 exec keyhint-2
 
 # switch output
