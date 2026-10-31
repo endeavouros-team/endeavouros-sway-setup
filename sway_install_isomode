@@ -45,7 +45,8 @@ cp -ar "$REPO_DIR/skel/.local"/* "$USER_HOME/.local/" 2>/dev/null || true
 cp -ar "$REPO_DIR/skel/.icons"/* "$USER_HOME/.icons/" 2>/dev/null || true
 cp "$REPO_DIR/skel/.gtkrc-2.0" "$USER_HOME/.gtkrc-2.0" 2>/dev/null || true
 cp "$REPO_DIR/skel/.profile" "$USER_HOME/.profile" 2>/dev/null || true
-cp "$REPO_DIR/force-knowledge.md" "$USER_HOME/.config/sway/readme.md"
+cp "$REPO_DIR/skel/set_once.sh" "$USER_HOME/set_once.sh" 2>/dev/null || true
+cp "$REPO_DIR/force-knowledge.md" "$USER_HOME/.config/sway/readme.md" 2>/dev/null || true
 
 # 5. Install Sway Tools
 echo ">> Deploying Sway Tools..."
