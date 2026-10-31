@@ -125,6 +125,13 @@ It is taken from sway-tools:
 In case you want to modify one or the other of the sway_tools scripts you can copy them to users path:
 `cp /usr/bin/sway-powermenu ~/.local/bin/` and edit from there.
 
+## you want more fancy?
+
+install swayfx from AUR:
+
+yay -S swayfx and let it replace sway package.
+
+and uncomment round corner settings in the config: defaults#Line54
 
 ## Reset Configuration
 
