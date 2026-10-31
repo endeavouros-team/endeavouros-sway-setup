@@ -6,6 +6,7 @@ brightnessctl
 cliphist
 dex
 engrampa
+eos-qogir-icons
 foot
 fuzzel
 galculator
