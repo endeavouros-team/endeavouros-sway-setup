@@ -121,7 +121,7 @@ bindsym $mod+b layout default
 bindsym $mod+d exec "app_menu drun rofidmenu"
 bindsym $mod+Shift+D exec "app_menu window rofidmenu"
 
-bindsym F1 exec keyhint-2
+bindsym F1 exec keyhint2
 
 # switch output
 bindsym $mod+p exec audio-device-switch
