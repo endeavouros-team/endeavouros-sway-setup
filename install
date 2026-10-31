@@ -47,12 +47,13 @@ mkdir -p "$HOME/.config" "$HOME/.local/bin" "$HOME/.icons"
 cp -R "$REPO_DIR"/skel/.config/* "$HOME/.config/" 2>/dev/null || true
 cp -R "$REPO_DIR"/skel/.local/* "$HOME/.local/" 2>/dev/null || true
 cp -R "$REPO_DIR"/skel/.icons/* "$HOME/.icons/" 2>/dev/null || true
+
 cp "$REPO_DIR"/skel/.gtkrc-2.0 "$HOME/.gtkrc-2.0" 2>/dev/null || true
 cp "$REPO_DIR"/skel/.profile "$HOME/.profile" 2>/dev/null || true
 
 echo ">> make xed nice looking..."
-dbus-launch dconf load / < "$REPO_DIR"/skel/xed.dconf
-
+dbus-launch dconf load / < "$REPO_DIR"/xed.dconf
+rm "$REPO_DIR"/xed.dconf
 echo ">> remove not needed set_once from sway config"
 sed -i 's|\(exec ~/set_once.sh\)|# \1|' "$HOME/.config/sway/config"
 
@@ -94,11 +95,11 @@ if [ -f "$SCRIPT_DIR/sway-powermenu-gracefully" ]; then
     mv "$SCRIPT_DIR/sway-powermenu-gracefully" "$SCRIPT_DIR/sway-powermenu"
 fi
 
-# Copy rasi files and themes
-cp "$TOOLS_DIR/power_profiles_switcher/power-profiles.rasi" "$HOME/.config/rasi/"
-cp "$TOOLS_DIR/powermenu/powermenu.rasi" "$HOME/.config/rasi/"
-cp "$TOOLS_DIR/app_menu/rofidmenu.rasi" "$HOME/.config/rasi/"
-cp "$TOOLS_DIR/keyhint/keyhint2/rofikeyhint2.rasi" "$HOME/.config/rasi/"
+# Copy rasi files and themes to rofi configuration and share paths
+cp "$TOOLS_DIR/power_profiles_switcher/power-profiles.rasi" "$HOME/.config/rofi/"
+cp "$TOOLS_DIR/powermenu/powermenu.rasi" "$HOME/.config/rofi/"
+cp "$TOOLS_DIR/app_menu/rofidmenu.rasi" "$HOME/.config/rofi/"
+cp "$TOOLS_DIR/keyhint/keyhint2/rofikeyhint2.rasi" "$HOME/.config/rofi/"
 cp "$TOOLS_DIR/rofi_themes/deep-purple.rasi" "$HOME/.local/share/rofi/themes/"
 
 # Make all scripts in the directory executable
