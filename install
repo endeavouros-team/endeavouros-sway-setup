@@ -59,7 +59,7 @@ sed -i 's|\(exec ~/set_once.sh\)|# \1|' "$HOME/.config/sway/config"
 # 4. Set up Sway Tools
 echo ">> Installing Sway helper scripts..."
 mkdir -p "$SCRIPT_DIR"
-mkdir -p "$HOME/.config/rasi"
+mkdir -p "$HOME/.config/rofi"
 mkdir -p "$HOME/.local/share/rofi/themes"
 
 TOOLS=(
