@@ -37,10 +37,14 @@ pacman -S --needed --noconfirm - < "$REPO_DIR/packages-repository.txt"
 
 # 4. Install Base Configuration
 echo ">> installing config files..."
+mkdir -p "$USER_HOME/.config" "$USER_HOME/.local/bin" "$USER_HOME/.icons"
 
 # Copy configs and files.
-cp -ar "$REPO_DIR/skel/.config" "$REPO_DIR/skel/.local" "$REPO_DIR/skel/.icons" "$USER_HOME/"
-cp "$REPO_DIR/skel/.gtkrc-2.0" "$REPO_DIR/skel/.profile" "$REPO_DIR/skel/set_once.sh" "$REPO_DIR/skel/xed.dconf" "$USER_HOME/"
+cp -ar "$REPO_DIR/skel/.config"/* "$USER_HOME/.config/" 2>/dev/null || true
+cp -ar "$REPO_DIR/skel/.local"/* "$USER_HOME/.local/" 2>/dev/null || true
+cp -ar "$REPO_DIR/skel/.icons"/* "$USER_HOME/.icons/" 2>/dev/null || true
+cp "$REPO_DIR/skel/.gtkrc-2.0" "$USER_HOME/.gtkrc-2.0" 2>/dev/null || true
+cp "$REPO_DIR/skel/.profile" "$USER_HOME/.profile" 2>/dev/null || true
 cp "$REPO_DIR/force-knowledge.md" "$USER_HOME/.config/sway/readme.md"
 
 # 5. Install Sway Tools
@@ -82,10 +86,10 @@ if [ -f "$SCRIPT_DIR/sway-powermenu-gracefully" ]; then
 fi
 
 # Copy rasi files and themes
-cp "$TOOLS_DIR/power_profiles_switcher/power-profiles.rasi" "$USER_HOME/.config/rasi/"
-cp "$TOOLS_DIR/powermenu/powermenu.rasi" "$USER_HOME/.config/rasi/"
-cp "$TOOLS_DIR/app_menu/rofidmenu.rasi" "$USER_HOME/.config/rasi/"
-cp "$TOOLS_DIR/keyhint/keyhint2/rofikeyhint2.rasi" "$USER_HOME/.config/rasi/"
+cp "$TOOLS_DIR/power_profiles_switcher/power-profiles.rasi" "$USER_HOME/.config/rofi/"
+cp "$TOOLS_DIR/powermenu/powermenu.rasi" "$USER_HOME/.config/rofi/"
+cp "$TOOLS_DIR/app_menu/rofidmenu.rasi" "$USER_HOME/.config/rofi/"
+cp "$TOOLS_DIR/keyhint/keyhint2/rofikeyhint2.rasi" "$USER_HOME/.config/rofi/"
 cp "$TOOLS_DIR/rofi_themes/deep-purple.rasi" "$USER_HOME/.local/share/rofi/themes/"
 
 # 6. Permissions and Executables
