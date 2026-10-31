@@ -116,15 +116,15 @@ bindsym $mod+b layout default
 # rofi-wayland application menu
 
 bindsym $mod+d exec rofi -modi drun -show drun \
-                -config $HOME/.config/rofi/rofidmenu.rasi
+                -config rofidmenu.rasi
 
 bindsym $mod+Shift+D exec rofi -show window \
-                -config $HOME/.config/rofi/rofidmenu.rasi
+                -config rofidmenu.rasi
 
-bindsym F1 exec $HOME/.local/bin/keyhint-2
+bindsym F1 exec keyhint-2
 
 # switch output
-bindsym $mod+p exec $HOME/.local/bin/audio-device-switch
+bindsym $mod+p exec audio-device-switch
 
 # new empty workspace in addition to existing ones:
 bindsym $mod+Shift+n exec sway-new-workspace
@@ -133,7 +133,7 @@ bindsym $mod+Shift+n exec sway-new-workspace
 bindsym F3 exec waybar-toggle
 
 # screen lock
-bindsym $mod+l exec $HOME/.local/bin/gtklock_config
+bindsym $mod+l exec gtklock_config
 
 # exit-menu
 bindsym $mod+Shift+e exec sway-powermenu

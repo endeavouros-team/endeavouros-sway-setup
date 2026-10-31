@@ -34,7 +34,7 @@ exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSO
      systemctl --user start sway-session.target
 
 # make sure it loads gtk configs
-exec_always $HOME/.local/bin/import-gsettings
+exec_always import-gsettings
 
 # Cursor theme and size
 seat seat0 xcursor_theme Qogir-Dark 16
