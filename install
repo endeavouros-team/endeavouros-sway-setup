@@ -42,9 +42,11 @@ echo ">> Installing system dependencies (sudo required)..."
 sudo pacman -S --needed --noconfirm - < "$REPO_DIR/packages-repository.txt"
 
 echo ">> installing config files..."
-cp -R "$REPO_DIR"/skel/.config/* "$HOME/.config/"
-cp -R "$REPO_DIR"/skel/.local/* "$HOME/.local/"
-cp -R "$REPO_DIR"/skel/.icons/* "$HOME/.icons/"
+mkdir -p "$HOME/.config" "$HOME/.local/bin" "$HOME/.icons"
+
+cp -R "$REPO_DIR"/skel/.config/* "$HOME/.config/" 2>/dev/null || true
+cp -R "$REPO_DIR"/skel/.local/* "$HOME/.local/" 2>/dev/null || true
+cp -R "$REPO_DIR"/skel/.icons/* "$HOME/.icons/" 2>/dev/null || true
 cp "$REPO_DIR"/skel/.gtkrc-2.0 "$HOME/.gtkrc-2.0" 2>/dev/null || true
 cp "$REPO_DIR"/skel/.profile "$HOME/.profile" 2>/dev/null || true
 echo ">> make xed nice looking..."
