@@ -113,15 +113,6 @@ bindsym $mod+n layout stacking
 bindsym $mod+m layout tabbed
 bindsym $mod+b layout default
 
-# rofi-wayland application menu
-# set config to user path in case a modified version is present
-set $rofi_config /usr/share/sway_tools/rofi/rofidmenu.rasi
-[ -f ~/.config/rofi/rofidmenu.rasi ] && set $rofi_config ~/.config/rofi/rofidmenu.rasi
-
-bindsym $mod+d exec rofi -show drun -config $rofi_config
-
-bindsym $mod+Shift+D exec rofi -show window -config $rofi_config
-
 bindsym F1 exec keyhint-2
 
 # switch output
