@@ -49,9 +49,10 @@ cp -R "$REPO_DIR"/skel/.local/* "$HOME/.local/" 2>/dev/null || true
 cp -R "$REPO_DIR"/skel/.icons/* "$HOME/.icons/" 2>/dev/null || true
 cp "$REPO_DIR"/skel/.gtkrc-2.0 "$HOME/.gtkrc-2.0" 2>/dev/null || true
 cp "$REPO_DIR"/skel/.profile "$HOME/.profile" 2>/dev/null || true
+
 echo ">> make xed nice looking..."
-dbus-launch dconf load / < "$REPO_DIR"/xed.dconf
-rm "$REPO_DIR"/xed.dconf
+dbus-launch dconf load / < "$REPO_DIR"/skel/xed.dconf
+
 echo ">> remove not needed set_once from sway config"
 sed -i 's|\(exec ~/set_once.sh\)|# \1|' "$HOME/.config/sway/config"
 
