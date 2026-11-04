@@ -1,1 +1,0 @@
-  command = "tuigreet --time --time-format '%d.%m.%Y - %H:%M:%S' --remember --remember-session --asterisks --width 70 --container-padding 3 --prompt-padding 2 --user-menu --theme 'container=black;border=gray;text=white;input=white;prompt=magenta;time=magenta;action=white;button=magenta' --cmd eos-sway-wrapper
