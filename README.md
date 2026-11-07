@@ -14,7 +14,7 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 7. [thunar](https://docs.xfce.org/xfce/thunar/start) as filemanager, including setup to open kitty terminal in path, and filextractor
 8. [bash](https://www.gnu.org/software/bash/bash.html) using a nice welcome message and fortune cookies enabled, plus history with up and down arrow buttons
 9. [gtklock](https://github.com/jovanlanik/gtklock) as lock screen
-10. [swayosd](https://github.com/ErikReider/SwayOSD) as OSD for volume brightness and others
+10. [swayosd](https://github.com/ErikReider/SwayOSD) as OSD for volume brightness and others --> [/etc/systemd/system/swayosd-libinput-backend.service.d/override.conf](https://raw.githubusercontent.com/endeavouros-team/endeavouros-sway-setup/refs/heads/main/override.conf) used currently to resolve issues.
 11. [foot](https://codeberg.org/dnkl/foot) as terminal
 
 # the panel (waybar)
