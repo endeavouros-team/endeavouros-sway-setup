@@ -65,7 +65,3 @@ exec  sh ~/.local/bin/packagelist
 # dex execute .desktop files
 # see here: https://man.archlinux.org/man/extra/dex/dex.1.en
 exec  dex --autostart --environment sway
-
-# osd (on screen display) für volume
-exec swayosd-server -s ~/.config/swayosd/style.css
-exec swayosd-client --monitor "$(swaymsg -t get_outputs | jq -r '.[] | select(.focused == true).name')" --output-volume raise
