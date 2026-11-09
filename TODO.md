@@ -3,3 +3,5 @@
 3. fix batttery waybar, indicator, adding scripting for options to call action on low battery and notification, may blinking waybar
 4. fix indicator colors for windows and workspace setup. ✔️
 5. fix keybindigs and keybind helper to show window resizing ✔️
+6. fix gtklock autolock and filename for the config (.local/bin..)
+7. Adding screenlock to powermenu (sway-tools)
