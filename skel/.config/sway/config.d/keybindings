@@ -154,6 +154,9 @@ bindsym $mod+Print exec swayshot -s
 # Shot of all screens in one pic after releasing print button:
 bindsym --release Print exec swayshot -a
 
+# 5 seconds delay before selected region will get shot
+bindsym $mod+Shift+Print exec  --no-startup-id swayshot -s -d 5
+
 ## screencast
 
 # Start recording (select area)
