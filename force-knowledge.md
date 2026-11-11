@@ -8,7 +8,7 @@ Add `#` at the start of the line (commenting the line) to disable auto start at 
 exec xdg-open https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/force-knowledge.md
 ```
 
-After (changed setting, browser will not auto start at login)
+After saving the autostart config browser will not auto start at login:
 
 ```
 # autostart apps
