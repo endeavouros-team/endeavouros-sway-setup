@@ -136,6 +136,14 @@ else
     exit 1
 fi
 
+# Install systemd override for greetd.service
+if sudo install -Dm644 "$REPO_DIR/override.conf" "/usr/lib/systemd/system/greetd.service.d/override.conf"; then
+    echo "==> greetd.service override installed."
+else
+    echo "ERROR: Failed to install override.conf." >&2
+    exit 1
+fi
+
 # 6. System Services
 echo ">> enable greetd and swayosd-libinput service..."
 
