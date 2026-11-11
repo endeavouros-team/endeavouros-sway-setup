@@ -51,7 +51,7 @@ This script backs up existing dotfiles to a timestamped directory before install
 
 It then deploys custom configuration files, Rofi themes, and helper utilities directly into the current user's home directory, ultimately enabling greetdand systemd services to deliver a fully pre-configured, ready-to-use Sway environment upon reboot.
 
-## Tipps
+# Dive into configuring your Sway WM setup
 
 **EndeavourOS sway default config**
 
