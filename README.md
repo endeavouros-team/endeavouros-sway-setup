@@ -47,9 +47,9 @@ chmod +x ./install
 ```
 **what will the *install* script do?**
 
-This script backs up existing dotfiles to a timestamped directory before installing system dependencies and cloning the EndeavorOS Sway repositories. 
+This script backs up existing dotfiles to a timestamped directory before installing system dependencies and cloning the EndeavourOS Sway repositories. 
 
-It then deploys custom configuration files, Rofi themes, and helper utilities directly into the current user's home directory, ultimately enabling greetdand systemd services to deliver a fully pre-configured, ready-to-use Sway environment upon reboot.
+It then deploys custom configuration files, Rofi themes, and helper utilities directly into the current user's home directory, ultimately enabling greetd with tuigreet greeter (session login) to deliver a fully pre-configured, ready-to-use Sway environment upon reboot.
 
 # Dive into configuring your Sway WM setup
 
@@ -59,7 +59,7 @@ Find main config dropins under:
 
 `$HOME/.config/sway/config.d/`
 
-Use the dropin configs there to change settings, these configs are:
+Use the dropin configs there to change settings:
 
 * **autostart** - everything to be automatically started with the session
 * **defaults** - default window handling
@@ -71,12 +71,32 @@ These configs will get sourced into the main user config automatically, edit the
 
 **User scripts can be found under `$HOME/.local/bin/`**
 
-make sure marking them executable to be used in waybar or other tools
+make sure marking them executable to be used in waybar or other tools.
+
 to edit sway_tools copy these to the users path example:
 
 `cp /usr/bin/sway_powermenu $HOME/.local/bin/`
 
 and edit from there, it will overwrite systemwide script.
+List of current default used [sway_tools](https://github.com/killajoe/sway_tools):
+
+* gracefully_exit
+* new_workspace
+* power_profiles_switcher
+* powermenu
+* app_menu
+* rofi_themes
+* keyhint
+* swaycast
+* swayshot
+* waybar_toggle
+* weather
+* app_id
+* audio-device-switch
+* bandwidth2
+* import-gsettings
+* inactive-window-transparency.py
+* terminal-alias
 
 **these are the pathes to default used tools**
 * $HOME/.config/foot
