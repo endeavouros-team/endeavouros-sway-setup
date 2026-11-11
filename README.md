@@ -26,7 +26,7 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 5. [Power-Profiles-Switcher](https://github.com/killajoe/sway_tools/tree/main/power_profiles_switcher)
 6. [Way-Bar Reloder Button](https://github.com/killajoe/sway_tools/tree/main/waybar_toggle)
 7. [Notifications](https://github.com/endeavouros-team/endeavouros-sway-setup/tree/main/skel/.config/swaync) (swayNC)
-8. [Simple Keybind hint](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.local/bin/keyhint)(YAD)
+8. [Simple Keybind hint](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/skel/.local/bin/keyhint) (YAD)
 9. [Power Menu](https://github.com/killajoe/sway_tools/tree/main/powermenu) ([it gracefully exit the session](https://github.com/killajoe/sway_tools/tree/main/gracefully_exit))
 
 ## you want more fancy?
