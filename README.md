@@ -5,10 +5,10 @@ sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavour
 ![screenshot](https://raw.githubusercontent.com/endeavouros-team/artwork-images-logo/refs/heads/master/eos-sway/eos-sway.png)
 <small>Wallpaper credits goes to: https://github.com/UncleSpellbinder/EndeavourOS-HD-Wallpaper</small>
 # includes:
-1. [waybar](https://github.com/Alexays/Waybar) with tray, powermenu, systemmonitors, worksapce buttons and audio control
+1. [way-bar](https://github.com/Alexays/Waybar) with tray, powermenu, systemmonitors, workspace buttons and audio control
 2. [rofi](https://github.com/lbonn/rofi) for menues (Application menu and others)
 3. [swaync](https://github.com/ErikReider/SwayNotificationCenter) notification, including swaync center for easy access to old notifications.
-4. [sway tools](https://github.com/killajoe/sway_tools/tree/main)
+4. [sway tools](https://github.com/killajoe/sway_tools/tree/main) tools to enhance and expand sway setup as a Desktop.
 5. [greetd](https://git.sr.ht/~kennylevinsen/greetd) with [tuigreet](https://github.com/apognu/tuigreet) (as login manager)
 6. [nwg-look](https://github.com/nwg-piotr/nwg-look) and [nwg-displays](https://github.com/nwg-piotr/nwg-displays) for setup/change gtk theme and display settings. Awesome tools made by piotr: [nwg](https://nwg-piotr.github.io/nwg-shell/)
 7. [thunar](https://docs.xfce.org/xfce/thunar/start) as filemanager, including setup to open kitty terminal in path, and filextractor
