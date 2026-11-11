@@ -17,8 +17,8 @@ After (changed setting, browser will not auto start at login)
 
 ---
 
-# Dive into configuring your Sway WM setup
-[Readme.md](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/README.md#dive-into-configuring-your-sway-wm-setup)
+## Dive into configuring your Sway WM setup
+Start reading here: [Readme.md](https://github.com/endeavouros-team/endeavouros-sway-setup/blob/main/README.md#dive-into-configuring-your-sway-wm-setup)
 
 
 ## Help
