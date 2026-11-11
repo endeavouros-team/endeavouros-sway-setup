@@ -121,6 +121,8 @@ The file has some common variables with a info comment to enable ready for uncom
 #export WLR_NO_HARDWARE_CURSORS=1
 ```
 
+To apply logout and back in once.
+
 ## Links:
 
 https://swaywm.org/ :: https://github.com/swaywm/sway/wiki
