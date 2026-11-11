@@ -112,6 +112,15 @@ List of current default used [sway_tools](https://github.com/killajoe/sway_tools
 
 The file has some common variables with a info comment to enable ready for uncomment.
 
+**Example:**
+
+```
+# uncomment if running in qemu and cursor is upside down
+#export WLR_RENDERER=pixman
+# may needed in VMs to show cursor correctly
+#export WLR_NO_HARDWARE_CURSORS=1
+```
+
 ## Links:
 
 https://swaywm.org/ :: https://github.com/swaywm/sway/wiki
