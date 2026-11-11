@@ -28,5 +28,5 @@ Start reading here: [Readme.md](https://github.com/endeavouros-team/endeavouros-
 
 ## Help
 
-Still having some issues? ask for help on [EndeavourOS Forum](https://forum.endeavouros.com/).
+Still having questions? ask for help on [EndeavourOS Forum](https://forum.endeavouros.com/).
 Or join the helpchat at telegram: [EndeavourOS-Chat](https://t.me/Endeavouros).
