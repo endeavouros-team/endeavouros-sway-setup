@@ -1,4 +1,5 @@
 # EndeavourOS Sway setup
+![Stars](https://img.shields.io/github/stars/endeavouros-team/endeavouros-sway-setup.svg?style=flat) ![Forks](https://img.shields.io/github/forks/endeavouros-team/endeavouros-sway-setup.svg?style=flat) ![Contributors](https://img.shields.io/github/contributors/endeavouros-team/endeavouros-sway-setup.svg?style=flat) ![Maintenance](https://img.shields.io/maintenance/yes/2026.svg)
 
 sway setup for EndeavourOS evolving from [i3 setup](https://github.com/endeavouros-team/endeavouros-i3wm-setup)
 # Get It, Break It, Love It
