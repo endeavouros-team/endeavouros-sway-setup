@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/endeavouros-team/artwork-images-logo/4d055dcec7052efe064fb120cc0f3e086cbcbaf1/eos-sway/force-knowledge-header.svg" alt="Firefox just opened itself. It's homework." width="100%">
+  <img src="https://raw.githubusercontent.com/endeavouros-team/artwork-images-logo/refs/heads/master/eos-sway/force-knowledge-header.svg" alt="Firefox just opened itself. It's homework." width="100%">
 </p>
 
 ## Browser is autostarting at each login?
