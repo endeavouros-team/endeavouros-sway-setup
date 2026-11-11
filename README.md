@@ -55,11 +55,11 @@ It then deploys custom configuration files, Rofi themes, and helper utilities di
 
 **EndeavourOS sway default config**
 
-will include all configs under 
+Find main config dropins under:
 
 `$HOME/.config/sway/config.d/`
 
-Use the dropin configs there to change settings, these configs are there:
+Use the dropin configs there to change settings, these configs are:
 
 * **autostart** - everything to be automatically started with the session
 * **defaults** - default window handling
