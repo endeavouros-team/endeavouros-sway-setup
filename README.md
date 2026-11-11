@@ -73,11 +73,11 @@ These configs will get sourced into the main user config automatically, edit the
 
 make sure marking them executable to be used in waybar or other tools.
 
-to edit sway_tools copy these to the users path example:
+to edit [sway_tools](https://github.com/killajoe/sway_tools) copy these to the users path example:
 
 `cp /usr/bin/sway_powermenu $HOME/.local/bin/`
 
-and edit from there, it will overwrite systemwide script.
+and edit from there, it will overwrite systemwide script (if names stay intact)
 List of current default used [sway_tools](https://github.com/killajoe/sway_tools):
 
 * gracefully_exit
